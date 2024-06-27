@@ -1,131 +1,198 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1 align="center"> LawForYou - your guidehelp in law</h1>
 
-Welcome Mikhail Atayev,
+![image](/static/images/readme-img/)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+### Live Site
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+- Go to live site - [LawForYou](https://lawforyou-4899488e19b1.herokuapp.com/)
 
-## Gitpod Reminders
+### Repository
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
-
-### Connecting your Mongo database
-
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**June 18, 2024,** Add Mongo back into template
-
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
-
-**May 28 2024:** Fix Mongo and Links installs
-
-**April 26 2024:** Update node version to 16
-
-**September 20 2023:** Update Python version to 3.9.17.
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- Go to the repository for this project - [Repository-LawForYou](https://github.com/Askeran17/lawforyou.git)
 
 ---
 
-Happy coding!
+## [Contents](#contents)
+
+- [Overview](#overview)
+- [Adaptability](#adaptability)
+- [User Experience (UX)](#user-experience-ux)
+  - [Project Goal](#project-goal)
+  - [User Stories](#user-stories)
+  - [Agile](#agile)
+  - [Design](#design)
+    - [Wireframes](#wireframes)
+    - [Database](#database)
+- [Features](#features)
+    - [Existing Features](#existing-features)
+- [Technologies Used](#technologies-used)
+  - [Languages Used](#languages-used)
+  - [Frameworks, Libraries & Programs Used](#frameworks)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
+  - [Content](#content)
+  - [Media](#media)
+
+## Overview
+
+
+
+## Adaptability on a variety of screen sizes
+
+![The LawForYou on a variety of screen sizes](/static/images/readme-img/adaptability-size.png)
+
+## User Experience
+
+### Project Goal
+
+
+
+### User Stories
+
+### Agile
+
+The project used a Agile methodology that tracked the process of creating the project. An issue was created for each user story.
+
+Visitors can read posts and view video in posts but not to add a comment under this. Registred users can add a comment under posts. Administrator of site can adding, updating & deleting comments. A project Kanban board was used to track progress, with user stories moved between 'ToDo', 'In Progress' and 'Done' columns as appropriate.
+
+Here is link to Agile [User Stories](https://github.com/users/Askeran17/projects/9).
+
+### Design
+
+- The design of the website should be combined with the theme
+
+#### Colours
+
+- 
+
+![image](/static/images/readme-img/colours-palette.jpg)
+
+#### Fonts
+
+
+
+
+### Wireframes
+I used program "Balsamiq Wireframes" to draw a page layout.
+
+Home page
+<br>
+
+![image](/static/images/readme-img/wireframe-home.png)
+
+
+
+### Database
+The project uses the relational database PostgreSQL to store the data. I used PostgreSQL because it is considered one of the recommended databases on the Heroku platform.
+
+
+
+## Features
+
+### Existing Features
+
+__Header__
+
+
+
+__Main content__
+
+
+
+__Footer__
+
+- In the footer I have placed a link to Facebook, Instagram, Twitter and YouTube. It looks beautiful with the bootstraps function. The link opens in a separate tab and the visitor is taken to socialmedia he choose, while the site remains open. It is very comfortable. And above links I placed copyright.
+
+![Footer](/static/images/readme-img/footer.png)
+
+__Error 404 page__
+
+- If the user incorrectly specified the page path or clicked on a non-existent page, then he is taken to a 404 page. This page contains a link to return to the main page
+![404 Page](/static/images/readme-img/404-page.png)
+
+## Technologies Used
+
+I did all the work in GitPod platform.
+
+### Languages Used
+
+HTML, CSS, JavaScript, Python, Django
+
+### Frameworks, Libraries & Programs Used
+
+* [Django](https://pypi.org/project/Django/4.2.11/) - To start project in Python.
+
+* [Bootstrap](https://getbootstrap.com/) - To create the front-end design.
+
+* [GitHub](https://github.com/) - To save and store the files for the website.
+
+* [GitPod](https://gitpod.io/) - To use as IDE to commit and push the project to GitHub.
+
+* [Google Fonts](https://fonts.google.com/) - To import the fonts used on the website.
+
+* [Google Developer Tools](https://developers.google.com/web/tools) - To troubleshoot and test features, solve issues with responsiveness and styling.
+
+* [IloveImg](https://www.iloveimg.com/) - To resize images.
+
+* [Convertio](https://convertio.co/) - To convert images to webp format.
+
+* [Favicon.io](https://favicon.io/) - To create favicon.
+
+* [Balsamiq](https://balsamiq.com/) - Used to create wireframes.
+
+* [Am I Responsive?](http://ami.responsivedesign.is/) - To show the website image on a range of devices.
+
+* [Emojipedia](https://emojipedia.org/) - Emoji for history timeline.
+
+* [Coolors](https://coolors.co/) - Colours palette.
+
+## Testing
+
+To view testing go here [TESTING.md](TESTING.md)
+
+## Deployment
+
+### How to deploy on Heroku
+
+The project was deployed to Heroku in the following manner:
+
+1. Firstly you need to sign up on the Heroku website.
+2. There after choose new and "create New App", give the app a name, choose a region: Europe
+3. Go to deploy, see Deployment Method and select GitHub.
+4. At section "Deployment method", click "GitHub" and connect your account with Heroku.
+4. To connect your Heroku app to your code in a Github repository, you need to enter the name of your repository and click on the "Search" button. After that click on button “Connect” when it appears.
+5. Go to manual deploy, select the branch from which you want to build your application and click to "Deploy Branch".
+6. You have to wait until the app is build. When it wiil be done it will appear an “App was successfully deployed” message and after that you will see a "View" button. When you click on this button you will see your app deployed.
+
+### How to fork
+
+To fork do do the following steps:
+
+1. You have to log in/register on GitHub.
+2. Go to the repository for this project [LawForYou](https://github.com/Askeran17/lawforyou).
+3. Click the "Fork" button in the top right corner.
+
+### How to clone
+
+To clone do the following steps:
+
+1. You have to log in/register on GitHub.
+2. Go to the repository for this project [LawForYou](https://github.com/Askeran17/lawforyou).
+3. To clone the repository using HTTPS, under "HTTPS", click to copy button. To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click SSH, then click to copy button. To clone a repository using GitHub CLI, click GitHub CLI, then click to copy button.
+4. Open terminal, change the current working directory to the location where you want the cloned directory.
+5. Type git clone, and then paste the URL you copied earlier. Press Enter to create your local clone.
+
+## Credits
+
+
+
+### Content 
+
+- 
+
+- The icons was taken from [Font Awesome](https://fontawesome.com/)
+
+### Media
+
+- The images in site I took from open source, i.e. google.
