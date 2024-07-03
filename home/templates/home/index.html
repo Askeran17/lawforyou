@@ -1,26 +1,82 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Views Part 1</title>
-</head>
+<!-- Page Header -->
+<header class="masthead-home lawforyou-bg">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 animate__animated animate__bounce text-white welcome-bg">
+                <h1>Welcome</h1>
+                <h2>Find your help here</h2>
 
-<body>
-    <h1>Posts list</h1>
-    {% for post in object_list %}
-    <h2>{{post.title}}</h2>
-    <p>{{post.excerpt}}</p>
-    <p>Author: {{post.author}}</p>
-    {% endfor %}
-</body>
+                <div class="go-posts">
+                    <a href="{% url 'home' %}#posts" class="btn-posts">Book an appointment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
-</html>
+
+<!-- index.html content starts here -->
+<div class="container-fluid">
+    <br>
+    <p class="front-page-text">In the Code of Procedure, where there were provisions regarding the manner of pursuing an
+        action against a lower court's decision, it was stated in which cases what should be used. This was, with
+        certain exceptions, partly when appealing lower court decisions in civil cases of such a nature that they should
+        be brought by summons, partly when suing against lower court decisions in certain cases, which belonged to the
+        extraordinary civil process.
+
+        According to the Code of Procedure, when a case was decided by a lower court or the court ruled that the case
+        should be sworn, the court would indicate in the decision whether the completion of the claim would instead take
+        place by way of appeal or appeal, the other of the then two legal remedies that could come into question. If
+        someone wanted to complain about another decision issued by a lower court, the court or the district head would,
+        upon request, send him a referral for enforcement.
+
+        The pledge procedure, which was stipulated in the Code of Procedure, began with the dissatisfied party, upon
+        payment of a fixed pledge, notifying that he wanted to appeal; which was to be done no later than the seventh
+        day from the day the decision was given and filed with the court or the person appointed to receive such
+        notification on behalf of the court. After what was paid, proof of this was signed on the decision with
+        notification of the time within which the appellant would submit a pledge to the Court of Appeal. On request,
+        the other party would receive proof of the bet and notice of the notice period.</p>
+    <div class="row">
+
+        <!-- Column -->
+        <div id="posts" class="col-12 mt-3 left">
+            <div class="row">
+                {% for post in post_list %}
+                <div class="col-md-4">
+                    <div class="card mb-4 text-center">
+                        <div class="card-body card-lawforyou">
+                            <div class="image-container">
+
+                                <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+
+                                <div class="image-flash">
+                                </div>
+                            </div>
+                            <h2 class="card-title">{{ post.title }}</h2>
+                            <p class="card-text">{{ post.summary }}</p>
+                            <a href="{{ post.slug }}" class="post-link bg-press-lawforyou">
+                                Click to read
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:3 %}
+            </div>
+            <div class="row">
+
+                {% endif %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- index.html content ends here -->
 {% endblock %}

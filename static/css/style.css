@@ -1,0 +1,451 @@
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Exo:ital,wght@0,100..900;1,100..900&family=Jersey+10&display=swap');
+
+/* General styles */
+body {
+    background-color: #F9FAFC;
+}
+
+.front-page-text {
+    font-family: 'Exo', sans-serif;
+}
+
+.lawforyou-bg {
+    background: url("https://askusedu.com/blogdashboard/wp-content/uploads/2023/07/mba-after-law-llb.jpg") no-repeat center /cover;
+    position: relative;
+}
+
+.lawforyou-bg:before {
+    content: "";
+    background: rgba(19, 19, 19, 0.626);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.btn-posts {
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px;
+    margin-left: -15px;
+    transition: 0.3s;
+    line-height: 1;
+    text-decoration: none;
+    color: #fff;
+    border: 0 solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-color: rgba(255, 255, 255, 0.5);
+    outline-offset: 0px;
+    text-shadow: none;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+
+}
+
+.btn-posts:hover {
+    background: white;
+    color: black;
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.welcome-bg {
+    position: relative;
+    margin-inline: auto;
+    text-align: center;
+    font-family: 'Jersey 10', sans-serif;
+    font-weight: 700;
+
+}
+
+.card {
+    border: none;
+    background-color: transparent;
+}
+
+.card-text {
+    font-family: 'Exo', sans-serif;
+}
+
+.full-post-text {
+    font-family: 'Exo', sans-serif;
+}
+
+.card-lawforyou {
+    background-color: #f0f0f0;
+}
+
+.text-lawforyou-bg {
+    font-family: 'Exo', sans-serif;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-flash {
+    position: absolute;
+    bottom: 5%;
+    min-width: 30%;
+    left: -2px;
+    background-color: #188181;
+}
+
+.scale {
+    width: 100%;
+    height: auto;
+}
+
+.author {
+    color: white;
+    margin: 4px;
+    text-transform: uppercase;
+}
+
+.masthead {
+    margin-top: 0px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: 33vh;
+    width: 100%;
+}
+
+.masthead-text {
+    background-color: #445261;
+    color: white;
+    position: relative;
+}
+
+.masthead-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.masthead-image:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 90%;
+    height: 100%;
+    width: 150%;
+    background: #445261;
+    -webkit-transform: skew(15deg);
+    -moz-transform: skew(15deg);
+    transform: skew(15deg);
+    z-index: 100;
+}
+
+.post-link {
+    text-decoration: none;
+    color: #445261;
+}
+
+.post-link:hover,
+.page-link {
+    color: #999;
+}
+
+.bg-press-lawforyou {
+    padding: 10px 10px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #1764e0;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    position: relative;
+    top: -7px;
+}
+
+.bg-press-lawforyou:hover {
+    background-color: #245dba
+}
+
+.bg-press-lawforyou:active {
+    background-color: #245dba;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+/* Full post page */
+.post-title {
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.post-subtitle {
+    margin-left: 5%;
+    color: lightgray;
+}
+
+
+.btn-edit {
+    background-color: #2499f3;
+    color: #fff;
+}
+
+
+.link {
+    color: #23BBBB;
+    text-decoration: none;
+}
+
+.link:hover,
+.link:active {
+    color: #445261;
+    text-decoration: underline;
+}
+
+.btn-delete {
+    color: #fff;
+    background: #E84610;
+}
+
+.faded {
+    color: rgb(172, 175, 175);
+}
+
+.approval {
+    color: rgb(234, 174, 125);
+}
+
+
+/* Button link navbar */
+.nav {
+    margin-left: auto;
+}
+
+.nav>li {
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.nav-link {
+    color: white
+}
+
+.nav-link:hover {
+    color: #a8a6a6
+}
+
+.nav-link.active {
+    color: #010101
+}
+
+.navbar-link-lawforyou {
+    padding: 10px 10px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #1EBBD7;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.navbar-link-lawforyou:hover {
+    background-color: #1aa1b8;
+}
+
+.navbar-link-lawforyou:active {
+    background-color: #1aa1b8;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+
+/* About page */
+.about-heading {
+    font-family: "Exo", sans-serif;
+    font-weight: 300;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+.bg-color-personal-info {
+    background-color: #404040;
+}
+
+.section-column {
+    padding: 0 43px 43px;
+    float: none;
+    display: table-cell;
+}
+
+.info-column {
+    color: #fafafa;
+}
+
+
+/* Small devices (phones, 335px and up) */
+@media only screen and (min-width: 335px) {
+
+    .masthead {
+        height: 200px;
+    }
+
+    .masthead-home {
+        height: 25vh;
+        width: 100%;
+    }
+
+    .text-lawforyou-bg {
+        font-size: 5px;
+    }
+
+    .welcome-bg {
+        top: 50px;
+    }
+
+}
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+
+    .masthead-home {
+        height: 33vh;
+        width: 100%;
+    }
+
+    .text-lawforyou-bg {
+        font-size: 10px;
+    }
+
+    .welcome-bg {
+        top: 200px;
+    }
+
+    .add-post-form-view {
+        width: 50%;
+        position: relative;
+        left: 175px;
+    }
+
+    .edit-delete {
+        margin-top: 12px;
+    }
+
+    .info-column {
+        margin-bottom: -255px;
+    }
+
+    .footer {
+        height: 475px;
+    }
+
+
+}
+
+/* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+
+    .masthead-home {
+        height: 53vh;
+    }
+
+    .add-post-form-view {
+        width: 50%;
+        position: relative;
+        left: 220px;
+    }
+
+}
+
+/* Large devices (laptops and desktops, 1024px and up) */
+@media screen and (min-width: 1024px) {
+
+    .masthead-home {
+        margin-top: 0px;
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        height: 73vh;
+        width: 100%;
+    }
+
+    .lawforyou-bg {
+        background-size: cover;
+        background-position-y: top;
+    }
+
+    .text-lawforyou-bg {
+        font-size: 30px;
+    }
+
+    .welcome-bg {
+        top: 300px;
+    }
+
+    .add-post-form-view {
+        width: 50%;
+        position: relative;
+        left: 230px;
+    }
+
+    .edit-delete {
+        margin-bottom: 1px;
+    }
+
+    .info-column {
+        margin-bottom: -435px;
+    }
+
+
+}
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+
+    .info-column {
+        margin-bottom: -55px;
+    }
+
+}
+
+/* Large devices (laptops and desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+
+    .go-posts {
+        margin-left: -15px;
+    }
+
+    .masthead {
+        height: 230px;
+    }
+
+    .p-text-history {
+        font-size: 1rem;
+    }
+
+    .add-post-form-view {
+        width: 50%;
+        position: relative;
+        left: 320px;
+    }
+
+    .info-column {
+        height: 485px;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    .edit-delete {
+        bottom: 34px;
+        position: relative;
+    }
+}
