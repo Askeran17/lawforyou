@@ -1,6 +1,7 @@
 {% load static %}
 
 {% url 'home' as home_url %}
+{% url 'about' as about_url %}
 
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
@@ -12,6 +13,9 @@
 <head>
     <title>LawForYou</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- SEO -->
+    <meta name="description" content="law for you is online service which can help people to find fast answer to their problem">
 
     <!-- Favicon -->
     <link rel="icon" sizes="180x180" href="{% static 'favicon/favicon-law.png' %}">
@@ -61,13 +65,13 @@
 
                     <li class="nav-item">
                         
-                        <a class="nav-link {% if request.path == history_url %}active{% endif %} navbar-link-lawforyou" aria-current="page"
+                        <a class="nav-link {% if request.path == services_url %}active{% endif %} navbar-link-lawforyou" aria-current="page"
                             href="#">Services </a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == about_url %}active{% endif %} navbar-link-lawforyou" aria-current="page"
-                            href="#">About </a>
+                            href="{% url 'about' %}">About </a>
                     </li>
 
                     {% if user.is_superuser %}
