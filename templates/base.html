@@ -77,7 +77,11 @@
                     {% if user.is_superuser %}
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == manage_url %}active{% endif %} navbar-link-lawforyou" aria-current="page"
-                            href="{% url 'manage' %}">Manage</a>
+                            href="{% url 'manage' %}">Manage
+                            <i class="far fa-bell" style="font-size: 20px; float: left; color: black">
+                            </i>
+                        </a>
+                        <span class="badge badge-danger">{{count}}</span>
                     </li>
                     {% endif %}
 

@@ -39,7 +39,7 @@ class ManageAppointmentView(ListView):
     model = Appointment
     context_object_name = "appointments"
     login_required = True
-    paginate_by = 3
+    paginate_by = 6
 
 
     def post(self, request):
