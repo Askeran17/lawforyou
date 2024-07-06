@@ -51,6 +51,12 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'cloudinary',
     'home',
+    'services',
+    'appointment',
+    'appeal',
+    'contracts',
+    'forecast',
+    'profiles',
 ]
 
 SITE_ID = 1
@@ -109,6 +115,7 @@ DATABASES = {
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.herokuapp.com",
+    "https://*.ws.codeinstitute-ide.net",
     "https://8000-askeran17-lawforyou-roxjsj28kaq.ws.codeinstitute-ide.net/"
 ]
 

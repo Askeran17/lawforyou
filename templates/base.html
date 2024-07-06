@@ -76,8 +76,8 @@
 
                     {% if user.is_superuser %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == add_post %}active{% endif %} navbar-link-lawforyou" aria-current="page"
-                            href="#">Add post </a>
+                        <a class="nav-link {% if request.path == manage_url %}active{% endif %} navbar-link-lawforyou" aria-current="page"
+                            href="{% url 'manage' %}">Manage</a>
                     </li>
                     {% endif %}
 
@@ -129,6 +129,7 @@
     </main>
 
     <!-- Footer -->
+     
     <footer class="footer mt-auto py-3 bg-dark text-light">
         <h6 class="text-center">Copyright &copy; LawForYou 2024</h6>
         <h6 class="text-center">Follow us:</h6>
