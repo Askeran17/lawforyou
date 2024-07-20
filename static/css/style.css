@@ -285,7 +285,7 @@ body {
         margin-bottom: 0
     }
 
-    input,
+    .input-appoint,
     textarea,
     .btn-appoint {
         padding: 8px 15px;
@@ -297,7 +297,7 @@ body {
         font-weight: 300
     }
 
-    input:focus,
+    .input-appoint:focus,
     textarea:focus {
         -moz-box-shadow: none !important;
         -webkit-box-shadow: none !important;

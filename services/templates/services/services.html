@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col card mb-4 mt-3 left top">
+      <div class="card-body full-post-text">
+        <!-- The post content goes inside the card-text. -->
+        <!-- Use the | safe filter inside the template tags -->
+        <div class="card-text">
+         Hello 
+        </div>
+        <br>
+        <div>
+            Today
+        </div>
+        <div>
+            Yesterday
+        </div>
+        
+        
+        <div class="row">
+
+          <!-- Blog Entries Column -->
+          <div id="posts" class="col-12 mt-3 left">
+              <div class="row">
+                {% for service in product_list %}
+                  <div class="col-md-4">
+                      <div class="card mb-4 text-center">
+                          <div class="card-body card-footbrazil">
+                              <div class="image-container">
+  
+                                  <img class="card-img-top">
+  
+                                  <div class="image-flash">
+                                  </div>
+                              </div>
+  
+                              <h2 class="card-title">{{ service.name }}</h2>
+                              <p class="card-text"></p>
+                              <a href="{{ service.url }}" class="post-link bg-press-footbrazil">
+                                  Choose
+                              </a>
+                              
+                          </div>
+                      </div>
+                  </div>
+                  {% if forloop.counter|divisibleby:3 %}
+              </div>
+              <div class="row">
+  
+                  {% endif %}
+                  {% endfor %}
+  
+              </div>
+          </div>
+      </div>
+  
+    </div>
+  </div>
+  <hr>
+  
+{% endblock content %}
+{% block extras %}
+{% endblock %}
