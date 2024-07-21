@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from .models import Product
 
@@ -9,10 +9,10 @@ class ServiceTemplateView(generic.ListView):
     queryset = Product.objects.all()
     paginate_by = 6
 
-def product_detail(request, product_id, slug):
+def product_detail(request, slug):
     """ A view to show individual product details """
-
-    product = get_object_or_404(Product, pk=product_id, slug=slug)
+    queryset = Product.objects.all()
+    product = get_object_or_404(queryset, url=slug)
 
     context = {
         'product': product,
