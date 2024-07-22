@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.views import generic
 from .models import Product
 from django.contrib.auth.decorators import login_required
+from .forms import ProductForm
 
 # Create your views here.
 
@@ -23,13 +24,13 @@ def product_detail(request, slug):
     return render(request, 'services/product_detail.html', context)
 
 @login_required
-def edit_product(request, slug):
+def edit_product(request, id):
     """ Edit a product in the store """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
-    product = get_object_or_404(Product, slug)
+    product = get_object_or_404(Product, id=id)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
