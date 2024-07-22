@@ -93,6 +93,10 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'appointment.context_processors.get_notification',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
