@@ -53,10 +53,8 @@ INSTALLED_APPS = [
     'home',
     'services',
     'appointment',
-    'appeal',
-    'contracts',
-    'forecast',
-    'profiles',
+    'bag',
+    
 ]
 
 SITE_ID = 1
