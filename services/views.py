@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.views import generic
 from .models import Product
@@ -24,19 +24,19 @@ def product_detail(request, slug):
     return render(request, 'services/product_detail.html', context)
 
 @login_required
-def edit_product(request, id):
+def edit_product(request, slug):
     """ Edit a product in the store """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
-    product = get_object_or_404(Product, id=id)
+    product = get_object_or_404(Product, url=slug)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated product!')
-            return redirect(reverse('product_detail', args=[product.id]))
+            return redirect(reverse('product_detail', args=[product.url]))
         else:
             messages.error(request, 'Failed to update product. Please ensure the form is valid.')
     else:
