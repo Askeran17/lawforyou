@@ -102,6 +102,8 @@ TEMPLATES = [
     },
 ]
 
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
 WSGI_APPLICATION = 'lawforyou.wsgi.application'
 
 
