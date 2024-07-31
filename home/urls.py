@@ -5,5 +5,4 @@ from .views import HomeTemplateView
 urlpatterns = [
     path("", HomeTemplateView.as_view(), name="home"),
     path("about/", views.about, name='about'),
-    path("accounts/", include("allauth.urls")),
 ]
