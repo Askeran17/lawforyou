@@ -10,7 +10,7 @@ from .forms import ProductForm
 class ServiceTemplateView(generic.ListView):
     template_name = 'services/services.html'
     queryset = Product.objects.all()
-    paginate_by = 7
+    paginate_by = 6
 
 def product_detail(request, slug):
     """ A view to show individual product details """
