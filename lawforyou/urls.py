@@ -14,7 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include    
+from django.urls import path, include
+from .views import handler404    
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,3 +27,7 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
 ]
+
+handler404 = 'lawforyou.views.handler404'
+handler403 = 'lawforyou.views.handler403'
+handler500 = 'lawforyou.views.handler500'
