@@ -47,8 +47,6 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'crispy_forms',
-    'crispy_bootstrap5',
     'cloudinary',
     'home',
     'services',
@@ -56,6 +54,9 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
     'profiles',
+
+    # Other
+    'crispy_forms',
     
 ]
 
@@ -73,8 +74,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'lawforyou.urls'
 
-CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
-CRISPY_TEMPLATE_PACK = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 TEMPLATES = [
     {

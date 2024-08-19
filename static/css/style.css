@@ -321,7 +321,8 @@ footer {
         font-size: 15px !important;
         font-weight: 400;
         height: 43px;
-        cursor: pointer
+        cursor: pointer;
+        width: 5em;
     }
 
     .btn-block:hover {
