@@ -29,19 +29,20 @@
                 {% for service in product_list %}
                   <div class="col-md-4">
                       <div class="card mb-4 text-center">
-                          <div class="card-body card-footbrazil">
+                          <div class="card-body card-lawforyou">
                               <div class="image-container">
   
-                                  <img class="card-img-top">
+                                  <img class="card-img-top" src="{{ service.image.url }}">
   
                                   <div class="image-flash">
                                   </div>
                               </div>
   
                               <h2 class="card-title">{{ service.name }}</h2>
-                              <p class="card-text"></p>
+                              <p class="card-text">hhhhh</p>
+                              <p class="card-text">Price: ${{ service.price }}</p>
                               <a href="{{ service.url }}" class="post-link bg-press-lawforyou">
-                                  Choose
+                                  Buy now
                               </a>
                               
                           </div>
