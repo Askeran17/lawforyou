@@ -43,6 +43,13 @@
                                 <span>{{app.request}}</span>
                             </div>
                             <hr class="w-100">
+
+                            {% if request.user.is_superuser %}
+                        <small class="ml-3">
+                            <a class="text-danger" href="{% url 'delete_appointment' app.pk %}">Delete</a> 
+                        </small>
+                        {% endif %}
+
                             {% if app.accepted == False %}
                             <form method="POST" action="{% url 'manage' %}">
                             {% csrf_token %}

@@ -2,6 +2,8 @@ from django.http.response import HttpResponseRedirect
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
+from django.views.generic.edit import DeleteView
+from django.urls import reverse, reverse_lazy
 from django.core.mail import EmailMessage, message
 from django.conf import settings
 from django.contrib import messages
@@ -76,3 +78,9 @@ class ManageAppointmentView(ListView):
             "title":"Manage Appointments"
         })
         return context
+
+class DeleteAppointment(DeleteView):
+    '''admin can delete appointment from the website itself'''
+    model = Appointment
+    template_name = 'appointment/delete_appointment.html'
+    success_url = reverse_lazy('appointment')
