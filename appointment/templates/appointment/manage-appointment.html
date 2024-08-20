@@ -4,10 +4,9 @@
 {% block content %}
 
 {% if messages %}
-    <div class="card notification-card notification-invitation card-manage">
+    <div class="message-notification">
         <div class="card-body">
         {% for message in messages %}
-                <div class="card-title">{{message}} </div>
             {% endfor %}
         </div>
       </div> 
@@ -36,11 +35,11 @@
                                 </div>
                                 <div class="widget-49-meeting-info">
                                     <span class="widget-49-pro-title">{{app.email}}</span>
-                                    <span class="widget-49-meeting-time">{{app.phone}}</span>
+                                    <span class="widget-49-meeting-time">Phone: {{app.phone}}</span>
                                 </div>
                             </div>
                             <div class="widget-49-meeting-points">
-                                <span>{{app.request}}</span>
+                                <span>Request: {{app.request}}</span>
                             </div>
                             <hr class="w-100">
 

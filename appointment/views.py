@@ -18,7 +18,7 @@ class AppointmentView(TemplateView):
 
     def post(self, request):
         fname = request.POST.get("fname")
-        lname = request.POST.get("fname")
+        lname = request.POST.get("lname")
         email = request.POST.get("email")
         mobile = request.POST.get("mobile")
         message = request.POST.get("request")
@@ -33,7 +33,7 @@ class AppointmentView(TemplateView):
 
         appointment.save()
 
-        messages.add_message(request, messages.SUCCESS, f"Thanks {fname} for making an appointment, we will email you ASAP!")
+        messages.add_message(request, messages.SUCCESS, f"Thanks {fname} for making an appointment, we will email you soon!")
         return HttpResponseRedirect(request.path)
 
 class ManageAppointmentView(ListView):
