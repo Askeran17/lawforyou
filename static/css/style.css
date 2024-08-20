@@ -335,6 +335,10 @@ footer {
         outline-width: 0
     }
 
+    .btn-send {
+        width: 33%;
+    }
+
 
 /* Manage appointment */
 
@@ -679,7 +683,6 @@ footer {
     background: brown;
     clear:left; 
     font:14px Helvetica,Arial,sans-serif; 
-    width: 600px;
 }
 
 /* Bag */
@@ -935,12 +938,12 @@ footer {
         margin-top: 12px;
     }
 
-    .info-column {
-        margin-bottom: -255px;
+    .btn-send {
+        width: 150%;
     }
 
     .footer {
-        height: 475px;
+        height: 600px;
     }
 
 
@@ -996,17 +999,8 @@ footer {
         margin-bottom: 1px;
     }
 
-    .info-column {
-        margin-bottom: -435px;
-    }
-
-
-}
-
-@media screen and (max-width: 1024px) and (max-height: 600px) {
-
-    .info-column {
-        margin-bottom: -55px;
+    .footer {
+        height: 800px;
     }
 
 }
