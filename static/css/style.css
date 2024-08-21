@@ -339,6 +339,14 @@ footer {
 
 /* Manage appointment */
 
+.badge {
+    position: relative;
+    top: -43px;
+    left: 72px;
+    font-size: 8px;
+    border-radius: 45%;
+}
+
 .card-margin {
     margin-bottom: 1.875rem;
 }
