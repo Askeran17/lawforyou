@@ -55,7 +55,7 @@
                             <div class="form-group">
                                 <input type="date" name="date" class="form-control mb-2 input-appoint" 
                                     placeholder="dd-mm-yyyy" value=""
-                                    min="1997-01-01" max="2030-12-31">
+                                    min="1997-01-01" max="2030-12-31"> 
                                     <input hidden="true" name="appointment-id" class="input-appoint" value="{{app.id}}">
                                 <input class="btn-block btn-primary form-control input-appoint" type="submit" value="Accept">
                             </div>
@@ -74,13 +74,13 @@
             <nav aria-label="Page navigation example">
                 <ul class="pagination">
                     {% if page_obj.has_previous %}
-                    <li class="page-item"><a class="page-link" href="?page={{page_obj.prebious_page_number}}">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">&laquo; Previous</a></li>
                     {% endif %}
                     {% for number in page_obj.paginator.page_range %}
-                    <li class="page-item"><a class="page-link" href="?page={{number}}">{{number}}</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ number }}">{{number}}</a></li>
                     {% endfor %}
                     {% if page_obj.has_next %}
-                    <li class="page-item"><a class="page-link" href="?page={{page_obj.prebious_page_number}}">Next</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next &raquo;</a></li>
                     {% endif %}
                 </ul>
             </nav>
