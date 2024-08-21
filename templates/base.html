@@ -65,6 +65,7 @@
                         src="https://res.cloudinary.com/dfy0one9z/image/upload/v1720017776/logo-lawforyou_cprutu.png"
                         alt="LawForYou Logo"></a>
 
+                    <!-- Head links  -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon tex-white"></span>
@@ -92,14 +93,26 @@
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == manage_url %}active{% endif %} navbar-link-lawforyou"
                                 aria-current="page" href="{% url 'manage' %}">Manage
-                                <i class="far fa-bell" style="font-size: 20px; float: left; color: black">
+                                <i class="far fa-bell" style="font-size: 16px;">
                                 </i>
                             </a>
                             <span class="badge badge-danger">{{count}}</span>
                         </li>
                         {% endif %}
 
-                        <li class="list-inline-item dropdown">
+                   
+
+
+
+                    </ul>
+
+                </div>
+
+                <!-- Account and Bag -->
+                <ul class="nav nav-account-bag mb-2 mb-lg-0">
+
+                         
+                         <li class="list-inline-item dropdown">
                             <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center">
@@ -120,7 +133,7 @@
                                 {% endif %}
                             </div>
                         </li>
-
+    
                         <li class="list-inline-item">
                             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                                 href="{% url 'view_bag' %}">
@@ -135,11 +148,10 @@
                                     </p>
                                 </div>
                             </a>
-                        </li>
+                        </li> 
 
-                    </ul>
+                </ul>
 
-                </div>
             </div>
         </nav>
     </header>
