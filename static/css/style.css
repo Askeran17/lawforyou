@@ -907,7 +907,11 @@ footer {
     }
 
     .welcome-bg {
-        top: 50px;
+        top: 20px;
+    }
+
+    .welcome-txt {
+        padding-right: 6px;
     }
 
 }
@@ -925,7 +929,7 @@ footer {
     }
 
     .welcome-bg {
-        top: 200px;
+        top: 100px;
     }
 
     .add-post-form-view {
@@ -986,7 +990,7 @@ footer {
     }
 
     .welcome-bg {
-        top: 300px;
+        top: 260px;
     }
 
     .add-post-form-view {
@@ -1014,6 +1018,10 @@ footer {
 
     .masthead {
         height: 230px;
+    }
+
+    .welcome-txt {
+        padding-right: 26px;
     }
 
     .p-text-history {
