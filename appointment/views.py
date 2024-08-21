@@ -83,4 +83,4 @@ class DeleteAppointment(DeleteView):
     '''admin can delete appointment from the website itself'''
     model = Appointment
     template_name = 'appointment/delete_appointment.html'
-    success_url = reverse_lazy('appointment')
+    success_url = reverse_lazy('manage')
