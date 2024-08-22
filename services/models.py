@@ -13,5 +13,8 @@ class Product(models.Model):
     options = models.BooleanField(default=False, null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
 
+    class Meta:
+        ordering= ['-item']
+
     def __str__(self):
         return self.name

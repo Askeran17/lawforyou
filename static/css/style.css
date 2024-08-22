@@ -231,6 +231,10 @@ footer {
     color: #000 !important;
 }
 
+.sign-out {
+    margin-bottom: 125px;
+}
+
 /* Button link navbar */
 
 .nav>li {
@@ -974,6 +978,10 @@ footer {
         height: 600px;
     }
 
+    .sign-out {
+        margin-bottom: 525px;
+    }
+
 
 }
 
@@ -1039,6 +1047,10 @@ footer {
         height: 800px;
     }
 
+    .sign-out {
+        margin-bottom: 325px;
+    }
+
 }
 
 /* Large devices (laptops and desktops, 1200px and up) */
@@ -1081,5 +1093,9 @@ footer {
     .edit-delete {
         bottom: 34px;
         position: relative;
+    }
+
+    .sign-out {
+        margin-bottom: 125px;
     }
 }
