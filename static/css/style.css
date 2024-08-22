@@ -231,7 +231,7 @@ footer {
     color: #000 !important;
 }
 
-.sign-out {
+.sign-out, .sign-up-fix {
     margin-bottom: 125px;
 }
 
@@ -1000,6 +1000,10 @@ footer {
         width: 50%;
         position: relative;
         left: 220px;
+    }
+
+    .profile-fix {
+        margin-bottom: 100px;
     }
 
 }
