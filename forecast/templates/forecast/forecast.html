@@ -71,6 +71,22 @@
     
 </section>
 
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">        
+        <div class="col-12 col-md-4">
+            <hr>
+            <h1 class="mb-2 text-black">Request Help</h1>
+            <hr>
+            <form action="{% url 'forecast' %}"  method="POST" id="contact-form">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="btn btn-black text-uppercase float-left mb-6">Send request</button>
+            </form>   
+        </div>
+    </div>
+</div>
+
 
 
 
