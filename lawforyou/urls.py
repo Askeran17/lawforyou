@@ -26,6 +26,7 @@ urlpatterns = [
     path('bag/', include('bag.urls')),
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
+    path('forecast/', include('forecast.urls')),
 ]
 
 handler404 = 'lawforyou.views.handler404'

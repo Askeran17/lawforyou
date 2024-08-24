@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'forecast/css/forecast.css' %}">
+{% endblock %}
+
+{% block content %}
+
+
+
+ <!-- Start -->
+ <section class="start">
+	<div class="start-display">
+		<h1>Get your forecast about your decision</h1>
+		<button id="start-button">Start</button>
+	  </div>
+	</section>
+
+    <!-- Forecast Area -->
+	<section class="game">
+	<div class="forecast hide" id="forecast">
+        
+		<!-- Scoreboard -->
+        <div id="top-scoreboard">
+            <div id="forecast-case">Forecasts decision</div>
+    
+            <!-- Question lenght -->
+            <div id="questions-total">1 of 5 questions</div>
+            
+            </div>
+
+			<!-- Forecast header -->
+		<div class="forecast-header" id="header">
+			
+			<!-- Question title -->
+			<h2 class="title">%title%</h2>
+
+			<!-- Final message -->
+			<h3 class="summary">%message%</h3>
+			<p class="result">%result%</p>
+		</div>
+
+		<!-- Answer options -->
+		<ul class="forecast-options" id="list">
+			<li>
+				<label>
+					<input type="radio" class="answer" name="answer">
+					<span>Answer...</span>
+				</label>
+			</li>
+			<li>
+				<label>
+					<input type="radio" class="answer" name="answer">
+					<span>Answer...</span>
+				</label>
+			</li>
+		</ul>
+
+        <!-- Result -->
+		<div id="result">
+		<div id="correct-answer"></div>
+		<div id="wrong-answer"></div>
+	   </div>
+        
+		<!-- Answer button -->
+		<button class="forecast-submit submit" id="submit">Answer</button>
+
+	</div>
+
+    
+</section>
+
+
+
+
+{% block postloadjs %}
+<script src="{% static 'forecast/js/forecast.js' %}"></script>
+{% endblock %}
+
+
+{% endblock %}
