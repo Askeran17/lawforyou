@@ -8,11 +8,12 @@
 	cursor: pointer;
 	margin-left: 25px;
     color: black;
+    margin-bottom: 100px;
 }
 
-h1 {
+.forecast-header {
 	font-size: 1.2rem;
-    color: whitesmoke;
+    color: black;
 	margin-bottom: 5px;
 	display: flex;
     flex-wrap: wrap;
@@ -79,7 +80,9 @@ h1 {
 	width: 600px;
 	max-width: 95vw;
 	overflow: hidden;
-    bottom: 60px;
+    bottom: -30px;
+    left: 10px;
+    margin-bottom: 100px;
 }
 
 .title{
