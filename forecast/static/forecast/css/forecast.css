@@ -1,0 +1,158 @@
+
+/* Start screen */
+#start-button {
+	font-size: 30px;
+	border-radius: 0.2em;
+	padding: 0.5em 1.8em;
+	background-color: gold;
+	cursor: pointer;
+	margin-left: 25px;
+    color: black;
+}
+
+h1 {
+	font-size: 1.2rem;
+    color: whitesmoke;
+	margin-bottom: 5px;
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hide {
+    display: none;
+  }
+
+/* Result */
+#result  {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+	margin-top: 10px;
+	font-family: "Paytone One", sans-serif;
+}
+
+#correct-answer {
+	color: green;
+    font-weight: bold;
+}
+
+#wrong-answer {
+	color: red;
+    font-weight: bold;
+}
+
+/* Top Scoreboard */
+
+#top-scoreboard  {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+	margin-top: 10px;
+	font-family: "Paytone One", sans-serif;
+}
+
+#forecast-case {
+    display: flex;
+    font-size: 12px;
+    margin-right: -1rem;
+    font-family: "Paytone One", sans-serif;
+    
+}
+
+#questions-total {
+	font-family: "Barlow Condensed", sans-serif;
+
+}
+
+.questions-hidden {
+    visibility: hidden;
+}
+
+/* Forecast Area */
+.forecast {
+	position: relative;
+	padding: 1rem 1rem calc(1rem + 70px);
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+	width: 600px;
+	max-width: 95vw;
+	overflow: hidden;
+    bottom: 60px;
+}
+
+.title{
+	font-size: 1.5rem;
+	padding: 1rem 0;
+	text-align: center;
+	margin: 0;
+}
+
+.summary {
+	text-align: center;
+	margin: 0.5rem 0 1rem;
+	font-size: 1.2rem;
+	font-weight: 400;
+}
+
+.result {
+	text-align: center;
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+.forecast-options {
+	list-style-type: none;
+	padding: 0;
+}
+
+.forecast-options li {
+	font-size: 1.2rem;
+}
+
+.forecast-options label {
+	cursor: pointer;
+	width: 100%;
+    display: block;
+	padding: 1rem 0.5rem;
+}
+
+.forecast-options label.disabled {
+	cursor: no-drop;
+}
+
+.forecast-options label.disabled:hover {
+	cursor: no-drop;
+	background-color: transparent;
+}
+
+.forecast-options input[type="radio"] {
+	margin-right: 10px;
+}
+
+/* Submit button */
+.forecast-submit {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 70px;
+	line-height: 70px;
+}
+
+.submit {
+	background-color: #8e44ad;
+	color: #fff;
+	border: none;
+	display: block;
+	width: 100%;
+	cursor: pointer;
+	font-size: 1.1rem;
+	font-family: inherit;
+
+}
+
+.submit:hover {
+	background-color: #732d91;
+}
