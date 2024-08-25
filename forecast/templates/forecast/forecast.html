@@ -8,17 +8,18 @@
 
 {% block content %}
 
-
+<section class="container-fluid">
  <!-- Start -->
- <section class="start">
+ <div class="start">
 	<div class="start-display">
 		<h1 class="forecast-header">Get your forecast about your decision</h1>
+		<br>
 		<button id="start-button">Start</button>
-	  </div>
-	</section>
+	</div>
+</div>
 
     <!-- Forecast Area -->
-	<section class="game">
+<div class="game">
 	<div class="forecast hide" id="forecast">
         
 		<!-- Scoreboard -->
@@ -59,8 +60,8 @@
 
         <!-- Result -->
 		<div id="result">
-		<div id="correct-answer"></div>
-		<div id="wrong-answer"></div>
+		<div id="good-answer"></div>
+		<div id="bad-answer"></div>
 	   </div>
         
 		<!-- Answer button -->
@@ -69,28 +70,27 @@
 	</div>
 
     
-</section>
+</div>
 
-<div class="overlay"></div>
-<div class="container">
+<div class="container-fluid">
     <div class="row">        
-        <div class="col-12 col-md-4">
+        <div class="col-md-6 bg-color-three-reasons section-column">
             <hr>
-            <h1 class="mb-2 text-black">Request Help</h1>
+            <h1 class="mb-2">Request Help</h1>
             <hr>
-            <form action="{% url 'forecast' %}"  method="POST" id="contact-form">
+            <form action="{% url 'forecast' %}" method="POST">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button class="btn btn-black text-uppercase float-left mb-6">Send request</button>
+                <button class="btn btn-black mb-6">Send Request</button>
             </form>   
         </div>
     </div>
 </div>
 
-
-
+</section>
 
 {% block postloadjs %}
+{{ block.super}}
 <script src="{% static 'forecast/js/forecast.js' %}"></script>
 {% endblock %}
 

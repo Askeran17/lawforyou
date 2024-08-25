@@ -17,7 +17,6 @@
 	margin-bottom: 5px;
 	display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .hide {
@@ -33,12 +32,12 @@
 	font-family: "Paytone One", sans-serif;
 }
 
-#correct-answer {
+#good-answer {
 	color: green;
     font-weight: bold;
 }
 
-#wrong-answer {
+#bad-answer {
 	color: red;
     font-weight: bold;
 }
@@ -158,4 +157,8 @@
 
 .submit:hover {
 	background-color: #732d91;
+}
+
+.success-image {
+	width: 100%;
 }

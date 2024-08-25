@@ -8,4 +8,3 @@ class RequestForm(forms.ModelForm):
     class Meta:
         model = RequestHelp
         fields = ['name', 'email', 'phone','subject', 'message']
-        

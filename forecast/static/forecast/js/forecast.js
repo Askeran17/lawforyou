@@ -63,8 +63,8 @@ const submitButton = document.querySelector('#submit');
 
 
 // scores variables
-let correctAnswer = 0; // number of correct answers
-let wrongAnswer = 0; // number of wrong answers
+let goodAnswer = 0; // number of good answers
+let badAnswer = 0; // number of bad answers
 let score = 0; // games scores
 let questionIndex = 0; // current question
 let questionTotal = 1; // count question
@@ -132,14 +132,14 @@ function checkAnswer(){
     // find out the user's answer number
     let userAnswer = parseInt(checkedRadio.value); 
     
-    // if the answer is correct - increase the score. If not alert and continue count questions
+    // if the answer is correct - increase the score. If not, continue count questions
     if (userAnswer === questions[questionIndex]['correct'] ) {
-        correctAnswer++;
-        document.innerHTML=+correctAnswer;
+        goodAnswer++;
+        document.innerHTML=+goodAnswer;
         document.innerHTML=+score;
     } else {
-        wrongAnswer++;
-        document.innerHTML=+wrongAnswer;
+        badAnswer++;
+        document.innerHTML=+badAnswer;
         
            
     }
@@ -171,7 +171,7 @@ function showResult () {
     console.log(forecastquestionTotal);
     forecastquestionTotal.classList.add("questions-hidden");
     console.log('showResult started!');
-    console.log(correctAnswer);
+    console.log(goodAnswer);
 
     const resultsTemplate = `
     <h2 class="title">%title%</h2>
@@ -182,11 +182,11 @@ function showResult () {
     let title, message;
 
     // outcome options at the end of the forecast
-    if (correctAnswer === questions.length) {
+    if (goodAnswer === questions.length) {
         title = 'Good work😀';
         message = 'The probability of a positive decision is high!';
 
-    } else if ((correctAnswer * 100) / questions.length >= 50) {
+    } else if ((goodAnswer * 100) / questions.length >= 50) {
         title = '50/50🤔';
         message = 'The probability of a positive decision is average';
 
@@ -196,7 +196,7 @@ function showResult () {
     }
 
 // result
-let result = `${correctAnswer} of ${questions.length}`;
+let result = `${goodAnswer} of ${questions.length}`;
 
 // final answer
 const finalMessage = resultsTemplate
