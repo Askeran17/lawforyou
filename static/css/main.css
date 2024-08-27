@@ -900,6 +900,7 @@ footer {
 }
 
 
+
 /* Small devices (phones, 335px and up) */
 @media only screen and (min-width: 335px) {
 
@@ -933,9 +934,10 @@ footer {
 /* Small devices (phones, 510px and up) */
 @media only screen and (min-width: 510px) {
     .nav-account-bag {
-        margin-left: 270px;
+        margin-left: 250px;
         position: absolute;
         font-size: 14px;
+        top: 20px;
     }
 
 }
@@ -944,7 +946,7 @@ footer {
 @media screen and (min-width: 768px) {
 
     .nav-account-bag {
-        margin-left: 300px;
+        margin-left: 370px;
         position: absolute;
     }
 

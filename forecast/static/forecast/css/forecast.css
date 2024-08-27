@@ -6,7 +6,7 @@
 	padding: 0.5em 1.8em;
 	background-color: gold;
 	cursor: pointer;
-	margin-left: 25px;
+	margin-left: 65px;
     color: black;
     margin-bottom: 100px;
 }
@@ -17,11 +17,13 @@
 	margin-bottom: 5px;
 	display: flex;
     flex-wrap: wrap;
+	text-align: center;
 }
 
 .hide {
     display: none;
   }
+
 
 /* Result */
 #result  {
@@ -76,12 +78,9 @@
 	background-color: #fff;
 	border-radius: 8px;
 	box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
-	width: 600px;
 	max-width: 95vw;
 	overflow: hidden;
-    bottom: -30px;
-    left: 10px;
-    margin-bottom: 100px;
+    
 }
 
 .title{
@@ -161,4 +160,63 @@
 
 .success-image {
 	width: 100%;
+}
+
+
+#forecast-main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 40px 5vw;
+	
+}
+
+
+/* Small devices (phones, 335px and up) */
+@media only screen and (min-width: 335px) {
+
+	.forecast {
+		margin-bottom: 50px;
+		
+	}
+
+}
+
+/* Small devices (phones, 510px and up) */
+@media only screen and (min-width: 510px) and (max-width: 767px) {
+    
+	#start-button {
+		
+	 margin-left: -40px;
+		
+	}
+
+	.forecast-header {
+		
+		margin-left: -115px;
+	}
+
+}
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+
+	.forecast {
+	
+		width: 300px;
+		
+	}
+
+}
+
+
+/* Large devices (laptops and desktops, 1024px and up) */
+@media screen and (min-width: 1024px) {
+
+	.forecast {
+	
+		width: 400px;
+		
+	}
 }

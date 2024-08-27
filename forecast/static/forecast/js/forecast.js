@@ -7,7 +7,7 @@
 let forecastquestionTotal = document.querySelector("#questions-total");
 
 //start screen
-let startPage = document.querySelector('.start-display');
+let startPage = document.querySelector('#start-display');
 let startButton = document.getElementById('start-button');
 let forecastContainer = document.getElementById('forecast');
 

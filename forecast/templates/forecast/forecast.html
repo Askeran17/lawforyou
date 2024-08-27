@@ -8,85 +8,88 @@
 
 {% block content %}
 
+<!-- Forecast Area -->
 <section class="container-fluid">
+ 
  <!-- Start -->
- <div class="start">
+ <!-- <div class="start">
 	<div class="start-display">
 		<h1 class="forecast-header">Get your forecast about your decision</h1>
 		<br>
 		<button id="start-button">Start</button>
 	</div>
-</div>
+</div> -->
 
-    <!-- Forecast Area -->
-<div class="game">
-	<div class="forecast hide" id="forecast">
-        
-		<!-- Scoreboard -->
-        <div id="top-scoreboard">
-            <div id="forecast-case">Forecasts decision</div>
-    
-            <!-- Question lenght -->
-            <div id="questions-total">1 of 5 questions</div>
-            
-            </div>
 
-			<!-- Forecast header -->
-		<div class="forecast-header" id="header">
+
+<div class="row" id="forecast-main-content">
+	<div class="game">
+	
+		<div class="forecast hide" id="forecast">
 			
-			<!-- Question title -->
-			<h2 class="title">%title%</h2>
-
-			<!-- Final message -->
-			<h3 class="summary">%message%</h3>
-			<p class="result">%result%</p>
+			<!-- Scoreboard -->
+			<div id="top-scoreboard">
+				<div id="forecast-case">Forecasts decision</div>
+		
+				<!-- Question lenght -->
+				<div id="questions-total">1 of 5 questions</div>
+				
+				</div>
+	
+				<!-- Forecast header -->
+			<div class="forecast-header" id="header">
+				
+				<!-- Question title -->
+				<h2 class="title">%title%</h2>
+	
+				<!-- Final message -->
+				<h3 class="summary">%message%</h3>
+				<p class="result">%result%</p>
+			</div>
+	
+			<!-- Answer options -->
+			<ul class="forecast-options" id="list">
+				<li>
+					<label>
+						<input type="radio" class="answer" name="answer">
+						<span>Answer...</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" class="answer" name="answer">
+						<span>Answer...</span>
+					</label>
+				</li>
+			</ul>
+	
+			<!-- Result -->
+			<div id="result">
+			<div id="good-answer"></div>
+			<div id="bad-answer"></div>
+		   </div>
+			
+			<!-- Answer button -->
+			<button class="forecast-submit submit" id="submit">Answer</button>
+	
 		</div>
-
-		<!-- Answer options -->
-		<ul class="forecast-options" id="list">
-			<li>
-				<label>
-					<input type="radio" class="answer" name="answer">
-					<span>Answer...</span>
-				</label>
-			</li>
-			<li>
-				<label>
-					<input type="radio" class="answer" name="answer">
-					<span>Answer...</span>
-				</label>
-			</li>
-		</ul>
-
-        <!-- Result -->
-		<div id="result">
-		<div id="good-answer"></div>
-		<div id="bad-answer"></div>
-	   </div>
-        
-		<!-- Answer button -->
-		<button class="forecast-submit submit" id="submit">Answer</button>
-
+		
+	</div>
+	<div id="start-display">
+		<h1 class="forecast-header">Get your forecast about your decision</h1>
+		<br>
+		<button id="start-button">Start</button>
 	</div>
 
-    
-</div>
-
-<div class="container-fluid">
-    <div class="row">        
-        <div class="col-md-6 bg-color-three-reasons section-column">
-            <hr>
-            <h1 class="mb-2">Request Help</h1>
-            <hr>
-            <form action="{% url 'forecast' %}" method="POST">
-                {% csrf_token %}
-                {{ form|crispy }}
-                <button class="btn btn-black mb-6">Send Request</button>
-            </form>   
-        </div>
+    <div class="col-md-6">
+		<h2>Make a Request</h2>
+        <form action="{% url 'forecast' %}" method="POST">
+            {% csrf_token %}
+            {{ form|crispy }}
+			<button class="btn btn-black mb-6">Send Request</button>
+        </form>  
     </div>
 </div>
-
 </section>
 
 {% block postloadjs %}
