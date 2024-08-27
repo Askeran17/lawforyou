@@ -8,20 +8,9 @@
 
 {% block content %}
 
-<!-- Forecast Area -->
+<!-- Forecast and Request Area -->
 <section class="container-fluid">
  
- <!-- Start -->
- <!-- <div class="start">
-	<div class="start-display">
-		<h1 class="forecast-header">Get your forecast about your decision</h1>
-		<br>
-		<button id="start-button">Start</button>
-	</div>
-</div> -->
-
-
-
 <div class="row" id="forecast-main-content">
 	<div class="game">
 	
@@ -75,12 +64,14 @@
 		</div>
 		
 	</div>
+	<!-- Start for forecast -->
 	<div id="start-display">
 		<h1 class="forecast-header">Get your forecast about your decision</h1>
 		<br>
 		<button id="start-button">Start</button>
 	</div>
 
+	<!-- Request for help -->
     <div class="col-md-6">
 		<h2>Make a Request</h2>
         <form action="{% url 'forecast' %}" method="POST">
