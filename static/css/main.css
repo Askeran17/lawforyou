@@ -904,8 +904,20 @@ footer {
 /* Small devices (phones, 335px and up) */
 @media only screen and (min-width: 335px) {
 
+    .navbar-link-lawforyou {
+
+        font-size: 12.3px;
+    }
+
     .nav-account-bag {
         margin: 0 auto;
+    }
+
+    .badge {
+    
+        left: 66px;
+        font-size: 7px;
+        border-radius: 48%;
     }
 
     .masthead {
@@ -945,9 +957,20 @@ footer {
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
 
+    .navbar-link-lawforyou {
+        font-size: 14px;
+    }
+
     .nav-account-bag {
         margin-left: 370px;
         position: absolute;
+    }
+
+    .badge {
+    
+        left: 72px;
+        font-size: 8px;
+        border-radius: 48%;
     }
 
     .masthead-home {
