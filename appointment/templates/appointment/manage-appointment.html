@@ -41,6 +41,12 @@
                             <div class="widget-49-meeting-points">
                                 <span>Request: {{app.request}}</span>
                             </div>
+
+                            {% if app.accepted %}
+                            <p> <strong>Set date to meeting: <u>{{ app.appointment_date }}</u> </strong>
+                            </p>
+                            {% endif %}
+
                             <hr class="w-100">
 
                             {% if request.user.is_superuser %}
