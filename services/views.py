@@ -44,6 +44,46 @@ def add_review(request, slug):
     else:
         return redirect("services")
 
+
+def review_edit(request, slug, review_id):
+    """
+    view to edit reviews
+    """
+    if request.method == "POST":
+
+        queryset = Product.objects.all()
+        post = get_object_or_404(queryset, url=slug)
+        review = get_object_or_404(Review, pk=review_id)
+        review_form = ReviewForm(data=request.POST, instance=review)
+
+        if review_form.is_valid() and review.user == request.user:
+            review = review_form.save(commit=False)
+            review.product = product
+            review.save()
+            messages.add_message(request, messages.SUCCESS, 'Review Updated!')
+        else:
+            messages.add_message(request, messages.ERROR, 'Error updating!')
+
+    return redirect(reverse('product_detail', args=[slug]))
+
+
+def review_delete(request, slug, review_id):
+    """
+    view to delete review
+    """
+    queryset = Product.objects.all()
+    post = get_object_or_404(queryset, url=slug)
+    review = get_object_or_404(Review, pk=review_id)
+
+    if review.user == request.user:
+        review.delete()
+        messages.add_message(request, messages.SUCCESS, 'Review deleted!')
+    else:
+        messages.add_message(request, messages.ERROR, 'Error delete!')
+
+    return redirect(reverse('product_detail', args=[slug]))
+
+
 @login_required
 def add_product(request):
     """ Add a product to the store """
