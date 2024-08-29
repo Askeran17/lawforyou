@@ -46,11 +46,9 @@ class ManageAppointmentView(ListView):
 
     def post(self, request):
         date = request.POST.get("date")
-        print('initial date: ' + date)
         appointment_id = request.POST.get("appointment-id")
         appointment = Appointment.objects.get(id=appointment_id)
         appointment.appointment_date = date
-        print('date applied: ' + appointment.appointment_date)
         appointment.accepted = True
         appointment.save()
 

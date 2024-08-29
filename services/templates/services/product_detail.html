@@ -92,11 +92,75 @@
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             {% endwith %}
                         </div>
-
                     </form>
                 </div>
             </div>
         </div>
+
+
+        <!-- Review -->
+                            
+        <div class="row">
+            <div class="col-md-8 card mb-4 mt-3">
+                <div class="card">
+                    <div class="card-body offset-md-2">
+                        {% if user.is_authenticated %}
+                        <h3 class="text-center">Add Review</h3>
+                        <form class="form " action="" method="POST">
+                            {% csrf_token %}
+                            <label for="comment">Review</label>
+                            <textarea required name="comment" id="comment" cols="30" rows="5" class="form-control"></textarea>
+                            <div class="rate">                                              
+                                <input type="radio" id="star5" name="rating" value="5" />
+                                <label for="star5" title="text">5 stars</label>
+                                <input type="radio" id="star4" name="rating" value="4" />
+                                <label for="star4" title="text">4 stars</label>
+                                <input type="radio" id="star3" name="rating" value="3" />
+                                <label for="star3" title="text">3 stars</label>
+                                <input type="radio" id="star2" name="rating" value="2" />
+                                <label for="star2" title="text">2 stars</label>
+                                <input type="radio" id="star1" name="rating" value="1" />
+                                <label for="star1" title="text">1 star</label>
+                            </div>       
+                            <br>
+                            <input type="submit" class="btn btn-primary" value="Add Review">
+                        </form>
+                        {% else %}
+                    <p>Log in to leave a comment</p>
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+        
+        <br>
+        
+            <div class="col-md-4 card mb-4 mt-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="text-center">Reviews</h3>
+                        {% for review in reviews %}
+                            <div class="card" style="background-color: #f5eeee;">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <h5 class="text-left">{{ review.user.username }}</h5>
+                                            <h5>Rating: {{ review.rating }}</h5>
+        
+                                        </div>
+                                        <div class="col-md-9">
+                                            <p>{{ review.comment }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+          <!-- End of review -->
 
     </div>
 {% endblock %}
