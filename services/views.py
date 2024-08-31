@@ -13,36 +13,31 @@ class ServiceTemplateView(generic.ListView):
     paginate_by = 6
 
 def product_detail(request, slug):
-    """ A view to show individual product details """
+    """ Display detailed post """
     queryset = Product.objects.all()
     product = get_object_or_404(queryset, url=slug)
-    reviews = Review.objects.all()
+    reviews = product.reviews.all().order_by("-created_at")
+    if request.method == "POST":
+        review_form = ReviewForm(data=request.POST)
+        if review_form.is_valid():
+            review = review_form.save(commit=False)
+            review.rating = request.POST["rating"]
+            review.user = request.user
+            review.product = product
+            review.save()
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Review submitted')
 
-    context = {
-        'product': product,
-        'reviews': reviews
-    }
+    review_form = ReviewForm()
 
-    return render(request, 'services/product_detail.html', context)
-
-def add_review(request, slug):
-    if request.user.is_authenticated:
-        product = Product.objects.get(url=slug)
-        if request.method == "POST":
-            form = ReviewForm(request.POST or None)
-            if form.is_valid():
-                data = form.save(commit=False)
-                data.comment = request.POST.get("comment")
-                data.rating = request.POST.get("rating")
-                data.user = request.user
-                data.product = product
-                data.save()
-                return redirect(reverse('product_detail', args=[product.url]))
-        else:
-            form = ReviewForm()
-        return render(request, 'services/product_detail.html', {"form": form})
-    else:
-        return redirect("services")
+    return render(
+        request,
+        "services/product_detail.html",
+        {"product": product,
+            "reviews": reviews,
+            "review_form": review_form, },
+    )
 
 
 def review_edit(request, slug, review_id):
@@ -52,7 +47,7 @@ def review_edit(request, slug, review_id):
     if request.method == "POST":
 
         queryset = Product.objects.all()
-        post = get_object_or_404(queryset, url=slug)
+        product = get_object_or_404(queryset, url=slug)
         review = get_object_or_404(Review, pk=review_id)
         review_form = ReviewForm(data=request.POST, instance=review)
 
@@ -72,7 +67,7 @@ def review_delete(request, slug, review_id):
     view to delete review
     """
     queryset = Product.objects.all()
-    post = get_object_or_404(queryset, url=slug)
+    product = get_object_or_404(queryset, url=slug)
     review = get_object_or_404(Review, pk=review_id)
 
     if review.user == request.user:

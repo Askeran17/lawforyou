@@ -29,6 +29,22 @@ footer {
     right: 0;
 }
 
+.img-featured {
+    height: 90vw;
+    width: 90vw;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    max-width: 150px;
+    max-height: 150px;
+    position: relative;
+    top: 10px;
+    left: 3px;
+}
+
+.stars i {
+    color: #ffc107;
+}
+
 .btn-posts {
     font-weight: 500;
     font-size: 15px;
@@ -879,10 +895,15 @@ footer {
 
 /* Review Rating */
 
+#div_id_rating {
+display: none;
+}
+
 .rating {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
+    
 }
 
 .rating>input {
@@ -1171,6 +1192,11 @@ footer {
     .footer {
         height: auto;
     }
+
+    .copyright {
+        padding-top: 70px;
+        
+        }
 
     .edit-delete {
         bottom: 34px;
