@@ -10,6 +10,10 @@ footer {
     background-color: rgb(26, 25, 25);
 }
 
+.copyright {
+    font-size: 12px;
+}
+
 .front-page-text {
     font-family: 'Exo', sans-serif;
 }
@@ -993,6 +997,7 @@ display: none;
         border-radius: 48%;
     }
 
+
     .masthead {
         height: 200px;
     }
@@ -1044,6 +1049,10 @@ display: none;
         left: 72px;
         font-size: 8px;
         border-radius: 48%;
+    }
+
+    .copyright {
+        padding-top: 150px;
     }
 
     .masthead-home {
@@ -1112,6 +1121,10 @@ display: none;
 
     .nav-account-bag {
         display: contents;
+    }
+
+    .copyright {
+        padding-top: 340px;
     }
 
     .masthead-home {
@@ -1194,7 +1207,7 @@ display: none;
     }
 
     .copyright {
-        padding-top: 70px;
+        padding-top: 1px;
         
         }
 
