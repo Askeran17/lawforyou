@@ -12,6 +12,7 @@ class ServiceTemplateView(generic.ListView):
     queryset = Product.objects.all()
     paginate_by = 6
 
+
 def product_detail(request, slug):
     """ Display detailed post """
     queryset = Product.objects.all()
@@ -21,7 +22,6 @@ def product_detail(request, slug):
         review_form = ReviewForm(data=request.POST)
         if review_form.is_valid():
             review = review_form.save(commit=False)
-            review.rating = request.POST["rating"]
             review.user = request.user
             review.product = product
             review.save()
