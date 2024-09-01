@@ -7,71 +7,70 @@
   <div class="row">
     <div class="col card mb-4 mt-3 left top">
       <div class="card-body full-post-text">
-        <!-- The post content goes inside the card-text. -->
-        <!-- Use the | safe filter inside the template tags -->
         <div class="service-summary">
-        Choose any service you need, and our lawyers with many years of experience in the field of jurisprudence will help you solve your problems.
+          Choose any service you need, and our lawyers with many years of experience in the field of jurisprudence will
+          help you solve your problems.
         </div>
         <hr>
-        
+
         <div class="row">
 
-          <!-- Blog Entries Column -->
+          <!-- Product Entries Column -->
           <div id="posts" class="col-12 mt-3 left">
-              <div class="row">
-                {% for service in product_list %}
-                  <div class="col-md-4">
-                      <div class="card mb-4 text-center">
-                          <div class="card-body card-lawforyou border">
-                              <div class="image-container">
-  
-                                  <img class="card-img-top" src="{{ service.image.url }}">
-  
-                                  <div class="image-flash">
-                                  </div>
-                              </div>
-  
-                              <h2 class="card-title">{{ service.name }}</h2>
-                              <p class="card-text">{{ service.summary }}</p>
-                              <p class="card-text"><strong>Price: ${{ service.price }} </strong></p>
-                              <a href="{{ service.url }}" class="post-link bg-press-lawforyou">
-                                  Buy now
-                              </a>
-                              
-                          </div>
-                      </div>
-                  </div>
-                  {% if forloop.counter|divisibleby:3 %}
-              </div>
-              <div class="row">
-  
-                  {% endif %}
-                  {% endfor %}
-  
-              </div>
-          </div>
-      </div>
+            <div class="row">
+              {% for service in product_list %}
+              <div class="col-md-4">
+                <div class="card mb-4 text-center">
+                  <div class="card-body card-lawforyou border">
+                    <div class="image-container">
 
-      {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
+                      <img class="card-img-top" src="{{ service.image.url }}" alt="{{ service.name }}">
+
+                      <div class="image-flash">
+                      </div>
+                    </div>
+
+                    <h2 class="card-title">{{ service.name }}</h2>
+                    <p class="card-text">{{ service.summary }}</p>
+                    <p class="card-text"><strong>Price: ${{ service.price }} </strong></p>
+                    <a href="{{ service.url }}" class="post-link bg-press-lawforyou">
+                      Buy now
+                    </a>
+
+                  </div>
+                </div>
+              </div>
+              {% if forloop.counter|divisibleby:3 %}
+            </div>
+            <div class="row">
+
+              {% endif %}
+              {% endfor %}
+
+            </div>
+          </div>
+        </div>
+
+        {% if is_paginated %}
+        <nav aria-label="Page navigation">
+          <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
-    <li>
-        <a href="?page={{ page_obj.previous_page_number }}"
-          class="page-link">&laquo; Previous</a>
-    </li>
-    {% endif %}
+            <li>
+              <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; Previous</a>
+            </li>
+            {% endif %}
             {% if page_obj.has_next %}
             <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> Next &raquo;</a></li>
             {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
-  
+          </ul>
+        </nav>
+        {% endif %}
+
+      </div>
     </div>
   </div>
-  <hr>
-  
-{% endblock content %}
-{% block extras %}
-{% endblock %}
+</div>
+
+    {% endblock content %}
+    {% block extras %}
+    {% endblock %}

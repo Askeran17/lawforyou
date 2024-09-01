@@ -4,94 +4,95 @@
 {% block content %}
 
 {% if messages %}
-    <div class="message-notification">
-        <div class="card-body">
+<div class="message-notification">
+    <div class="card-body">
         {% for message in messages %}
-            {% endfor %}
-        </div>
-      </div> 
-    {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
 
-    <div class="container mt-5">
-        <div class="col-11 text-center mt-4 mb-4">
-            <h3>
-                Manage appointments
-            </h3>
-        </div>
-        <div class="row">
-
+<div class="container mt-5">
+    <div class="col-11 text-center mt-4 mb-4">
+        <h3>
+            Manage appointments
+        </h3>
+    </div>
+    <div class="row">
         {% for app in appointments %}
-            <div class="col-lg-4">
-                <div class="card card-margin card-manage">
-                    <div class="card-header no-border">
-                        <h5 class="card-title">{{app.first_name}} {{app.last_name}}</h5>
-                    </div>
-                    <div class="card-body pt-0">
-                        <div class="widget-49">
-                            <div class="widget-49-title-wrapper">
-                                <div class="widget-49-date-primary">
-                                    <span class="widget-49-date-day">{{app.sent_date|date:"d"}}</span>
-                                    <span class="widget-49-date-month">{{app.sent_date|date:"M"}}</span>
-                                </div>
-                                <div class="widget-49-meeting-info">
-                                    <span class="widget-49-pro-title">{{app.email}}</span>
-                                    <span class="widget-49-meeting-time">Phone: {{app.phone}}</span>
-                                </div>
+        <div class="col-lg-4">
+            <div class="card card-margin card-manage">
+                <div class="card-header no-border">
+                    <h5 class="card-title">{{app.first_name}} {{app.last_name}}</h5>
+                </div>
+                <div class="card-body pt-0">
+                    <div class="widget-49">
+                        <div class="widget-49-title-wrapper">
+                            <div class="widget-49-date-primary">
+                                <span class="widget-49-date-day">{{app.sent_date|date:"d"}}</span>
+                                <span class="widget-49-date-month">{{app.sent_date|date:"M"}}</span>
                             </div>
-                            <div class="widget-49-meeting-points">
-                                <span>Request: {{app.request}}</span>
+                            <div class="widget-49-meeting-info">
+                                <span class="widget-49-pro-title">{{app.email}}</span>
+                                <span class="widget-49-meeting-time">Phone: {{app.phone}}</span>
                             </div>
+                        </div>
+                        <div class="widget-49-meeting-points">
+                            <span>Request: {{app.request}}</span>
+                        </div>
 
-                            {% if app.accepted %}
-                            <p> <strong>Set date to meeting: <u>{{ app.appointment_date }}</u> </strong>
-                            </p>
-                            {% endif %}
+                        {% if app.accepted %}
+                        <p> <strong>Set date to meeting: <u>{{ app.appointment_date }}</u> </strong>
+                        </p>
+                        {% endif %}
 
-                            <hr class="w-100">
+                        <hr class="w-100">
 
-                            {% if request.user.is_superuser %}
+                        {% if request.user.is_superuser %}
                         <small class="ml-3">
-                            <a class="text-danger" href="{% url 'delete_appointment' app.pk %}">Delete</a> 
+                            <a class="text-danger" href="{% url 'delete_appointment' app.pk %}">Delete</a>
                         </small>
                         {% endif %}
 
-                            {% if app.accepted == False %}
-                            <form method="POST" action="{% url 'manage' %}">
+                        {% if app.accepted == False %}
+                        <form method="POST" action="{% url 'manage' %}">
                             {% csrf_token %}
                             <div class="form-group">
-                                <input type="date" name="date" class="form-control mb-2 input-appoint" 
-                                    placeholder="dd-mm-yyyy" value=""
-                                    min="1997-01-01" max="2030-12-31"> 
-                                    <input hidden="true" name="appointment-id" class="input-appoint" value="{{app.id}}">
-                                <input class="btn-block btn-primary form-control input-appoint" type="submit" value="Accept">
+                                <input type="date" name="date" class="form-control mb-2 input-appoint"
+                                    placeholder="dd-mm-yyyy" value="" min="1997-01-01" max="2030-12-31">
+                                <input hidden="true" name="appointment-id" class="input-appoint" value="{{app.id}}">
+                                <input class="btn-block btn-primary form-control input-appoint" type="submit"
+                                    value="Accept">
                             </div>
-                            </form>
-                            {% endif %}
-                        </div>
+                        </form>
+                        {% endif %}
                     </div>
                 </div>
             </div>
+        </div>
         {% endfor %}
 
-        </div>
+    </div>
 
-        {% if is_paginated %}
-        <div class="wrapper">
-            <nav aria-label="Page navigation example">
-                <ul class="pagination">
-                    {% if page_obj.has_previous %}
-                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">&laquo; Previous</a></li>
-                    {% endif %}
-                    {% for number in page_obj.paginator.page_range %}
-                    <li class="page-item"><a class="page-link" href="?page={{ number }}">{{number}}</a></li>
-                    {% endfor %}
-                    {% if page_obj.has_next %}
-                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next &raquo;</a></li>
-                    {% endif %}
-                </ul>
-            </nav>
-        </div>
+    {% if is_paginated %}
+    <div class="wrapper">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                {% if page_obj.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">&laquo;
+                        Previous</a></li>
+                {% endif %}
+                {% for number in page_obj.paginator.page_range %}
+                <li class="page-item"><a class="page-link" href="?page={{ number }}">{{number}}</a></li>
+                {% endfor %}
+                {% if page_obj.has_next %}
+                <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next &raquo;</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
 
-        {% endif %}
-
+    {% endif %}
+</div>
 {% endblock content %}
