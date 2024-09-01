@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-askeran17-lawforyou-phf277kcren.ws.codeinstitute-ide.net','.herokuapp.com']
 
@@ -135,11 +135,19 @@ WSGI_APPLICATION = 'lawforyou.wsgi.application'
  #         'ENGINE': 'django.db.backends.sqlite3',
  #         'NAME': BASE_DIR / 'db.sqlite3',
  #     }
- # }
+ # }dd
     
-DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
- }
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        },
+    }
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.herokuapp.com",
