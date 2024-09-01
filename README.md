@@ -36,6 +36,9 @@
 
 ## Overview
 
+This site is dedicated to legal assistance to people who need to protect their rights. On this site you will find a variety of legal services, thanks to which the visitor has a large choice of options for solving their problems. For example, the user can order a free consultation with a lawyer, where the user and the lawyer will analyze the problem together, the user is also given the opportunity to make a brief forecast of his case, what is the probability of a positive or negative decision.
+
+The scope of paid services includes, for example, writing a contract, appealing a decision in government agencies and court, a notary seal, filing a petition, etc. Under each service, the user can leave a review and evaluate the offered service. The user also has the opportunity to follow the company's news via Facebook, by subscribing to the company's Facebook page, as well as subscribing to the mailing list.
 
 
 ## Adaptability on a variety of screen sizes
@@ -46,6 +49,7 @@
 
 ### Project Goal
 
+The purpose of the site is to provide visitors with the opportunity to easily obtain legal assistance online using web development.
 
 
 ### User Stories
@@ -60,7 +64,7 @@ Here is link to Agile [User Stories](https://github.com/users/Askeran17/projects
 
 ### Design
 
-- The design of the website should be combined with the theme
+- The design of the site should be consistent with the theme, and since the theme of the site is the provision of legal services, the design of the site should be focused on a combination of strict colors, so jurisprudence, in my opinion, is visually felt well when there are strict tones diluted with a little light, for example, blue.
 
 #### Colours
 
@@ -85,6 +89,18 @@ Home page
 
 ### Database
 The project uses the relational database PostgreSQL to store the data. I used PostgreSQL because it is considered one of the recommended databases on the Heroku platform.
+
+**Review model:**
+
+The model consists of the following parts:
+
+- [x] **product**: models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name="reviews") - indicates that a review will be attached to the product
+- [x] **user**: models.ForeignKey(
+        User, on_delete=models.CASCADE) - indicates who is the author of the review
+- [x] **comment**: models.TextField(max_length=500) - field for writing a review with a maximum length of 500 characters
+- [x] **rating**: models.IntegerField(choices=RATINGS, null=True, blank=True) - the ability to rate a product by placing a rating along with a review
+- [x] **created_at**: models.DateTimeField(auto_now_add=True) - review publication date
 
 
 
@@ -147,6 +163,8 @@ HTML, CSS, JavaScript, Python, Django
 
 * [Coolors](https://coolors.co/) - Colours palette.
 
+* [Stripe](https://stripe.com/) - To ability to accept payment.
+
 ## Testing
 
 To view testing go here [TESTING.md](TESTING.md)
@@ -189,7 +207,7 @@ To clone do the following steps:
 
 ### Content 
 
-- 
+- I was inspired by the "Boutique Ado" project at the Code Institute. I watched YouTube tutorial about how to fix appointments opportunity for customers: (https://www.youtube.com/watch?v=3_3q_dE4_qs) 
 
 - The icons was taken from [Font Awesome](https://fontawesome.com/)
 
