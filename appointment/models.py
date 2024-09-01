@@ -12,7 +12,7 @@ class Appointment(models.Model):
     appointment_date = models.DateField(null=True, blank=True)
 
     def __str__(self):
-        return self.first_name
-    
+        return f"Request: {self.sent_date} - by {self.first_name} {self.last_name}"
+        
     class Meta:
         ordering = ["-sent_date"]

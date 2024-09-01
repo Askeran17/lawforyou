@@ -9,5 +9,8 @@ class RequestHelp(models.Model):
     subject = models.CharField(max_length=150)
     message = models.TextField()
 
+    class Meta:  
+        verbose_name_plural = 'Requests'
+
     def __str__(self):
-        return self.subject
+        return f"Request: {self.subject} - by {self.name}"
