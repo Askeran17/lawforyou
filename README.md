@@ -66,11 +66,11 @@ Here is link to Agile [User Stories](https://github.com/users/Askeran17/projects
 
 - The design of the site should be consistent with the theme, and since the theme of the site is the provision of legal services, the design of the site should be focused on a combination of strict colors, so jurisprudence, in my opinion, is visually felt well when there are strict tones diluted with a little light, for example, blue.
 
-#### Colours
+#### Colors
 
-- 
+- The color scheme predominantly consists of a variety of greys, blacks, whites and blues. The use of gray and white creates a background tone, and the blue is refreshing and correlates with the color of hope, which in my opinion corresponds to the light-soft color that is blue, which corresponds to the theme of the site. The red color enlivens the dark colors in the bottom panel, and also characterizes some details in one of the buttons. The black color clearly marks the bottom panel of the site.
 
-![image](/static/images/readme-img/colours-palette.jpg)
+![image](/static/images/readme-img/color-palette.png)
 
 #### Fonts
 
