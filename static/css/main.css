@@ -942,7 +942,6 @@ display: none;
 }
 
 
-
 .rating-submit {
     border-radius: 8px;
     color: #fff;
@@ -951,6 +950,11 @@ display: none;
 
 .rating-submit:hover {
     color: #fff
+}
+
+
+.rating-star {
+    color:#FFD600;
 }
 
 /* About page */

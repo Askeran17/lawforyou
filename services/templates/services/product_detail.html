@@ -95,10 +95,16 @@
         <h3 class="">Reviews: </h3>
         {% for review in reviews %}
         <div class="p-2 reviews border mt-2" style="background-color: #f5eeee;">
-          <p class="font-weight-bold">
+          <p class="font-weight-bold"> <i class="far fa-user"></i>
             {{ review.user}}
-            <small class="text-muted"><i class="fas fa-star mr-1" style="color: #FFDE00"></i> {{ review.rating }} /5</small>
-            <span class="font-weight-normal">
+            <span>
+              <i class="rating-star fa fa-star{% if review.rating == 4.5 %}-half-o{% elif review.rating < 5 %}-o {% endif %}" aria-hidden="true" style="float: right;"></i>
+              <i class="rating-star fa fa-star{% if review.rating == 3.5 %}-half-o{% elif review.rating < 4 %}-o {% endif %}" aria-hidden="true" style="float: right;"></i>
+              <i class="rating-star fa fa-star{% if review.rating == 2.5 %}-half-o{% elif review.rating < 3 %}-o {% endif %}" aria-hidden="true" style="float: right;"></i>
+              <i class="rating-star fa fa-star{% if review.rating == 1.5 %}-half-o{% elif review.rating < 2 %}-o {% endif %}" aria-hidden="true" style="float: right;"></i>
+              <i class="rating-star fa fa-star{% if review.rating == 0.5 %}-half-o{% elif review.rating < 1 %}-o {% endif %}" aria-hidden="true" style="float: right;"></i>
+          </span>
+            <span class="font-weight-normal"><i class="far fa-clock"></i>
               {{ review.created_at }}
             </span> wrote:
           </p>
@@ -140,7 +146,7 @@
   </div>
 </div>
 
-    </div>
+    
 
 <!-- Delete confirmation modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">

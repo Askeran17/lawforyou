@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-askeran17-lawforyou-phf277kcren.ws.codeinstitute-ide.net','.herokuapp.com']
 
@@ -129,13 +129,6 @@ WSGI_APPLICATION = 'lawforyou.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-# DATABASES = {
- #     'default': {
- #         'ENGINE': 'django.db.backends.sqlite3',
- #         'NAME': BASE_DIR / 'db.sqlite3',
- #     }
- # }dd
     
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
