@@ -90,6 +90,18 @@ Home page
 ### Database
 The project uses the relational database PostgreSQL to store the data. I used PostgreSQL because it is considered one of the recommended databases on the Heroku platform.
 
+**Product model:**
+
+The model consists of the following parts:
+
+- [x] **item**: models.CharField(max_length=254, null=True, blank=True) - Indicates the item of the product with 254 characters length
+- [x] **name**: models.CharField(max_length=254) - Indicates the title of the post with 254 characters length
+- [x] **url**: models.SlugField(max_length=300, unique=True) - creates a 300-character address bar path based on the product name
+- [x] **image**: CloudinaryField('image', default='', blank=True) - load images to post from Cloudinary
+- [x] **description**: models.TextField() - detailed description of the product
+- [x] **summary**: models.TextField(blank=True) - short description of the product
+- [x] **price**: models.DecimalField(max_digits=6, decimal_places=2) - price of the product
+
 **Review model:**
 
 The model consists of the following parts:
@@ -110,6 +122,25 @@ The model consists of the following parts:
 
 __Header__
 
+- The header has an adaptive navigation bar on the right. There are six links there for registered/unregistered users: home, services, forecast, about, my account and bag. The visitor can easily navigate through these links thanks to the responsive bar. Also, in the mobile or medium screen extension version, there will be a “hamburger” icon on the right side of the adaptive panel, which means that the same links are hidden behind it. This is very convenient and allows you to take up less page space.
+
+![Navbar Desktop](/static/images/readme-img/nav-menu-desktop-visitor.png)
+![Navbar Mobile](/static/images/readme-img/nav-menu-mobile-visitor.png)
+
+
+- For admin, the navbar will look like this:
+
+![Navbar Admin](/static/images/readme-img/nav-menu-admin.png)
+
+- On the left side of navbar there is a logo that can be clicked and it will return the visitor to the main page.
+
+- When user is logged in, it appears message at the top:
+
+![User logged in](/static/images/readme-img/message-sign-in.png)
+
+- When user is logged out, it appears message at the top:
+
+![User logged out](/static/images/readme-img/message-sign-out.png)
 
 
 __Main content__
@@ -203,13 +234,13 @@ To clone do the following steps:
 
 ## Credits
 
-
-
-### Content 
-
 - I was inspired by the "Boutique Ado" project at the Code Institute. I watched YouTube tutorial about how to fix appointments opportunity for customers: (https://www.youtube.com/watch?v=3_3q_dE4_qs) 
 
 - The icons was taken from [Font Awesome](https://fontawesome.com/)
+
+### Content 
+
+- All text content for the site was written by myself.
 
 ### Media
 

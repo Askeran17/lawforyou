@@ -980,6 +980,9 @@ display: none;
 }
 
 
+.error-image {
+	width: 100%;
+}
 
 /* Small devices (phones, 335px and up) */
 @media only screen and (min-width: 335px) {
