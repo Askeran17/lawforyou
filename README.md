@@ -25,6 +25,9 @@
     - [Database](#database)
 - [Features](#features)
     - [Existing Features](#existing-features)
+- [Marketing](#marketing)
+    - [Facebook Business](#facebook-business)
+    - [SEO Optimization](#seo-optimization)
 - [Technologies Used](#technologies-used)
   - [Languages Used](#languages-used)
   - [Frameworks, Libraries & Programs Used](#frameworks)
@@ -157,6 +160,13 @@ __Error 404 page__
 
 - If the user incorrectly specified the page path or clicked on a non-existent page, then he is taken to a 404 page. This page contains a link to return to the main page
 ![404 Page](/static/images/readme-img/404-page.png)
+
+
+## Marketing
+
+### Facebook Business
+
+- Since social networks play a big role today, having the most popular social network Facebook will significantly increase the reach of the audience, among which there will be potential clients. The best marketing move is a well-promoted page on the social platform Facebook, where we can reach an audience not only in our region, but also beyond its borders, which will lead to the popularity of our site. Considering that our legal services operate online with the help of proper marketing, especially using Facebook, we can receive requests from clients from all over the world.
 
 ## Technologies Used
 
