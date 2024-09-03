@@ -11,8 +11,7 @@ class HomeTemplateView(generic.ListView):
 def featured(request, slug):
     queryset = Product.objects.all()
     product = get_object_or_404(queryset, url=slug)
-
-    return redirect(reverse('product_detail', args=[product.url]))
+    return render(request, 'home/index.html', {'product_list': product})
 
 def about(request):
     return render(request, 'home/about.html')

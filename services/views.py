@@ -13,10 +13,10 @@ class ServiceTemplateView(generic.ListView):
     paginate_by = 6
 
 
-def product_detail(request, slug):
+def product_detail(request, url):
     """ Display detailed post """
     queryset = Product.objects.all()
-    product = get_object_or_404(queryset, url=slug)
+    product = get_object_or_404(queryset, url=url)
     reviews = product.reviews.all().order_by("-created_at")
     if request.method == "POST":
         review_form = ReviewForm(data=request.POST)
@@ -40,14 +40,14 @@ def product_detail(request, slug):
     )
 
 
-def review_edit(request, slug, review_id):
+def review_edit(request, url, review_id):
     """
     view to edit reviews
     """
     if request.method == "POST":
 
         queryset = Product.objects.all()
-        product = get_object_or_404(queryset, url=slug)
+        product = get_object_or_404(queryset, url=url)
         review = get_object_or_404(Review, pk=review_id)
         review_form = ReviewForm(data=request.POST, instance=review)
 
@@ -59,15 +59,15 @@ def review_edit(request, slug, review_id):
         else:
             messages.add_message(request, messages.ERROR, 'Error updating!')
 
-    return redirect(reverse('product_detail', args=[slug]))
+    return redirect(reverse('product_detail', args=[url]))
 
 
-def review_delete(request, slug, review_id):
+def review_delete(request, url, review_id):
     """
     view to delete review
     """
     queryset = Product.objects.all()
-    product = get_object_or_404(queryset, url=slug)
+    product = get_object_or_404(queryset, url=url)
     review = get_object_or_404(Review, pk=review_id)
 
     if review.user == request.user:
@@ -76,7 +76,7 @@ def review_delete(request, slug, review_id):
     else:
         messages.add_message(request, messages.ERROR, 'Error delete!')
 
-    return redirect(reverse('product_detail', args=[slug]))
+    return redirect(reverse('product_detail', args=[url]))
 
 
 @login_required
@@ -105,13 +105,13 @@ def add_product(request):
     return render(request, template, context)
 
 @login_required
-def edit_product(request, slug):
+def edit_product(request, url):
     """ Edit a product in the store """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
-    product = get_object_or_404(Product, url=slug)
+    product = get_object_or_404(Product, url=url)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
@@ -134,13 +134,13 @@ def edit_product(request, slug):
 
 
 @login_required
-def delete_product(request, slug):
+def delete_product(request, url):
     """ Delete a product from the store """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
-    product = get_object_or_404(Product, url=slug)
+    product = get_object_or_404(Product, url=url)
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('services'))
