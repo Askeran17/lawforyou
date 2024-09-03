@@ -167,6 +167,7 @@ __Error 404 page__
 ### Facebook Business
 
 - Since social networks play a big role today, having the most popular social network Facebook will significantly increase the reach of the audience, among which there will be potential clients. The best marketing move is a well-promoted page on the social platform Facebook, where we can reach an audience not only in our region, but also beyond its borders, which will lead to the popularity of our site. Considering that our legal services operate online with the help of proper marketing, especially using Facebook, we can receive requests from clients from all over the world.
+![Facebook Page](/static/images/readme-img/facebook-page.png)
 
 ## Technologies Used
 
