@@ -40,14 +40,14 @@
     </p>
 
      <!-- Featured -->
-    <div class="card-header text-center border border-secondary">Featured</div>
+    <div class="card-header text-center border ">Featured</div>
 
     <br>
 
       <div class="row text-center">
         {% for product in product_list|slice:":4" %}
         <div class="col-lg-3 col-md-6 mt-2">
-          <div class="card h-100 card-lawforyou border border-secondary">
+          <div class="card h-100 card-lawforyou border ">
             <div class="card-img">
               <img src="{{ product.image.url }}" alt="" class="img-fluid img-featured">
             </div>
@@ -67,7 +67,7 @@
 
       <br>
 
-      <div class="card-footer text-muted text-center border border-secondary">Only qualified assistance!</div>
+      <div class="card-footer text-muted text-center border ">Only qualified assistance!</div>
 
       <br>
 

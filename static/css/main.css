@@ -710,7 +710,7 @@ footer {
 /* MailChimp */
 
 #mc_embed_signup {
-    background: brown;
+    background: blue;
     clear:left; 
     font:14px Helvetica,Arial,sans-serif; 
 }
@@ -918,7 +918,7 @@ display: none;
     width: 1em;
     font-size: 30px;
     font-weight: 300;
-    color: #FFD600;
+    color: #fdbd33;
     cursor: pointer
 }
 
@@ -954,7 +954,7 @@ display: none;
 
 
 .rating-star {
-    color:#FFD600;
+    color:#fdbd33;
 }
 
 /* About page */
@@ -1096,6 +1096,9 @@ display: none;
         margin-bottom: 525px;
     }
 
+    .section-column {
+    padding-bottom: 230px;
+    }
 
 }
 
@@ -1204,8 +1207,8 @@ display: none;
         left: 320px;
     }
 
-    .info-column {
-        height: 485px;
+    .section-column {
+        padding-bottom: 10px;
     }
 
     .footer {
