@@ -45,66 +45,23 @@
     <br>
 
       <div class="row text-center">
-
+        {% for product in product_list|slice:":4" %}
         <div class="col-lg-3 col-md-6 mt-2">
           <div class="card h-100 card-lawforyou border border-secondary">
             <div class="card-img">
-              <img src="/static/images/homepage-img/featured-legal-service.jpg" alt="" class="img-fluid img-featured">
+              <img src="{{ product.image.url }}" alt="" class="img-fluid img-featured">
             </div>
             <div class="card-body">
-                <h5 class="card-title">Law service for you</h5>
-                <p class="card-text">Find service you need in our website</p>
+                <h5 class="card-title">{{ product.name }}</h5>
+                <p class="card-text">{{ product.summary }}</p>
                 <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-                <a href="{% url 'services' %}" class="btn btn-primary">Go to services</a>
+                <a href="{{ product.url }}" class="btn btn-primary">Click on</a>
             </div>
           </div>
         </div>
         <!-- End Card Item -->
-    
-        <div class="col-lg-3 col-md-6 mt-2">
-          <div class="card h-100 card-lawforyou border border-secondary">
-            <div class="card-img">
-              <img src="/static/images/homepage-img/featured-forecast.jpg" alt="" class="img-fluid img-featured">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Forecast for your case</h5>
-                <p class="card-text">Get forecast in our website</p>
-                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-                <a href="{% url 'forecast' %}" class="btn btn-primary">Go to forecast</a>
-            </div>
-          </div>
-        </div>
-        <!-- End Card Item -->
-
-        <div class="col-lg-3 col-md-6 mt-2">
-          <div class="card h-100 card-lawforyou border border-secondary">
-            <div class="card-img">
-              <img src="/static/images/featured-letter.jpg" alt="" class="img-fluid img-featured">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Law service for you</h5>
-                <p class="card-text">Find service you need in our website</p>
-                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-                <a href="{% url 'services' %}" class="btn btn-primary">Go to services</a>
-            </div>
-          </div>
-        </div>
-        <!-- End Card Item -->
-    
-        <div class="col-lg-3 col-md-6 mt-2">
-          <div class="card h-100 card-lawforyou border border-secondary">
-            <div class="card-img">
-              <img src="/static/images/featured-forecast.jpg" alt="" class="img-fluid img-featured">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Forecast for your case</h5>
-                <p class="card-text">Get forecast in our website</p>
-                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-                <a href="{% url 'forecast' %}" class="btn btn-primary">Go to forecast</a>
-            </div>
-          </div>
-        </div>
-        <!-- End Card Item -->
+        {% endfor %}
+        
     
       </div>
 
