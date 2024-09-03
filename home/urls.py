@@ -1,9 +1,7 @@
 from . import views
 from django.urls import path, include
-from .views import HomeTemplateView
 
 urlpatterns = [
-    path("", HomeTemplateView.as_view(), name="home"),
-    path("", views.featured, name='featured'),
+    path("", views.index, name='home'),
     path("about/", views.about, name='about'),
 ]
