@@ -104,9 +104,9 @@
               <i class="rating-star fa fa-star{% if review.rating == 1.5 %}-half-o{% elif review.rating < 2 %}-o {% endif %}" aria-hidden="true" style="float: right;"></i>
               <i class="rating-star fa fa-star{% if review.rating == 0.5 %}-half-o{% elif review.rating < 1 %}-o {% endif %}" aria-hidden="true" style="float: right;"></i>
           </span>
-            <span class="font-weight-normal"><i class="far fa-clock"></i>
+            <span class="font-weight-normal p-2"><i class="far fa-clock"></i>
               {{ review.created_at }}
-            </span> wrote:
+            </span>
           </p>
           <div id="review{{ review.id }}">
             {{ review.comment | linebreaks }}

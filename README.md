@@ -148,8 +148,7 @@ __Header__
 
 __Main content__
 
-
-
+1
 __Footer__
 
 - In the footer I have placed a link to Facebook, Instagram, Twitter and YouTube. It looks beautiful with the bootstraps function. The link opens in a separate tab and the visitor is taken to socialmedia he choose, while the site remains open. It is very comfortable. And above links I placed copyright.
