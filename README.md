@@ -148,7 +148,11 @@ __Header__
 
 __Main content__
 
-1
+__About page__
+
+- This page contains brief information about the company, as well as what the company does
+![About Page](/static/images/readme-img/about-page.png)
+
 __Footer__
 
 - In the footer I have placed a link to Facebook, Instagram, Twitter and YouTube. It looks beautiful with the bootstraps function. The link opens in a separate tab and the visitor is taken to socialmedia he choose, while the site remains open. It is very comfortable. And above links I placed copyright.
