@@ -55,6 +55,11 @@ I conducted manual testing to ensure the effectiveness and usability of the Foot
 | Visitor can click on all button in homepage | When hover over the button, the button darkens a little| Buttons works without errors | PASS |
 | Homepage displays posts | Navigation from background image to posts | Posts shows without errors | PASS |
 
+#### About page
+
+| Testing  | Action | Expected Result | Grade |  
+| - | - | - | - |
+| Visitor can view about page | Access to the about page after clicked on button "About" from navbar | Being able read text without errors | PASS |
 
 #### Registration 
 

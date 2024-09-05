@@ -94,7 +94,7 @@ Home page
 The project uses the relational database PostgreSQL to store the data. I used PostgreSQL because it is considered one of the recommended databases on the Heroku platform.
 
 
-### Models in "Services" app**
+### Models in "Services" app
 
 **Product model:**
 
