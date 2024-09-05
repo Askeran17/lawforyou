@@ -93,14 +93,17 @@ Home page
 ### Database
 The project uses the relational database PostgreSQL to store the data. I used PostgreSQL because it is considered one of the recommended databases on the Heroku platform.
 
+
+### Models in "Services" app**
+
 **Product model:**
 
 The model consists of the following parts:
 
 - [x] **item**: models.CharField(max_length=254, null=True, blank=True) - Indicates the item of the product with 254 characters length
-- [x] **name**: models.CharField(max_length=254) - Indicates the title of the post with 254 characters length
+- [x] **name**: models.CharField(max_length=254) - Indicates the name of the product with 254 characters length
 - [x] **url**: models.SlugField(max_length=300, unique=True) - creates a 300-character address bar path based on the product name
-- [x] **image**: CloudinaryField('image', default='', blank=True) - load images to post from Cloudinary
+- [x] **image**: models.ImageField(null=True, blank=True) - fiel for upload images
 - [x] **description**: models.TextField() - detailed description of the product
 - [x] **summary**: models.TextField(blank=True) - short description of the product
 - [x] **price**: models.DecimalField(max_digits=6, decimal_places=2) - price of the product
@@ -117,6 +120,34 @@ The model consists of the following parts:
 - [x] **rating**: models.IntegerField(choices=RATINGS, null=True, blank=True) - the ability to rate a product by placing a rating along with a review
 - [x] **created_at**: models.DateTimeField(auto_now_add=True) - review publication date
 
+
+### Model in "Appointment" app
+
+**Appointment model:**
+
+The model consists of the following parts:
+
+- [x] **first_name**: models.CharField(max_length=50) - Indicates the first name of a person with 50 characters length
+- [x] **last_name**: models.CharField(max_length=50) - Indicates the last name of a person with 50 characters length
+- [x] **email**: models.CharField(max_length=50) - Indicates the email of a person with 50 characters length
+- [x] **phone**: models.CharField(max_length=50) - Indicates the phone number of a person with 50 characters length
+- [x] **request**: models.TextField(blank=True) - Field for request from customer
+- [x] **sent_date**: models.DateField(auto_now_add=True) - Indicates the date when request was send from a customer
+- [x] **accepted**: models.BooleanField(default=False) - Field if date of appointment will accepted
+- [x] **appointment_date**: models.DateField(null=True, blank=True) - Field for appointment date
+
+
+### Model in "Forecast" app
+
+**RequestHelp model:**
+
+The model consists of the following parts:
+
+- [x] **name**: models.CharField(max_length=100) - Indicates the first name of a person with 100 characters length
+- [x] **email**: models.EmailField() - Indicates the email of a person
+- [x] **phone**: models.CharField(max_length=20) - Indicates the phone number of a person with 20 characters length
+- [x] **subject**: models.CharField(max_length=150) - The field where a person writes the name of his request with 150 characters length
+- [x] **message**: models.TextField(blank=True) - Field for request there customer describe his resquest
 
 
 ## Features
