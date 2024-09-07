@@ -28,6 +28,8 @@ def product_detail(request, url):
             messages.add_message(
                 request, messages.SUCCESS,
                 'Review submitted')
+        else:
+            messages.error(request, 'Failed to add review. Please ensure the form is valid.')
 
     review_form = ReviewForm()
 

@@ -20,14 +20,14 @@ class AppointmentView(TemplateView):
         fname = request.POST.get("fname")
         lname = request.POST.get("lname")
         email = request.POST.get("email")
-        mobile = request.POST.get("mobile")
+        phone = request.POST.get("phone")
         message = request.POST.get("request")
 
         appointment = Appointment.objects.create(
             first_name=fname,
             last_name=lname,
             email=email,
-            phone=mobile,
+            phone=phone,
             request=message,
         )
 

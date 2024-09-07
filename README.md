@@ -150,6 +150,59 @@ The model consists of the following parts:
 - [x] **message**: models.TextField(blank=True) - Field for request there customer describe his resquest
 
 
+### Model in "Profiles" app
+
+**UserProfile model:**
+
+The model consists of the following parts:
+
+- [x] **user**: models.OneToOneField(User, on_delete=models.CASCADE) - Indicates on user and if profile will be deleted, all information will be deleted also
+- [x] **default_phone_number**: models.CharField(max_length=20, null=True, blank=True) - Indicates the phone number of a user with 20 characters
+- [x] **default_country**: CountryField(blank_label='Country *', null=True, blank=True) - Indicates of the user country there user will choose
+- [x] **default_postcode**: models.CharField(max_length=20, null=True, blank=True) - Field for postcode with 20 characters
+- [x] **default_town_or_city**: models.CharField(max_length=40, null=True, blank=True) - Field for town or city with 40 characters
+- [x] **default_street_address1**: models.CharField(max_length=80, null=True, blank=True) - Field for users street address with 80 characters
+- [x] **default_street_address2**: models.CharField(max_length=80, null=True, blank=True) - Field for another users street address with 80 characters
+- [x] **default_county**: models.CharField(max_length=80, null=True, blank=True) - Field for users county with 80 characters
+
+
+### Model in "Checkout" app
+
+**Order model:**
+
+The model consists of the following parts:
+
+- [x] **order_number**: models.CharField(max_length=32, null=False, editable=False) - Indicates the order number with 32 characters
+- [x] **user_profile**: models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders') - indicates user profile
+- [x] **full_name**: models.CharField(max_length=50, null=False, blank=False) - Indicates the full name of a person with 50 characters length
+- [x] **email**: models.EmailField(max_length=254, null=False, blank=False) - Indicates the email of a person
+- [x] **phone_number**: models.CharField(max_length=20, null=False, blank=False) - Indicates the phone number of a user with 20 characters
+- [x] **country**: CountryField(blank_label='Country *', null=True, blank=True) - Indicates of the user country there user will choose
+- [x] **postcode**: models.CharField(max_length=20, null=True, blank=True) - Field for postcode with 20 characters
+- [x] **town_or_city**: models.CharField(max_length=40, null=True, blank=True) - Field for town or city with 40 characters
+- [x] **street_address1**: models.CharField(max_length=80, null=True, blank=True) - Field for users street address with 80 characters
+- [x] **street_address2**: models.CharField(max_length=80, null=True, blank=True) - Field for another users street address with 80 characters
+- [x] **county**: models.CharField(max_length=80, null=True, blank=True) - Field for users county with 80 characters
+- [x] **description_order**: models.TextField() - 
+- [x] **date**: models.DateTimeField(auto_now_add=True) - Field for date
+- [x] **order_total**: models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0) - Field for order total
+- [x] **grand_total**: models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0) - Field for grand total order
+- [x] **original_bag**: models.TextField(null=False, blank=False, default='') -
+- [x] **stripe_pid**: models.CharField(max_length=254, null=False, blank=False, default='') - 
+
+**OrderLineItem model:**
+
+The model consists of the following parts:
+
+- [x] **order**: models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems') - 
+- [x] **product**: models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE) - 
+- [x] **quantity**: models.IntegerField(null=False, blank=False, default=0) - Field quantity
+- [x] **lineitem_total**: models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False) -
+
+
+
+
+
 ## Features
 
 ### Existing Features
