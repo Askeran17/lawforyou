@@ -4,6 +4,7 @@ from django.contrib import messages
 
 # Create your views here.
 
+
 def requestHelp(request):
 
     """
@@ -16,19 +17,20 @@ def requestHelp(request):
             return render(request, 'forecast/success_request.html')
         else:
             form = RequestForm()
-            messages.error(request, 'Failed to add request. Please ensure the form is valid.')
-    
+            messages.error(request, 'Error. Please ensure the form is valid.')
+
     else:
         form = RequestForm()
-        
+
     form = RequestForm()
     template = 'forecast/forecast.html'
     context = {
-    'form': form,
+        'form': form,
     }
 
     return render(request, template, context)
-    
+
+
 def requestSuccess(request):
-    
+
     return render(request, 'forecast/success_request.html')

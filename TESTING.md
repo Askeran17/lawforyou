@@ -136,7 +136,7 @@ I conducted manual testing to ensure the effectiveness and usability of the Foot
 
 | Testing  | Action | Expected Result | Grade |  
 | - | - | - | - |
-| Social media link opens with new tab | Click on link "Facebook, Twitter, Instagram or Youtube" from footer | Visitor is directed to the new window for selected socialmedia | PASS |
+| Social media link opens with new tab | Click on link "Facebook, Instagram or Youtube" from footer | Visitor is directed to the new window for selected socialmedia | PASS |
 
 #### Navbar
 

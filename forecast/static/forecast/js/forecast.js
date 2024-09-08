@@ -187,7 +187,7 @@ function showResult () {
         message = 'The probability of a positive decision is high!';
 
     } else if ((goodAnswer * 100) / questions.length >= 50) {
-        title = '50/50🤔';
+        title = 'Not bad🤔';
         message = 'The probability of a positive decision is average';
 
     } else {

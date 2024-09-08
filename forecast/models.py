@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 
 class RequestHelp(models.Model):
@@ -9,7 +10,7 @@ class RequestHelp(models.Model):
     subject = models.CharField(max_length=150)
     message = models.TextField()
 
-    class Meta:  
+    class Meta:
         verbose_name_plural = 'Requests'
 
     def __str__(self):
