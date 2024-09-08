@@ -1,6 +1,7 @@
 from django.db import models
 from django.http import request
 
+
 class Appointment(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
@@ -12,7 +13,7 @@ class Appointment(models.Model):
     appointment_date = models.DateField(null=True, blank=True)
 
     def __str__(self):
-        return f"Request: {self.sent_date} - by {self.first_name} {self.last_name}"
-        
+        return f"Request: {self.sent_date} - by {self.first_name}"
+
     class Meta:
         ordering = ["-sent_date"]

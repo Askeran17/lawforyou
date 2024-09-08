@@ -2,6 +2,7 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from services.models import Product
 
+
 def bag_contents(request):
 
     bag_items = []
@@ -19,9 +20,9 @@ def bag_contents(request):
                 'quantity': item_data,
                 'product': product,
             })
-    
+
     grand_total = total
-    
+
     context = {
         'bag_items': bag_items,
         'total': total,

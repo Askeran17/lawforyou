@@ -13,6 +13,7 @@ import datetime
 from django.template import Context
 from django.template.loader import render_to_string, get_template
 
+
 class AppointmentView(TemplateView):
     template_name = "appointment/appointment.html"
 
@@ -33,8 +34,9 @@ class AppointmentView(TemplateView):
 
         appointment.save()
 
-        messages.add_message(request, messages.SUCCESS, f"Thanks {fname} for making an appointment, we will email you soon!")
+        messages.add_message(request, messages.SUCCESS, f"Thanks {fname} for making an appointment, we will email you soon!")  # noqa
         return HttpResponseRedirect(request.path)
+
 
 class ManageAppointmentView(ListView):
     template_name = "appointment/manage-appointment.html"
@@ -42,7 +44,6 @@ class ManageAppointmentView(ListView):
     context_object_name = "appointments"
     login_required = True
     paginate_by = 6
-
 
     def post(self, request):
         date = request.POST.get("date")
@@ -53,8 +54,8 @@ class ManageAppointmentView(ListView):
         appointment.save()
 
         data = {
-            "fname":appointment.first_name,
-            "date":appointment.appointment_date,
+            "fname": appointment.first_name,
+            "date": appointment.appointment_date,
         }
 
         message = get_template('appointment/email.html').render(data)
@@ -67,17 +68,17 @@ class ManageAppointmentView(ListView):
         email.content_subtype = "html"
         email.send()
 
-        messages.add_message(request, messages.SUCCESS, f"You accepted the appointment of {appointment.first_name}")
+        messages.add_message(request, messages.SUCCESS, f"You accepted the appointment of {appointment.first_name}")  # noqa
         return HttpResponseRedirect(request.path)
 
-
-    def get_context_data(self,*args, **kwargs):
+    def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         appointments = Appointment.objects.all()
-        context.update({   
-            "title":"Manage Appointments"
+        context.update({
+            "title": "Manage Appointments"
         })
         return context
+
 
 class DeleteAppointment(DeleteView):
     '''admin can delete appointment from the website itself'''

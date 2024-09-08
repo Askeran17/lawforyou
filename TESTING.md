@@ -201,6 +201,56 @@ I conducted manual testing to ensure the effectiveness and usability of the Foot
 - Urls.py
   ![urls.py](/static/images/testing-img/profiles-urls-py.png)
 
+### Checkout app
+- Admin.py
+  ![admin.py](/static/images/testing-img/checkout-admin-py.png)
+
+- Forms.py
+  ![forms.py](/static/images/testing-img/checkout-forms-py.png)
+
+- Models.py
+  ![models.py](/static/images/testing-img/checkout-models-py.png)
+
+- Views.py
+  ![views.py](/static/images/testing-img/checkout-views-py.png)
+
+- Urls.py
+  ![urls.py](/static/images/testing-img/checkout-urls-py.png)
+
+- Signals.py
+  ![signals.py](/static/images/testing-img/checkout-signals-py.png)
+
+- Webhooks.py
+  ![webhooks.py](/static/images/testing-img/checkout-webhooks-py.png)
+
+- Webhook handler.py
+  ![webhook-handler.py](/static/images/testing-img/checkout-webhook-handler-py.png)
+
+### Bag app
+- Views.py
+  ![views.py](/static/images/testing-img/bag-views-py.png)
+
+- Urls.py
+  ![urls.py](/static/images/testing-img/bag-urls-py.png)
+
+- Contexts.py
+  ![contexts.py](/static/images/testing-img/bag-contexts-py.png)
+
+### Appointment app
+- Context processors.py
+  ![context-processors.py](/static/images/testing-img/appointment-context-processors-py.png)
+
+- Models.py
+  ![models.py](/static/images/testing-img/appointment-models-py.png)
+
+- Views.py
+  ![views.py](/static/images/testing-img/appointment-views-py.png)
+
+- Urls.py
+  ![urls.py](/static/images/testing-img/appointment-urls-py.png)
+
+
+
 
 
 
