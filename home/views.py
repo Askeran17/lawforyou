@@ -2,6 +2,7 @@ from django.shortcuts import render
 from services.models import Product
 # Create your views here.
 
+
 def index(request):
 
     product = Product.objects.all()

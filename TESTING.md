@@ -55,6 +55,34 @@ I conducted manual testing to ensure the effectiveness and usability of the Foot
 | Visitor can click on all button in homepage | When hover over the button, the button darkens a little| Buttons works without errors | PASS |
 | Homepage displays posts | Navigation from background image to posts | Posts shows without errors | PASS |
 
+#### Detailed product page
+
+| Testing  | Action | Expected Result | Grade |  
+| - | - | - | - |
+| Visitor can view detailed product page | Access to the product page after either clicked on button "buy" from homepage featured products or after clicked on button "services" and there choose the product | Being able read text without errors | PASS |
+| Registered user can leave a review and add rating under product | Log in and leave a review | Leave a review without errors | PASS |
+| Reviews appears directly | Leave a review on product | Reviews appears without errors | PASS |
+| Rating appears directly | Leave a rating on product | Rating appears without errors | PASS |
+
+#### Add product page
+
+| Testing  | Action | Expected Result | Grade |  
+| - | - | - | - |
+| Admin can add product from website itself | Access to the add product page after clicked on link "Product management" from navbar | Being able to fill out the fields, send it and product will be added directly | PASS |
+| Image uploading from add product page | Opportunity to have a field to upload image to product | Image appears without errors | PASS |
+
+#### Edit product page
+
+| Testing  | Action | Expected Result | Grade |  
+| - | - | - | - |
+| Admin can edit product from website itself | Access to the edit product page after clicked on button "edit" from product | Being able to update the fields, send it and product will be updatet directly | PASS |
+
+#### Delete product
+
+| Testing  | Action | Expected Result | Grade |  
+| - | - | - | - |
+| Admin can delete product from website itself | Access to the delete product after clicked on button "delete" from product page | Being able to delete product directly | PASS |
+
 #### About page
 
 | Testing  | Action | Expected Result | Grade |  
@@ -65,7 +93,7 @@ I conducted manual testing to ensure the effectiveness and usability of the Foot
 
 | Testing  | Action | Expected Result | Grade |  
 | - | - | - | - |
-| User signup page | Click on button "Register" from navbar | Visitor is directed to the signup page | PASS |
+| User signup page | Click on link "Register" from navbar | Visitor is directed to the signup page | PASS |
 | Fill in the registration form with valid and unique user information | Click on button "Sign up" | Success full registration | PASS |
 
 #### Footer
@@ -95,25 +123,49 @@ I conducted manual testing to ensure the effectiveness and usability of the Foot
   - No errors were found when passing through the official [(Jigsaw) validator](http://jigsaw.w3.org/css-validator/)
 
 - JAVASCRIPT
-  - No errors were returned when passing through the official [JSHint validator](https://jshint.com/)
+  - No errors for all scripts were returned when passing through the official [JSHint validator](https://jshint.com/)
+  - Checkout.js - This script is taken from the Stripe documentation and I decided to ignore these warnings as there was no solution found to fix it.
+
+  ![checkout.js](/static/images/testing-img/checkout-js.png)
+
+  - Countryfield.js - These warnings also do not affect my code, so I ignored them as well. I tried to solve them, but did not find a good solution for them.
+
+  ![countryfield.js](/static/images/testing-img/countryfield-js.png)
+
+  - Reviews.js - the same here, these warnings do not affect my code, so I also ignored them.
+
+  ![reviews.js](/static/images/testing-img/reviews-js.png)
+
+  - Forecast.js - No warnings for this script.
+
+  ![forecast.js](/static/images/testing-img/forecast-js.png)
+
+  - 
 
 - PYTHON
   - No errors were returned when passing through the PEP8 Validator 
 
-- Admin.py
-  ![admin.py](/static/images/readme-img/admin-py.png)
-
-- Models.py
-  ![models.py](/static/images/readme-img/models-py.png)
-
+### Home app
 - Views.py
-  ![views.py](/static/images/readme-img/views-py.png)
+  ![views.py](/static/images/testing-img/home-views-py.png)
 
 - Urls.py
-  ![urls.py](/static/images/readme-img/urls-py.png)
+  ![urls.py](/static/images/testing-img/home-urls-py.png)
 
+### Profiles app
 - Forms.py
-  ![forms.py](/static/images/readme-img/forms-py.png)
+  ![forms.py](/static/images/testing-img/profiles-forms-py.png)
+
+- Models.py
+  ![models.py](/static/images/testing-img/profiles-models-py.png)
+
+- Views.py
+  ![views.py](/static/images/testing-img/profiles-views-py.png)
+
+- Urls.py
+  ![urls.py](/static/images/testing-img/profiles-urls-py.png)
+
+
 
 
 ## Bugs
