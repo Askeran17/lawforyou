@@ -83,6 +83,36 @@ I conducted manual testing to ensure the effectiveness and usability of the Foot
 | - | - | - | - |
 | Admin can delete product from website itself | Access to the delete product after clicked on button "delete" from product page | Being able to delete product directly | PASS |
 
+#### Make an appointment
+
+| Testing  | Action | Expected Result | Grade |  
+| - | - | - | - |
+| Registred and unregistred users can book an appointment | Users must fill in form to book an appointment | Being able to fill out the fields, send it and appointment request will be recieved directly | PASS |
+
+#### Manage appointment
+
+| Testing  | Action | Expected Result | Grade |  
+| - | - | - | - |
+| Admin can accept appointment from website itself | Admin must set date to appointment on manage appointment page | Being able to choose the date and accept appointment, and user will receive an confirmation mail directly | PASS |
+
+#### Delete appointment
+
+| Testing  | Action | Expected Result | Grade |  
+| - | - | - | - |
+| Admin can delete appointment from website itself | Access to the delete appointment after clicked on button "delete" from manage appointment page | Being able to delete appointment directly | PASS |
+
+#### Forecast
+
+| Testing  | Action | Expected Result | Grade |  
+| - | - | - | - |
+| Registred and unregistred users can do an forecast | Users must click on start button to start forecast and answer on questions | Being able to answer questions and get an result based on answers directly | PASS |
+
+#### Make an request
+
+| Testing  | Action | Expected Result | Grade |  
+| - | - | - | - |
+| Registred and unregistred users can send an request | Users must fill in form to book an appointment | Being able to fill out the fields, send it and request will be recieved directly | PASS |
+
 #### About page
 
 | Testing  | Action | Expected Result | Grade |  
@@ -95,6 +125,12 @@ I conducted manual testing to ensure the effectiveness and usability of the Foot
 | - | - | - | - |
 | User signup page | Click on link "Register" from navbar | Visitor is directed to the signup page | PASS |
 | Fill in the registration form with valid and unique user information | Click on button "Sign up" | Success full registration | PASS |
+
+#### Subscribe on newsletter
+
+| Testing  | Action | Expected Result | Grade |  
+| - | - | - | - |
+| User can subscribe on newsletter | Type email in field to subscribe | Being able to subscribe without errors | PASS |
 
 #### Footer
 

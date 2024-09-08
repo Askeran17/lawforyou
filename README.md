@@ -183,7 +183,6 @@ The model consists of the following parts:
 - [x] **street_address1**: models.CharField(max_length=80, null=True, blank=True) - Field for users street address with 80 characters
 - [x] **street_address2**: models.CharField(max_length=80, null=True, blank=True) - Field for another users street address with 80 characters
 - [x] **county**: models.CharField(max_length=80, null=True, blank=True) - Field for users county with 80 characters
-- [x] **description_order**: models.TextField() - 
 - [x] **date**: models.DateTimeField(auto_now_add=True) - Field for date
 - [x] **order_total**: models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0) - Field for order total
 - [x] **grand_total**: models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0) - Field for grand total order
