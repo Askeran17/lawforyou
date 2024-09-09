@@ -10,14 +10,6 @@ footer {
     background-color: rgb(26, 25, 25);
 }
 
-.copyright {
-    font-size: 12px;
-}
-
-.social-media:hover {
-    text-decoration: none;
-}
-
 .front-page-text {
     font-family: 'Exo', sans-serif;
 }
@@ -518,10 +510,32 @@ textarea:focus {
     box-shadow: none
 }
 
+/* Footer*/
+
+.copyright {
+    font-size: 12px;
+}
+
+.social-media:hover {
+    text-decoration: none;
+}
+
+.fa-facebook {
+    color: #0022ba;
+}
+
+.fa-instagram {
+    color: #a900ba;
+}
+
+.fa-youtube {
+    color: red;
+}
+
 /* MailChimp */
 
 #mc_embed_signup {
-    background: #004085;
+    background: #495057;
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;
 }
