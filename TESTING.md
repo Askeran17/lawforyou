@@ -249,8 +249,21 @@ I conducted manual testing to ensure the effectiveness and usability of the Foot
 - Urls.py
   ![urls.py](/static/images/testing-img/appointment-urls-py.png)
 
+### Services app
+- Forms.py
+  ![forms.py](/static/images/testing-img/services-forms-py.png)
 
+- Models.py
+  ![models.py](/static/images/testing-img/services-models-py.png)
 
+- Widgets.py
+  ![widgets.py](/static/images/testing-img/services-widgets-py.png)
+
+- Views.py
+  ![views.py](/static/images/testing-img/services-views-py.png)
+
+- Urls.py
+  ![urls.py](/static/images/testing-img/services-urls-py.png)
 
 
 

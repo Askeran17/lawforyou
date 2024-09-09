@@ -242,10 +242,12 @@ __Footer__
 
 ![Footer](/static/images/readme-img/footer.png)
 
-__Error 404 page__
+__Error pages__
 
-- If the user incorrectly specified the page path or clicked on a non-existent page, then he is taken to a 404 page. This page contains a link to return to the main page
-![404 Page](/static/images/readme-img/404-page.png)
+- If the user incorrectly specified the page path or clicked on a non-existent page, then he is taken to a 404 page. This page contains a link to return to the main page.
+![404 Page](/static/images/readme-img/.png)
+
+- The similar pages I did for pages 403 and 500.
 
 
 ## Marketing
