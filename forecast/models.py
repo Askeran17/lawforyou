@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MinLengthValidator
 
 
 # Create your models here.
@@ -8,7 +9,11 @@ class RequestHelp(models.Model):
     email = models.EmailField()
     phone = models.CharField(max_length=20)
     subject = models.CharField(max_length=150)
-    message = models.TextField()
+    message = models.TextField(
+        validators=[
+            MinLengthValidator(1)
+            ]
+        )
 
     class Meta:
         verbose_name_plural = 'Requests'

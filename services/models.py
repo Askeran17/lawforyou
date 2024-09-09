@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.validators import MinLengthValidator
+
 
 RATINGS = ((None, '0'), (1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5'))
 
@@ -11,7 +13,11 @@ class Product(models.Model):
     name = models.CharField(max_length=254)
     url = models.SlugField(max_length=300, null=True, unique=True)
     image = models.ImageField(null=True, blank=True)
-    description = models.TextField()
+    description = models.TextField(
+        validators=[
+            MinLengthValidator(1)
+            ]
+        )
     summary = models.TextField(blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
 

@@ -17,7 +17,8 @@ def requestHelp(request):
             return render(request, 'forecast/success_request.html')
         else:
             form = RequestForm()
-            messages.error(request, 'Error. Please ensure the form is valid.')
+            messages.error(request, 'Please ensure the form is valid'
+                                    ' or you haven´t filled in the field.')
 
     else:
         form = RequestForm()

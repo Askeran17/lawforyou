@@ -9,13 +9,16 @@ class ProductForm(forms.ModelForm):
     name.widget = forms.TextInput(
         attrs={'pattern': "[A-zÀ-ú]+",
                'title': "Please Enter Valid Name (Only letters, no space)"})
+    url = forms.SlugField(max_length=300)
+    url.widget = forms.TextInput(
+        attrs={'pattern': "^[a-z0-9_]+(?:-[a-z0-9_]+)*$",
+               'title': "Please Enter Valid URL (No space)"})
+    image = forms.ImageField(
+        label='Image', required=False, widget=CustomClearableFileInput)
 
     class Meta:
         model = Product
         fields = '__all__'
-
-    image = forms.ImageField(
-        label='Image', required=False, widget=CustomClearableFileInput)
 
 
 class ReviewForm(forms.ModelForm):

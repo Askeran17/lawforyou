@@ -23,9 +23,11 @@
                 <div class="card mb-4 text-center">
                   <div class="card-body card-lawforyou border">
                     <div class="image-container">
-
+                      {% if service.image %}
                       <img class="card-img-top" src="{{ service.image.url }}" alt="{{ service.name }}">
-
+                      {% else%}
+                      <img class="card-img-top" src="{{ MEDIA_URL }}noimage.webp" alt="{{ service.name }}">
+                      {% endif %}
                       <div class="image-flash">
                       </div>
                     </div>

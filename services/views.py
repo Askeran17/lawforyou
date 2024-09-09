@@ -7,6 +7,7 @@ from .forms import ProductForm, ReviewForm
 
 # Create your views here.
 
+
 class ServiceTemplateView(generic.ListView):
     template_name = 'services/services.html'
     queryset = Product.objects.all()
@@ -29,7 +30,10 @@ def product_detail(request, url):
                 request, messages.SUCCESS,
                 'Review submitted')
         else:
-            messages.error(request, 'Failed to add review. Please ensure the form is valid.')
+            messages.error(request,
+                           ('Failed to add review. '
+                            'Ensure the form is valid and '
+                            'you added a rating'))
 
     review_form = ReviewForm()
 
@@ -95,16 +99,19 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.url]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request,
+                           ('Failed to add product. '
+                            'Please ensure the form is valid.'))
     else:
         form = ProductForm()
-        
+
     template = 'services/add_product.html'
     context = {
         'form': form,
     }
 
     return render(request, template, context)
+
 
 @login_required
 def edit_product(request, url):
@@ -121,7 +128,9 @@ def edit_product(request, url):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.url]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request,
+                           ('Failed to update product. '
+                            'Please ensure the form is valid.'))
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')

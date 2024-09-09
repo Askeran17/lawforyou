@@ -49,7 +49,11 @@
         <div class="col-lg-3 col-md-6 mt-2">
           <div class="card h-100 card-lawforyou border ">
             <div class="card-img">
-              <img src="{{ product.image.url }}" alt="" class="img-fluid img-featured">
+              {% if product.image %}
+              <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid img-featured">
+              {% else%}
+              <img src="{{ MEDIA_URL }}noimage.webp" alt="{{ product.name }}" class="img-fluid img-featured">
+              {% endif %}
             </div>
             <div class="card-body">
                 <h5 class="card-title">{{ product.name }}</h5>
