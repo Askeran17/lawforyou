@@ -186,17 +186,17 @@ The model consists of the following parts:
 - [x] **date**: models.DateTimeField(auto_now_add=True) - Field for date
 - [x] **order_total**: models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0) - Field for order total
 - [x] **grand_total**: models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0) - Field for grand total order
-- [x] **original_bag**: models.TextField(null=False, blank=False, default='') -
-- [x] **stripe_pid**: models.CharField(max_length=254, null=False, blank=False, default='') - 
+- [x] **original_bag**: models.TextField(null=False, blank=False, default='') - Field for original bag
+- [x] **stripe_pid**: models.CharField(max_length=254, null=False, blank=False, default='') - Field for stripe pid, i.e for each order a key
 
 **OrderLineItem model:**
 
 The model consists of the following parts:
 
-- [x] **order**: models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems') - 
-- [x] **product**: models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE) - 
-- [x] **quantity**: models.IntegerField(null=False, blank=False, default=0) - Field quantity
-- [x] **lineitem_total**: models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False) -
+- [x] **order**: models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems') - Field for order
+- [x] **product**: models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE) - Field for order product
+- [x] **quantity**: models.IntegerField(null=False, blank=False, default=0) - Field for quantity
+- [x] **lineitem_total**: models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False) - Field for item total price
 
 
 
@@ -230,6 +230,23 @@ __Header__
 
 
 __Main content__
+
+__Forecast page__
+
+- By clicking on the Forecast button in the top panel, the user is taken to the forecast page.
+![Forecast Button](/static/images/readme-img/forecast-button.png)
+
+- On this page, the user is asked to take a short test of 5 questions, which will reveal the probability of a positive or negative decision regarding a case that is under consideration in one of the government agencies, such as the Migration Service, the Tax Service, the Social Insurance Service, and so on.
+![Forecast Page](/static/images/readme-img/forecast-request-page.png)
+
+- If, for example, the user receives a positive answer, then he can be calm and most likely does not need to contact lawyers
+![Forecast Page](/static/images/readme-img/.png)
+
+- If the user receives an average or especially negative answer, then he is recommended to contact lawyers by filling out a request
+![Forecast Page](/static/images/readme-img/.png)
+
+- Having filled in all the contact fields, the user sends it and the legal team receives this request, after which they will contact him as soon as possible
+![Forecast Page](/static/images/readme-img/.png)
 
 __About page__
 

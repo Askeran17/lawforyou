@@ -176,7 +176,6 @@ function showResult () {
     const resultsTemplate = `
     <h2 class="title">%title%</h2>
     <h3 class="summary">%message%</h3>
-    <p class="result">%result%</p>
     `;
 
     let title, message;
@@ -195,14 +194,11 @@ function showResult () {
         message = 'The probability of a positive decision is low';
     }
 
-// result
-let result = `${goodAnswer} of ${questions.length}`;
 
 // final answer
 const finalMessage = resultsTemplate
             .replace('%title%', title)
-            .replace('%message%', message)
-            .replace('%result%', result);
+            .replace('%message%', message);
 
 headerBlock.innerHTML = finalMessage;
 
