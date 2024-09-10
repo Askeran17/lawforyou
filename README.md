@@ -239,7 +239,7 @@ __Forecast page__
 - On this page, the user is asked to take a short test of 5 questions, which will reveal the probability of a positive or negative decision regarding a case that is under consideration in one of the government agencies, such as the Migration Service, the Tax Service, the Social Insurance Service, and so on.
 ![Forecast Page](/static/images/readme-img/forecast-request-page.png)
 
-- If, for example, the user receives a positive answer, then he can be calm and most likely does not need to contact lawyers
+- If, for example, the user receives a positive answer, then he can be calm and most likely does not need to contact lawyers.
 ![Forecast Page](/static/images/readme-img/.png)
 
 - If the user receives an average or especially negative answer, then he is recommended to contact lawyers by filling out a request
