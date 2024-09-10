@@ -1,13 +1,10 @@
 /* Main */
-.is-invalid {
-    border-color: #e74c3c !important; /* Red color */
-    box-shadow: 0 0 5px rgba(231, 76, 60, 0.75); /* Red outline shadow */
-}
 
-.is-invalid:focus {
-    border-color: #e74c3c !important;
-    box-shadow: 0 0 8px rgba(231, 76, 60, 0.75);
-}
+input.is-invalid, textarea.is-invalid, select.is-invalid {
+	border-color: #ff4d4d !important; /* Custom color */
+	outline: 0; /* Remove default focus outline */
+	box-shadow: 0 0 5px rgba(255, 77, 77, 0.75); /* Custom outline */
+	}
 
 /* Start screen */
 #start-button {
