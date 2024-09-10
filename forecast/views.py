@@ -6,7 +6,6 @@ from django.contrib import messages
 
 
 def requestHelp(request):
-
     """
     View for processing the submission of the request form
     """
@@ -16,20 +15,12 @@ def requestHelp(request):
             form.save()
             return render(request, 'forecast/success_request.html')
         else:
-            form = RequestForm()
             messages.error(request, 'Please ensure the form is valid'
                                     ' or you haven´t filled in the field.')
-
     else:
         form = RequestForm()
 
-    form = RequestForm()
-    template = 'forecast/forecast.html'
-    context = {
-        'form': form,
-    }
-
-    return render(request, template, context)
+    return render(request, 'forecast/forecast.html', {'form': form})
 
 
 def requestSuccess(request):
