@@ -50,8 +50,8 @@
                             {% csrf_token %}
                             <div class="form-group">
                                 <input type="date" name="date" class="form-control mb-2 input-appoint"
-                                    placeholder="dd-mm-yyyy" value="" min="1997-01-01" max="2030-12-31">
-                                <input hidden="true" name="appointment-id" class="input-appoint" value="{{app.id}}">
+                                     value="" min="1997-01-01" max="2030-12-31" required>
+                                <input name="appointment-id" class="input-appoint hide-appoint" value="{{app.id}}">
                                 <input class="btn-block btn-primary form-control input-appoint" type="submit"
                                     value="Accept">
                             </div>

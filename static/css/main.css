@@ -339,6 +339,10 @@ textarea:focus {
     font-weight: 400
 }
 
+.hide-appoint {
+    display: none;
+}
+
 .btn-block {
     text-transform: uppercase;
     font-size: 15px !important;

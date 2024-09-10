@@ -19,13 +19,13 @@
                         <div class="form-group col-sm-6 flex-column d-flex"> 
                             <label class="form-control-label px-3">First name<span class="text-danger"> *</span>
                             </label> 
-                            <input required type="text" pattern="[A-zÀ-ú]+" title="Please Enter Valid First Name (Only letters)" onkeydown="this.value = this.value.trim()" onkeyup="this.value = this.value.trim()" id="fname" class="input-appoint" name="fname" placeholder="Enter your first name"> 
+                            <input type="text" pattern="[A-zÀ-ú]+" title="Please Enter Valid First Name (Only letters)" onkeydown="this.value = this.value.trim()" onkeyup="this.value = this.value.trim()" id="fname" class="input-appoint" name="fname" placeholder="Enter your first name" required> 
                         </div>
 
                         <div class="form-group col-sm-6 flex-column d-flex"> 
                             <label class="form-control-label px-3">Last name<span class="text-danger"> *</span>
                             </label> 
-                            <input required type="text" pattern="[A-zÀ-ú]+" title="Please Enter Valid Last Name (Only letters)" onkeydown="this.value = this.value.trim()" onkeyup="this.value = this.value.trim()" id="lname" class="input-appoint" name="lname" placeholder="Enter your last name"> 
+                            <input type="text" pattern="[A-zÀ-ú]+" title="Please Enter Valid Last Name (Only letters)" onkeydown="this.value = this.value.trim()" onkeyup="this.value = this.value.trim()" id="lname" class="input-appoint" name="lname" placeholder="Enter your last name" required> 
                         </div>
                     </div>
 
@@ -34,12 +34,12 @@
                             <div class="form-group col-sm-6 flex-column d-flex"> 
                                 <label class="form-control-label px-3">Email<span class="text-danger"> *</span>
                                 </label> 
-                                <input required type="email" id="email" class="input-appoint" name="email" placeholder="Enter your e-mail"> 
+                                <input type="email" id="email" class="input-appoint" name="email" placeholder="Enter your e-mail" required> 
                             </div>
 
                             <div class="form-group col-sm-6 flex-column d-flex"> 
                              <label class="form-control-label px-3">Phone number<span class="text-danger"> *</span></label> 
-                              <input required type="text" pattern="[0-9\-\+\(\)\s]+" title="Please Enter Valid Phone Number (Only numbers and +/-)" onkeydown="this.value = this.value.trim()" onkeyup="this.value = this.value.trim()" id="phone-number" class="input-appoint" name="phone" placeholder="Enter your phone"> 
+                              <input type="text" pattern="[0-9\-\+\(\)\s]+" title="Please Enter Valid Phone Number (Only numbers and +/-)" onkeydown="this.value = this.value.trim()" onkeyup="this.value = this.value.trim()" id="phone-number" class="input-appoint" name="phone" placeholder="Enter your phone" required> 
                             </div>
 
                         </div>
@@ -47,7 +47,7 @@
                         <div class="row justify-content-between text-left">
                             <div class="form-group col-12 flex-column d-flex"> 
                                 <label class="form-control-label px-3">Your request<span class="text-danger"> *</span></label> 
-                                <textarea required id="request" name="request" placeholder="Type your request here" minlength="5" maxlength="255"></textarea>
+                                <textarea id="request" name="request" placeholder="Type your request here" minlength="5" maxlength="255" required></textarea>
                             </div>
                         </div>
                         <div class="row">
