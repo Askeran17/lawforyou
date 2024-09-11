@@ -88,6 +88,30 @@ Home page
 
 ![image](/static/images/readme-img/wireframe-home.png)
 
+Services page
+<br>
+
+![image](/static/images/readme-img/wireframe-services.png)
+
+Forecast page
+<br>
+
+![image](/static/images/readme-img/wireframe-forecast.png)
+
+About page
+<br>
+
+![image](/static/images/readme-img/wireframe-about.png)
+
+Manage appointment page
+<br>
+
+![image](/static/images/readme-img/wireframe-manage-appointment.png)
+
+Product detail page
+<br>
+
+![image](/static/images/readme-img/wireframe-product-detail-page.png)
 
 
 ### Database
