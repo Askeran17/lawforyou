@@ -866,6 +866,13 @@ textarea:focus {
         text-align: center;
     }
 
+    .manage-appoint-display {
+        margin-bottom: 400px;
+    }
+
+    .delete-appoint-display {
+        margin-bottom: 30px;
+    }
 }
 
 /* Small devices (phones, 510px and up) */
@@ -946,6 +953,10 @@ textarea:focus {
         padding-bottom: 230px;
     }
 
+    .delete-appoint-display {
+        margin-bottom: 200px;
+    }
+
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
@@ -968,6 +979,11 @@ textarea:focus {
     .profile-fix {
         margin-bottom: 100px;
     }
+
+    .delete-appoint-display {
+        margin-bottom: 600px;
+    }
+
 
 }
 
@@ -1027,6 +1043,10 @@ textarea:focus {
         margin-bottom: 325px;
     }
 
+    .manage-appoint-display {
+        margin-bottom: 780px;
+    }
+
 }
 
 /* Large devices (laptops and desktops, 1200px and up) */
@@ -1083,4 +1103,13 @@ textarea:focus {
     .sign-out {
         margin-bottom: 125px;
     }
+
+    .manage-appoint-display {
+        margin-bottom: 400px;
+    }
+
+    .delete-appoint-display {
+        margin-bottom: 40px;
+    }
+
 }
