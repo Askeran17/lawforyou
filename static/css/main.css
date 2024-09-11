@@ -102,6 +102,12 @@ footer {
 
 .card-lawforyou {
     background-color: #f0f0f0;
+    border:1px solid black;
+    transition:.3s;
+}
+
+.card-lawforyou:hover{
+    transform:scale(1.1);
 }
 
 .text-lawforyou-bg {
@@ -520,20 +526,50 @@ textarea:focus {
     font-size: 12px;
 }
 
-.social-media:hover {
+.social-media-button:hover {
     text-decoration: none;
 }
 
-.fa-facebook {
-    color: #0022ba;
+/*Change icons size here*/
+.social-icons .fa {
+    font-size: 1.8em;
+}
+/*Change icons circle size and color here*/
+.social-icons .fa {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #FFF;
+    color: rgba(255, 255, 255, 0.8);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-.fa-instagram {
-    color: #a900ba;
+.social-icons.icon-circle .fa{ 
+    border-radius: 50%;
 }
 
-.fa-youtube {
-    color: red;
+.social-icons .fa:hover, .social-icons .fa:active {
+    color: #FFF;
+    -webkit-box-shadow: 1px 1px 3px #333;
+    -moz-box-shadow: 1px 1px 3px #333;
+    box-shadow: 1px 1px 3px #333; 
+}
+
+.social-icons .fa-facebook {
+  background-color:#3C599F;
+}  
+
+.social-icons .fa-instagram {
+    background-color:#951597;
+}
+
+.social-icons .fa-youtube-play{
+  background-color:#C52F30;
 }
 
 /* MailChimp */

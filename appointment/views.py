@@ -12,7 +12,7 @@ from django.views.generic import ListView
 import datetime
 from django.template import Context
 from django.template.loader import render_to_string, get_template
-
+from django.contrib.messages.views import SuccessMessageMixin
 
 class AppointmentView(TemplateView):
     template_name = "appointment/appointment.html"
@@ -80,8 +80,14 @@ class ManageAppointmentView(ListView):
         return context
 
 
-class DeleteAppointment(DeleteView):
+class DeleteAppointment(SuccessMessageMixin, DeleteView):
     '''admin can delete appointment from the website itself'''
     model = Appointment
     template_name = 'appointment/delete_appointment.html'
     success_url = reverse_lazy('manage')
+    success_message = "Appointment deleted!"
+
+    def delete(self, request, *args, **kwargs):
+        obj = self.get_object()
+        messages.success(self.request, self.success_message % obj.__dict__)
+        return super(DeleteAppointment, self).delete(request, *args, **kwargs)

@@ -19,8 +19,7 @@
                         <div class="form-group col-sm-6 flex-column d-flex">
                             <label class="form-control-label px-3">First name<span class="text-danger"> *</span>
                             </label>
-                            <input type="text" pattern="[A-zÀ-ú]+" title="Please Enter Valid First Name (Only letters)"
-                                onkeydown="this.value = this.value.trim()" onkeyup="this.value = this.value.trim()"
+                            <input type="text" pattern="[A-zÀ-ú]+" title="Please Enter Valid First Name (Only letters, no space)"
                                 id="fname" class="input-appoint" name="fname" placeholder="Enter your first name"
                                 required>
                         </div>
@@ -28,8 +27,7 @@
                         <div class="form-group col-sm-6 flex-column d-flex">
                             <label class="form-control-label px-3">Last name<span class="text-danger"> *</span>
                             </label>
-                            <input type="text" pattern="[A-zÀ-ú]+" title="Please Enter Valid Last Name (Only letters)"
-                                onkeydown="this.value = this.value.trim()" onkeyup="this.value = this.value.trim()"
+                            <input type="text" pattern="[A-zÀ-ú]+" title="Please Enter Valid Last Name (Only letters, no space)"
                                 id="lname" class="input-appoint" name="lname" placeholder="Enter your last name"
                                 required>
                         </div>
@@ -47,9 +45,8 @@
                         <div class="form-group col-sm-6 flex-column d-flex">
                             <label class="form-control-label px-3">Phone number<span class="text-danger">
                                     *</span></label>
-                            <input type="text" pattern="[0-9\-\+\(\)\s]+"
-                                title="Please Enter Valid Phone Number (Only numbers and +/-)"
-                                onkeydown="this.value = this.value.trim()" onkeyup="this.value = this.value.trim()"
+                            <input type="text" pattern="[0-9\-\+]+"
+                                title="Please Enter Valid Phone Number (Only numbers and +/-, no space)"
                                 id="phone-number" class="input-appoint" name="phone" placeholder="Enter your phone"
                                 required>
                         </div>
