@@ -265,6 +265,19 @@ I conducted manual testing to ensure the effectiveness and usability of the Foot
 - Urls.py
   ![urls.py](/static/images/testing-img/services-urls-py.png)
 
+### Forecast app
+- Forms.py
+  ![forms.py](/static/images/testing-img/forecast-forms-py.png)
+
+- Models.py
+  ![models.py](/static/images/testing-img/forecast-models-py.png)
+
+- Views.py
+  ![views.py](/static/images/testing-img/forecast-views-py.png)
+
+- Urls.py
+  ![urls.py](/static/images/testing-img/forecast-urls-py.png)
+
 
 
 ## Bugs
