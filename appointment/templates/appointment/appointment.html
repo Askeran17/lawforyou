@@ -3,60 +3,97 @@
 
 {% block content %}
 
-    <div class="container-fluid py-5 mx-auto">
-        <div class="row d-flex justify-content-center">
-            <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
-                <h3>
-                    Book an appointment with lawyer
-                </h3>
-                <p class="blue-text">Use the following form to contact us and request an appointment</p>
-                <div class="card card-appointment">
-                    
-                    <form class="form-card" method="POST" action="{% url 'appointment' %}" id="contact_wrap">
+<div class="container-fluid py-5 mx-auto">
+    <div class="row d-flex justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+            <h3>
+                Book an appointment with lawyer
+            </h3>
+            <p class="blue-text">Use the following form to contact us and request an appointment</p>
+            <div class="card card-appointment">
+
+                <form class="form-card" method="POST" action="{% url 'appointment' %}" id="contact_wrap">
                     {% csrf_token %}
                     <div class="row justify-content-between text-left">
 
-                        <div class="form-group col-sm-6 flex-column d-flex"> 
+                        <div class="form-group col-sm-6 flex-column d-flex">
                             <label class="form-control-label px-3">First name<span class="text-danger"> *</span>
-                            </label> 
-                            <input type="text" pattern="[A-zÀ-ú]+" title="Please Enter Valid First Name (Only letters)" onkeydown="this.value = this.value.trim()" onkeyup="this.value = this.value.trim()" id="fname" class="input-appoint" name="fname" placeholder="Enter your first name" required> 
+                            </label>
+                            <input type="text" pattern="[A-zÀ-ú]+" title="Please Enter Valid First Name (Only letters)"
+                                onkeydown="this.value = this.value.trim()" onkeyup="this.value = this.value.trim()"
+                                id="fname" class="input-appoint" name="fname" placeholder="Enter your first name"
+                                required>
                         </div>
 
-                        <div class="form-group col-sm-6 flex-column d-flex"> 
+                        <div class="form-group col-sm-6 flex-column d-flex">
                             <label class="form-control-label px-3">Last name<span class="text-danger"> *</span>
-                            </label> 
-                            <input type="text" pattern="[A-zÀ-ú]+" title="Please Enter Valid Last Name (Only letters)" onkeydown="this.value = this.value.trim()" onkeyup="this.value = this.value.trim()" id="lname" class="input-appoint" name="lname" placeholder="Enter your last name" required> 
+                            </label>
+                            <input type="text" pattern="[A-zÀ-ú]+" title="Please Enter Valid Last Name (Only letters)"
+                                onkeydown="this.value = this.value.trim()" onkeyup="this.value = this.value.trim()"
+                                id="lname" class="input-appoint" name="lname" placeholder="Enter your last name"
+                                required>
                         </div>
                     </div>
 
-                        <div class="row justify-content-between text-left">
+                    <div class="row justify-content-between text-left">
 
-                            <div class="form-group col-sm-6 flex-column d-flex"> 
-                                <label class="form-control-label px-3">Email<span class="text-danger"> *</span>
-                                </label> 
-                                <input type="email" id="email" class="input-appoint" name="email" placeholder="Enter your e-mail" required> 
-                            </div>
-
-                            <div class="form-group col-sm-6 flex-column d-flex"> 
-                             <label class="form-control-label px-3">Phone number<span class="text-danger"> *</span></label> 
-                              <input type="text" pattern="[0-9\-\+\(\)\s]+" title="Please Enter Valid Phone Number (Only numbers and +/-)" onkeydown="this.value = this.value.trim()" onkeyup="this.value = this.value.trim()" id="phone-number" class="input-appoint" name="phone" placeholder="Enter your phone" required> 
-                            </div>
-
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <label class="form-control-label px-3">Email<span class="text-danger"> *</span>
+                            </label>
+                            <input type="email" id="email" class="input-appoint" name="email"
+                                placeholder="Enter your e-mail" required>
                         </div>
 
-                        <div class="row justify-content-between text-left">
-                            <div class="form-group col-12 flex-column d-flex"> 
-                                <label class="form-control-label px-3">Your request<span class="text-danger"> *</span></label> 
-                                <textarea id="request" name="request" placeholder="Type your request here" minlength="5" maxlength="255" required></textarea>
-                            </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <label class="form-control-label px-3">Phone number<span class="text-danger">
+                                    *</span></label>
+                            <input type="text" pattern="[0-9\-\+\(\)\s]+"
+                                title="Please Enter Valid Phone Number (Only numbers and +/-)"
+                                onkeydown="this.value = this.value.trim()" onkeyup="this.value = this.value.trim()"
+                                id="phone-number" class="input-appoint" name="phone" placeholder="Enter your phone"
+                                required>
                         </div>
-                        <div class="row">
-                            <div class="form-group col-sm-2"> <button type="submit" class="btn-block btn-primary btn-appoint btn-send">Send</button> </div>
+
+                    </div>
+
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-12 flex-column d-flex">
+                            <label class="form-control-label px-3">Your request<span class="text-danger">
+                                    *</span></label>
+                            <textarea id="request" name="request" placeholder="Type your request here" minlength="5"
+                                maxlength="255" required></textarea>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-2"> <button type="submit"
+                                class="btn-block btn-primary btn-appoint btn-send">Send</button> </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
 
+{% endblock %}
+
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    let noSpace = function (event) {
+        if (document.getElementById('request').value.trim() === '') {
+            event.preventDefault();
+            swal({
+                title: "Error!",
+                text: "Please Type Your Request",
+                type: "error",
+                confirmButtonText: "Ok"
+            });
+        }
+    };
+
+    window.onload = function () {
+        document.forms[0].addEventListener('submit', noSpace, true);
+    };
+</script>
 {% endblock %}

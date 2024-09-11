@@ -858,6 +858,10 @@ textarea:focus {
         padding-right: 6px;
     }
 
+    .copyright {
+        text-align: center;
+    }
+
 }
 
 /* Small devices (phones, 510px and up) */
@@ -892,6 +896,7 @@ textarea:focus {
 
     .copyright {
         padding-top: 150px;
+        text-align: start;
     }
 
     .masthead-home {
