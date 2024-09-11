@@ -7,7 +7,7 @@ body {
 }
 
 footer {
-    background-color: rgb(26, 25, 25);
+    background-color: black;
 }
 
 .front-page-text {
@@ -15,13 +15,13 @@ footer {
 }
 
 .lawforyou-bg {
-    background: url("https://askusedu.com/blogdashboard/wp-content/uploads/2023/07/mba-after-law-llb.jpg") no-repeat center /cover;
+    background: url("https://www.business-ethics-pledge.org/wp-content/uploads/2024/07/Attorney-Emails-and-22Reply-All22-ABA-Adjusts-MRPC-Rule-4.2.jpg") no-repeat center /cover;
     position: relative;
 }
 
 .lawforyou-bg:before {
     content: "";
-    background: rgba(19, 19, 19, 0.626);
+    background: rgb(19 19 19 / 33%);
     position: absolute;
     bottom: 0;
     top: 0;
@@ -29,16 +29,18 @@ footer {
     right: 0;
 }
 
-.img-featured {
-    height: 90vw;
-    width: 90vw;
-    margin-bottom: 20px;
-    border-radius: 50%;
-    max-width: 150px;
-    max-height: 150px;
-    position: relative;
-    top: 10px;
-    left: 3px;
+.highlight {
+	display: inline-block;
+	color: #fff;
+	line-height: 2em;
+	padding: 2px 10px 2px 15px;
+	border-radius: 4px;
+    background: red;
+    font-size: 13px;
+}
+
+.card-header {
+    background-color: #3e94e4;
 }
 
 .stars i {
@@ -104,11 +106,23 @@ footer {
     background-color: #f0f0f0;
     border:1px solid black;
     transition:.3s;
+    border-radius: 5%;
 }
 
 .card-lawforyou:hover{
     transform:scale(1.1);
 }
+
+.card-lawforyou-featured {
+    background-color: #e7e7e7;
+    border:1px solid black;
+    transition:.3s;
+}
+
+.card-lawforyou-featured:hover{
+    transform:scale(1.1);
+}
+
 
 .text-lawforyou-bg {
     font-family: 'Exo', sans-serif;
@@ -127,7 +141,7 @@ footer {
 }
 
 .card-img-top {
-    border-radius: 10%;
+    border-radius: 5%;
 }
 
 .scale {
@@ -275,7 +289,7 @@ footer {
 }
 
 .nav-link:hover {
-    color: #a8a6a6
+    color: gold;
 }
 
 .nav-link.active {
@@ -289,18 +303,17 @@ footer {
     cursor: pointer;
     outline: none;
     color: #fff;
-    background-color: #1EBBD7;
+    background-color: #42a9d8;
     border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
+    border-radius: 5px;
 }
 
 .navbar-link-lawforyou:hover {
-    background-color: #1aa1b8;
+    background-color: #3eade5;
 }
 
 .navbar-link-lawforyou:active {
-    background-color: #1aa1b8;
+    background-color: #3eade5;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
@@ -522,60 +535,11 @@ textarea:focus {
 
 /* Footer*/
 
-.copyright {
-    font-size: 12px;
-}
-
-.social-media-button:hover {
-    text-decoration: none;
-}
-
-/*Change icons size here*/
-.social-icons .fa {
-    font-size: 1.8em;
-}
-/*Change icons circle size and color here*/
-.social-icons .fa {
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    color: #FFF;
-    color: rgba(255, 255, 255, 0.8);
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
-
-.social-icons.icon-circle .fa{ 
-    border-radius: 50%;
-}
-
-.social-icons .fa:hover, .social-icons .fa:active {
-    color: #FFF;
-    -webkit-box-shadow: 1px 1px 3px #333;
-    -moz-box-shadow: 1px 1px 3px #333;
-    box-shadow: 1px 1px 3px #333; 
-}
-
-.social-icons .fa-facebook {
-  background-color:#3C599F;
-}  
-
-.social-icons .fa-instagram {
-    background-color:#951597;
-}
-
-.social-icons .fa-youtube-play{
-  background-color:#C52F30;
-}
 
 /* MailChimp */
 
 #mc_embed_signup {
-    background: #495057;
+    background: #1e1e1e;
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;
 }
@@ -865,6 +829,10 @@ textarea:focus {
         margin: 0 auto;
     }
 
+    .logo-lawforyou {
+        width: 200px;
+    }
+
     .badge {
 
         left: 66px;
@@ -921,6 +889,10 @@ textarea:focus {
     .nav-account-bag {
         margin-left: 370px;
         position: absolute;
+    }
+
+    .logo-lawforyou {
+        width: 300px;
     }
 
     .badge {
@@ -1006,6 +978,11 @@ textarea:focus {
         display: contents;
     }
 
+    .navbar-link-lawforyou {
+        margin-top: 20px;
+        
+    }
+
     .copyright {
         padding-top: 340px;
     }
@@ -1057,6 +1034,10 @@ textarea:focus {
 
     .go-posts {
         margin-left: -15px;
+    }
+
+    .logo-lawforyou {
+        width: 100%;
     }
 
     .masthead {

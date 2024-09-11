@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-lg-8 animate__animated animate__bounce text-white welcome-bg">
                 <h1 class="welcome-txt">Welcome</h1>
-                <h2 class="lawforyou-txt">Find your help here</h2>
+                <h2 class="lawforyou-txt">Get your help here</h2>
 
                 <div class="go-posts">
                     <a href="{% url 'appointment' %}" class="btn-posts">Book an appointment</a>
@@ -40,14 +40,14 @@
     </p>
 
      <!-- Featured -->
-    <div class="card-header text-center border"> <strong>Featured</strong></div>
+    <div class="card-header text-center uppercase border"> <strong class="text-white text-uppercase"> Featured</strong></div>
 
     <br>
 
       <div class="row text-center">
         {% for product in product_list|slice:":4" %}
         <div class="col-lg-3 col-md-6 mt-2">
-          <div class="card h-100 card-lawforyou border ">
+          <div class="card h-100 card-lawforyou-featured border border-secondary">
             <div class="card-img">
               {% if product.image %}
               <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid img-featured">
@@ -57,9 +57,12 @@
             </div>
             <div class="card-body">
                 <h5 class="card-title">{{ product.name }}</h5>
-                <p class="card-text">{{ product.summary }}</p>
-                <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-                <a href="{% url 'product_detail' product.url %}" class="btn btn-primary">Buy</a>
+                <p class="card-text"> {{ product.summary }}</p>
+                <hr>
+                <div class="highlight red-bg ribbon float-left">
+                  #1 Best Seller
+                  </div>
+                <a href="{% url 'product_detail' product.url %}" class="btn btn-primary float-right"> <i class="fa-sharp fa-solid fa-bag-shopping"></i> Buy</a>
             </div>
           </div>
         </div>
@@ -68,15 +71,7 @@
         
     
       </div>
-
       <br>
-
-      <div class="card-footer text-muted text-center border ">Only qualified assistance!</div>
-
-      <br>
-
-      
-
 </div>
 
 <!-- index.html content ends here -->
