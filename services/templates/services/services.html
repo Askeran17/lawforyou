@@ -7,9 +7,12 @@
   <div class="row">
     <div class="col card mb-4 mt-3 left top">
       <div class="card-body full-post-text">
-        <div class="service-summary">
-          Choose any service you need, and our lawyers with many years of experience in the field of jurisprudence will
-          help you solve your problems.
+        <div class="service-summary text-center">
+          <h1 class="text-uppercase"> <strong>Our service </strong></h1>
+          <br>
+          <p>Choose any service you need, and our lawyers with many years of experience in the field of jurisprudence will
+          help you solve your problems!</p>
+          <div class="card-header text-center uppercase border"> <strong class="text-white text-uppercase"> We recommend</strong></div>
         </div>
         <hr>
 
@@ -31,10 +34,12 @@
                       <div class="image-flash">
                       </div>
                     </div>
-
+                    <br>
                     <h2 class="card-title">{{ service.name }}</h2>
+                    <hr>
                     <p class="card-text">{{ service.summary }}</p>
-                    <p class="card-text"><strong>Price: ${{ service.price }} </strong></p>
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    <p class="card-text border border-secondary"><strong>Price: ${{ service.price }} </strong></p>
                     <a href="{{ service.url }}" class="btn btn-primary">Buy</a>
                   </div>
                 </div>

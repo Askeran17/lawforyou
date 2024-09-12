@@ -1,6 +1,6 @@
 <h1 align="center"> LawForYou - your guidehelp in law</h1>
 
-![image](/static/images/readme-img/)
+![image](/static/images/readme-img/home-bg.png)
 
 ### Live Site
 
@@ -71,7 +71,7 @@ Here is link to Agile [User Stories](https://github.com/users/Askeran17/projects
 
 #### Colors
 
-- The color scheme predominantly consists of a variety of greys, blacks, whites and blues. The use of gray and white creates a background tone, and the blue is refreshing and correlates with the color of hope, which in my opinion corresponds to the light-soft color that is blue, which corresponds to the theme of the site. The red color enlivens the dark colors in the bottom panel, and also characterizes some details in one of the buttons. The black color clearly marks the bottom panel of the site.
+- The color scheme predominantly consists of a variety of greys, blacks, whites and blues. The use of gray and white creates a background tone, and the blue is refreshing and correlates with the color of hope, which in my opinion corresponds to the light-soft color that is blue, which corresponds to the theme of the site. The red color enlivens the dark colors, and also characterizes some details in the website. The black color clearly marks the bottom panel of the site.
 
 ![image](/static/images/readme-img/color-palette.png)
 
@@ -255,6 +255,55 @@ __Header__
 
 __Main content__
 
+- On the main page, the user is given the opportunity at the top to immediately proceed to ordering a service - an appointment. To do this, click on the "Book an appointment" button located in the middle of the picture.
+![Homepage](/static/images/readme-img/.png)
+
+- Below the picture is a description with keywords so that the site is well ranked and promoted in search engines.
+![Homepage](/static/images/readme-img/.png)
+
+- Further below the text are recommended services, of which there are four. The user can choose any of them by clicking on the "Buy" button and will immediately go to the detailed product page.
+![Homepage](/static/images/readme-img/.png)
+
+__Services page__
+
+- On the service page, several types of services are offered, 6 of them on each page. In total, the service page offers 8 services, namely: draw up a testament, a power of attorney, write a letter to an opponent, notarize any document, get help in filling out a application, help in dividing property, help in appealing a decision, and also the ability to draw up a contract.
+![Services Page](/static/images/readme-img/.png)
+
+__Product detail page__
+
+- On the product page, any user, even unregistered, can buy a service. By specifying how many services he wants to order and then clicking the buy button, his service goes to the cart.
+![Product Detail Page](/static/images/readme-img/.png)
+
+- Registered users also have the ability to leave comments, edit them and delete them. Also, registered users can rate the service by placing their rating.
+![Product Detail Page](/static/images/readme-img/.png)
+
+- After the user has rated and left a rating, his review appears immediately.
+![Product Detail Page](/static/images/readme-img/.png)
+
+- The admin can edit the product, as well as delete it directly without going to the admin panel.
+![Product Detail Page](/static/images/readme-img/.png)
+
+__Shopping Bag page__
+
+- On the shopping bag page, the user can delete the ordered product or, for example, increase its quantity.
+![Shopping Bag Page](/static/images/readme-img/.png)
+
+- The user can also return to shopping or continue placing the order.
+![Shopping Bag Page](/static/images/readme-img/.png)
+
+__Checkout page__
+
+- On the checkout page, the user fills in the specified fields and makes a purchase by clicking the order button.
+![Checkout Page](/static/images/readme-img/.png)
+
+- After the purchase, the user is taken to the order confirmation page, where the purchased service is described, and the user also receives a confirmation email to his email that the service has been purchased with a notification in the mail that the user will be contacted shortly.
+![Checkout Page](/static/images/readme-img/.png)
+
+__Profile page__
+
+- On the profile page, the user can see all of their orders, as well as their personal data.
+![Profile Page](/static/images/readme-img/.png)
+
 __Forecast page__
 
 - By clicking on the Forecast button in the top panel, the user is taken to the forecast page.
@@ -272,6 +321,22 @@ __Forecast page__
 - Having filled in all the contact fields, the user sends it and the legal team receives this request, after which they will contact him as soon as possible
 ![Forecast Page](/static/images/readme-img/.png)
 
+__Appointment page__
+
+On the Meeting page, you can order a meeting with a lawyer. To do this, the user needs to fill out the form and click the send button.
+![Appointment Page](/static/images/readme-img/.png)
+
+__Manage Appointment page__
+
+- The admin, in turn, will see each sent request directly from the frontend on the management page, without going to the admin panel, and can process the request, choosing a suitable date for the meeting.
+![Manage-Appointment Page](/static/images/readme-img/.png)
+
+- After the admin approves the request by specifying the date, the user will receive an email that the request has been approved and will be contacted shortly.
+![Manage-Appointment Page](/static/images/readme-img/.png)
+
+- The admin can also delete the request directly without going to the admin panel.
+![Manage-Appointment Page](/static/images/readme-img/.png)
+
 __About page__
 
 - This page contains brief information about the company, as well as what the company does
@@ -279,7 +344,7 @@ __About page__
 
 __Footer__
 
-- In the footer I have placed a link to Facebook, Instagram, Twitter and YouTube. It looks beautiful with the bootstraps function. The link opens in a separate tab and the visitor is taken to socialmedia he choose, while the site remains open. It is very comfortable. And above links I placed copyright.
+- In the footer I have placed a link to Facebook, Instagram, Twitter and YouTube. The link opens in a separate tab and the visitor is taken to socialmedia he choose, while the site remains open. It is very comfortable. Then I add schedule of opening hours, contacts and oppotunity to subscribe. And at the bottom I placed copyright.
 
 ![Footer](/static/images/readme-img/footer.png)
 
@@ -293,6 +358,10 @@ __Error pages__
 
 
 ## Marketing
+
+- For good promotion of products, and especially online services, the site that offers its services for this must be well SEO optimized. For this, all possible means were used to promote the legal services that the site offers, namely: a beautifully designed site design, which in turn entices the visitor to visit the site again and again, well-structured web pages, removal of unnecessary code, adaptability and the ability to use the site on all possible devices. Google AdWords was also used to find key queries for the site's subject matter.
+
+- The site also offers to subscribe to the newsletter using Mail Chimp, which in turn will increase the flow of returning visitors and from the incoming visitors will become regular customers, receiving new and high-quality offers.
 
 ### Facebook Business
 

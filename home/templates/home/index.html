@@ -5,73 +5,90 @@
 
 <!-- Page Header -->
 <header class="masthead-home lawforyou-bg">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 animate__animated animate__bounce text-white welcome-bg">
-                <h1 class="welcome-txt">Welcome</h1>
-                <h2 class="lawforyou-txt">Get your help here</h2>
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 animate__animated animate__bounce text-white welcome-bg">
+        <h1 class="welcome-txt">Welcome</h1>
+        <h2 class="lawforyou-txt">Get your help here</h2>
 
-                <div class="go-posts">
-                    <a href="{% url 'appointment' %}" class="btn-posts">Book an appointment</a>
-                </div>
-            </div>
+        <div class="go-posts">
+          <a href="{% url 'appointment' %}" class="btn-posts">Book an appointment</a>
         </div>
+      </div>
     </div>
+  </div>
 </header>
 
 
 <!-- index.html content starts here -->
 <div class="container-fluid">
-    <br>
-    <p class="front-page-text">Our legal services are services provided on a professional basis by qualified lawyers who
-        have an attorney's license to protect the rights, freedoms and interests of citizens and organizations.
+  <br>
+  <p class="front-page-text">Our legal services are services provided on a professional basis by qualified lawyers who
+    have an attorney's license to protect the rights, freedoms and interests of citizens and organizations.
 
-        Our law firm strives to provide the highest standards of quality in the provision of legal services. The main
-        mission of our law firm is to take business to a new level, providing reliable legal protection from all
-        possible risks.
+    Our law firm strives to provide the highest standards of quality in the provision of legal services. The main
+    mission of our law firm is to take business to a new level, providing reliable legal protection from all
+    possible risks.
 
-        Our law firm is not afraid to take responsibility when providing legal services. All financial guarantees are
-        fixed in the contract. Therefore, when cooperating with us, you and your business are 100% protected.
+    Our law firm is not afraid to take responsibility when providing legal services. All financial guarantees are
+    fixed in the contract. Therefore, when cooperating with us, you and your business are 100% protected.
 
-        We value skill and professionalism. We can rightfully be proud of our ability to negotiate. Perhaps we can
-        resolve the dispute without going to court. In any case, we always offer clients the most effective way to
-        resolve a legal dispute.
-    </p>
+    We value skill and professionalism. We can rightfully be proud of our ability to negotiate. Perhaps we can
+    resolve the dispute without going to court. In any case, we always offer clients the most effective way to
+    resolve a legal dispute.
+  </p>
 
-     <!-- Featured -->
-    <div class="card-header text-center uppercase border"> <strong class="text-white text-uppercase"> Featured</strong></div>
+  <p class="front-page-text">
+    The company's lawyers are ready to provide legal services in all regions of Sweden, as well as online services in
+    all countries of the world, using modern instant messengers (Skype, WhatsApp, Viber, Zoom and Teams) to provide oral
+    and written consultations and negotiations, organize the collection of documentation and coordinate the actions of
+    clients, as well as by sending on business trips on behalf of the client.
 
-    <br>
+    The activities are carried out in various branches of law, the key areas of which are civil, labor, tax law,
+    intellectual property law, etc.
 
-      <div class="row text-center">
-        {% for product in product_list|slice:":4" %}
-        <div class="col-lg-3 col-md-6 mt-2">
-          <div class="card h-100 card-lawforyou-featured border border-secondary">
-            <div class="card-img">
-              {% if product.image %}
-              <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid img-featured">
-              {% else%}
-              <img src="{{ MEDIA_URL }}noimage.webp" alt="{{ product.name }}" class="img-fluid img-featured">
-              {% endif %}
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">{{ product.name }}</h5>
-                <p class="card-text"> {{ product.summary }}</p>
-                <hr>
-                <div class="highlight red-bg ribbon float-left">
-                  #1 Best Seller
-                  </div>
-                <a href="{% url 'product_detail' product.url %}" class="btn btn-primary float-right"> <i class="fa-sharp fa-solid fa-bag-shopping"></i> Buy</a>
-            </div>
-          </div>
+    We carefully treat the issue of customer trust, strengthening it in practice, and therefore we only advocate for the
+    transparency of mutual business and partnership relations. We value our reputation and regular customers who have
+    trusted us for many years.
+  </p>
+  <!-- Featured -->
+  <div class="card-header text-center uppercase border"> <strong class="text-white text-uppercase"> Featured</strong>
+  </div>
+
+  <br>
+
+  <div class="row text-center">
+    {% for product in product_list|slice:":4" %}
+    <div class="col-lg-3 col-md-6 mt-2">
+      <div class="card h-100 card-lawforyou-featured border border-secondary">
+        <div class="card-img">
+          {% if product.image %}
+          <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid img-featured">
+          {% else%}
+          <img src="{{ MEDIA_URL }}noimage.webp" alt="{{ product.name }}" class="img-fluid img-featured">
+          {% endif %}
         </div>
-        <!-- End Card Item -->
-        {% endfor %}
-        
-    
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text"> {{ product.summary }}</p>
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          <hr>
+          <div class="highlight red-bg ribbon float-left">
+            #1 Best Seller
+          </div>
+          <a href="{% url 'product_detail' product.url %}" class="btn btn-primary float-right"> <i
+              class="fa-sharp fa-solid fa-bag-shopping"></i> Buy</a>
+        </div>
       </div>
-      <br>
+    </div>
+    <!-- End Card Item -->
+    {% endfor %}
+
+
+  </div>
+  <br>
 </div>
 
 <!-- index.html content ends here -->

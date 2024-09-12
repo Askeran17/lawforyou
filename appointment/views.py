@@ -39,6 +39,7 @@ class AppointmentView(TemplateView):
 
 
 class ManageAppointmentView(ListView):
+    queryset = Appointment.objects.all().order_by("-sent_date", "-id")
     template_name = "appointment/manage-appointment.html"
     model = Appointment
     context_object_name = "appointments"

@@ -14,7 +14,7 @@
         <div class="col-lg-4">
             <div class="card card-margin card-manage">
                 <div class="card-header no-border">
-                    <h5 class="card-title">{{app.first_name}} {{app.last_name}}</h5>
+                    <h5 class="card-title">Request nr: {{app.id}}</h5>
                 </div>
                 <div class="card-body pt-0">
                     <div class="widget-49">
@@ -24,8 +24,9 @@
                                 <span class="widget-49-date-month">{{app.sent_date|date:"M"}}</span>
                             </div>
                             <div class="widget-49-meeting-info">
-                                <span class="widget-49-pro-title">{{app.email}}</span>
-                                <span class="widget-49-meeting-time">Phone: {{app.phone}}</span>
+                                <span class="widget-49-pro-title"> <strong>Full Name:</strong> {{app.first_name}} {{app.last_name}}</span>
+                                <span class="widget-49-pro-title"><strong>E-Mail:</strong> {{app.email}}</span>
+                                <span class="widget-49-meeting-time"><strong>Phone:</strong> {{app.phone}}</span>
                             </div>
                         </div>
                         <div class="widget-49-meeting-points">
@@ -52,7 +53,7 @@
                                 <input type="date" name="date" class="form-control mb-2 input-appoint"
                                      value="" min="1997-01-01" max="2030-12-31" required>
                                 <input name="appointment-id" class="input-appoint hide-appoint" value="{{app.id}}">
-                                <input class="btn-block btn-primary form-control input-appoint" type="submit"
+                                <input class="btn-block btn-warning form-control input-appoint" type="submit"
                                     value="Accept">
                             </div>
                         </form>

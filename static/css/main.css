@@ -14,6 +14,10 @@ footer {
     font-family: 'Exo', sans-serif;
 }
 
+.bi-star-fill {
+    color: rgb(255, 182, 24);
+}
+
 .lawforyou-bg {
     background: url("https://www.business-ethics-pledge.org/wp-content/uploads/2024/07/Attorney-Emails-and-22Reply-All22-ABA-Adjusts-MRPC-Rule-4.2.jpg") no-repeat center /cover;
     position: relative;
@@ -105,22 +109,20 @@ footer {
 .card-lawforyou {
     background-color: #f0f0f0;
     border:1px solid black;
-    transition:.3s;
     border-radius: 5%;
 }
 
 .card-lawforyou:hover{
-    transform:scale(1.1);
+    background-color: #d1d1d1;
 }
 
 .card-lawforyou-featured {
     background-color: #e7e7e7;
     border:1px solid black;
-    transition:.3s;
 }
 
 .card-lawforyou-featured:hover{
-    transform:scale(1.1);
+    background-color: #d1d1d1;
 }
 
 
@@ -316,6 +318,10 @@ footer {
     background-color: #3eade5;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+}
+
+.dropdown-menu {
+    background-color: #f2f2f2f0;
 }
 
 /* Appointment */
@@ -539,7 +545,7 @@ textarea:focus {
 /* MailChimp */
 
 #mc_embed_signup {
-    background: #1e1e1e;
+    background: #343a40;
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;
 }
@@ -817,6 +823,14 @@ textarea:focus {
     width: 100%;
 }
 
+/* Small devices (phones, 300px and up) */
+@media only screen and (min-width: 300px) {
+
+    .logo-lawforyou {
+        width: 180px;
+    }
+}
+
 /* Small devices (phones, 335px and up) */
 @media only screen and (min-width: 335px) {
 
@@ -875,6 +889,16 @@ textarea:focus {
     }
 }
 
+/* Small devices (phones, 335px and up) */
+@media only screen and (min-width: 335px) and (max-width: 400px) {
+
+    .refferal_badge {
+    margin-left: 140px;
+    margin-top: -55px;
+}
+
+}
+
 /* Small devices (phones, 510px and up) */
 @media only screen and (min-width: 510px) {
     .nav-account-bag {
@@ -909,11 +933,6 @@ textarea:focus {
         border-radius: 48%;
     }
 
-    .copyright {
-        padding-top: 150px;
-        text-align: start;
-    }
-
     .masthead-home {
         height: 33vh;
         width: 100%;
@@ -939,6 +958,10 @@ textarea:focus {
 
     .btn-send {
         width: 150%;
+    }
+
+    .message-container {
+        top: 82px;
     }
 
     .footer {
@@ -1012,6 +1035,11 @@ textarea:focus {
         width: 100%;
     }
 
+    .message-container {
+        right: 42px;
+
+    }
+
     .lawforyou-bg {
         background-size: cover;
         background-position-y: top;
@@ -1060,8 +1088,25 @@ textarea:focus {
         width: 100%;
     }
 
+    .navbar-link-lawforyou {
+        font-size: 15px;
+    }
+
+    .badge {
+        left: 75px;
+    }
+
+    .message-container {
+        top: 120px;
+
+    }
+
     .masthead {
         height: 230px;
+    }
+
+    .masthead-home {
+        height: 93vh;
     }
 
     .welcome-txt {
@@ -1088,11 +1133,6 @@ textarea:focus {
 
     .footer {
         height: auto;
-    }
-
-    .copyright {
-        padding-top: 1px;
-
     }
 
     .edit-delete {
