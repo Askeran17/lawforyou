@@ -1,6 +1,6 @@
 <h1 align="center"> LawForYou - your guidehelp in law</h1>
 
-![image](/static/images/readme-img/home-bg.png)
+![The LawForYou on a variety of screen sizes](/static/images/readme-img/adaptability-size.png)
 
 ### Live Site
 
@@ -15,7 +15,6 @@
 ## [Contents](#contents)
 
 - [Overview](#overview)
-- [Adaptability](#adaptability)
 - [User Experience (UX)](#user-experience-ux)
   - [Project Goal](#project-goal)
   - [User Stories](#user-stories)
@@ -43,10 +42,6 @@ This site is dedicated to legal assistance to people who need to protect their r
 
 The scope of paid services includes, for example, writing a contract, appealing a decision in government agencies and court, a notary seal, filing a petition, etc. Under each service, the user can leave a review and evaluate the offered service. The user also has the opportunity to follow the company's news via Facebook, by subscribing to the company's Facebook page, as well as subscribing to the mailing list.
 
-
-## Adaptability on a variety of screen sizes
-
-![The LawForYou on a variety of screen sizes](/static/images/readme-img/adaptability-size.png)
 
 ## User Experience
 
@@ -256,10 +251,10 @@ __Header__
 __Main content__
 
 - On the main page, the user is given the opportunity at the top to immediately proceed to ordering a service - an appointment. To do this, click on the "Book an appointment" button located in the middle of the picture.
-![Homepage](/static/images/readme-img/.png)
+![Homepage](/static/images/readme-img/homepage.png)
 
 - Below the picture is a description with keywords so that the site is well ranked and promoted in search engines.
-![Homepage](/static/images/readme-img/.png)
+![SEO Description](/static/images/readme-img/seo-description.png)
 
 - Further below the text are recommended services, of which there are four. The user can choose any of them by clicking on the "Buy" button and will immediately go to the detailed product page.
 ![Homepage](/static/images/readme-img/.png)
