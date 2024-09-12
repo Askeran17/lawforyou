@@ -108,6 +108,10 @@ Product detail page
 
 ![image](/static/images/readme-img/wireframe-product-detail-page.png)
 
+My profile page
+<br>
+
+![image](/static/images/readme-img/wireframe-profile.png)
 
 ### Database
 The project uses the relational database PostgreSQL to store the data. I used PostgreSQL because it is considered one of the recommended databases on the Heroku platform.
@@ -254,6 +258,7 @@ __Main content__
 ![Homepage](/static/images/readme-img/homepage.png)
 
 - Below the picture is a description with keywords so that the site is well ranked and promoted in search engines.
+
 ![SEO Description](/static/images/readme-img/seo-description.png)
 
 - Further below the text are recommended services, of which there are four. The user can choose any of them by clicking on the "Buy" button and will immediately go to the detailed product page.

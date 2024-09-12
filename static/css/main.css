@@ -19,7 +19,7 @@ footer {
 }
 
 .lawforyou-bg {
-    background: url("https://www.business-ethics-pledge.org/wp-content/uploads/2024/07/Attorney-Emails-and-22Reply-All22-ABA-Adjusts-MRPC-Rule-4.2.jpg") no-repeat center /cover;
+    background: url("https://res.cloudinary.com/dfy0one9z/image/upload/v1726171187/background-image_k6w3sp.webp") no-repeat center /cover;
     position: relative;
 }
 
@@ -123,6 +123,12 @@ footer {
 
 .card-lawforyou-featured:hover{
     background-color: #d1d1d1;
+}
+
+.img-featured {
+    width: 40vh;
+    height: 30vh;
+    margin-top: 40px;
 }
 
 
@@ -1042,7 +1048,7 @@ textarea:focus {
 
     .lawforyou-bg {
         background-size: cover;
-        background-position-y: top;
+        
     }
 
     .text-lawforyou-bg {
@@ -1084,10 +1090,6 @@ textarea:focus {
         margin-left: -15px;
     }
 
-    .logo-lawforyou {
-        width: 100%;
-    }
-
     .navbar-link-lawforyou {
         font-size: 15px;
     }
@@ -1106,7 +1108,7 @@ textarea:focus {
     }
 
     .masthead-home {
-        height: 93vh;
+        height: 60vh;
     }
 
     .welcome-txt {
