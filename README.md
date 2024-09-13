@@ -72,7 +72,29 @@ Here is link to Agile [User Stories](https://github.com/users/Askeran17/projects
 
 #### Fonts
 
+-  In order for the site to blend beautifully with the text, two text styles were used:
 
+<br>
+
+<strong>"Jersey 10"</strong> - was used for the main page as a welcome message, which goes well with the main image of the site. 
+
+Here is an example:
+
+![image](/static/images/readme-img/font-jersey-10.png)
+
+<br>
+<strong>"Exo"</strong> - was used as the main style of page texts.
+
+<br>
+Here is an example:
+
+![image](/static/images/readme-img/font-exo.png)
+
+<strong>"Crimson Text"</strong> - was used for banner 
+
+Here is an example:
+
+![image](/static/images/readme-img/font-crimson-text.png)
 
 
 ### Wireframes
@@ -220,9 +242,6 @@ The model consists of the following parts:
 - [x] **product**: models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE) - Field for order product
 - [x] **quantity**: models.IntegerField(null=False, blank=False, default=0) - Field for quantity
 - [x] **lineitem_total**: models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False) - Field for item total price
-
-
-
 
 
 ## Features
