@@ -14,7 +14,7 @@
         <div class="col-lg-4">
             <div class="card card-margin card-manage">
                 <div class="card-header no-border">
-                    <h5 class="card-title">Request nr: {{app.id}}</h5>
+                    <h5 class="card-title">APP: {{app.id}}</h5>
                 </div>
                 <div class="card-body pt-0">
                     <div class="widget-49">
@@ -30,12 +30,14 @@
                             </div>
                         </div>
                         <div class="widget-49-meeting-points">
-                            <span>Request: {{app.request}}</span>
+                            <span> <strong>Request:</strong> {{app.request}}</span>
                         </div>
 
                         {% if app.accepted %}
-                        <p> <strong>Set date to meeting: <u>{{ app.appointment_date }}</u> </strong>
-                        </p>
+                        <div class="widget-49-meeting-points">
+                        <span><strong>Date to meeting:</strong> <u>{{ app.appointment_date }}</u></span> 
+                        </div>
+                        
                         {% endif %}
 
                         <hr class="w-100">
@@ -53,7 +55,7 @@
                                 <input type="date" name="date" class="form-control mb-2 input-appoint"
                                      value="" min="1997-01-01" max="2030-12-31" required>
                                 <input name="appointment-id" class="input-appoint hide-appoint" value="{{app.id}}">
-                                <input class="btn-block btn-warning form-control input-appoint" type="submit"
+                                <input class="btn-block btn-dark form-control input-appoint" type="submit"
                                     value="Accept">
                             </div>
                         </form>

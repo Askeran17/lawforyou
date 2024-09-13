@@ -14,6 +14,18 @@ footer {
     font-family: 'Exo', sans-serif;
 }
 
+#legal-banner {
+    font-family: 'Crimson Text', sans-serif;
+}
+
+.legal-text-banner {
+    color: black;
+}
+
+.bg-banner {
+   background-color: #d6d7d8;
+}
+
 .bi-star-fill {
     color: rgb(255, 182, 24);
 }
@@ -115,12 +127,6 @@ footer {
 .card-lawforyou-featured {
     background-color: #e7e7e7;
     border:1px solid black;
-}
-
-.img-featured {
-    width: 40vh;
-    height: 30vh;
-    margin-top: 40px;
 }
 
 
@@ -409,7 +415,7 @@ textarea:focus {
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #ffffff;
+    background-color: #ffd146;
     background-clip: border-box;
     border: 1px solid #e6e4e9;
     border-radius: 8px;
@@ -442,7 +448,7 @@ textarea:focus {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #edf1fc;
+    background-color: #ffffff;
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
@@ -474,7 +480,7 @@ textarea:focus {
 }
 
 .widget-49 .widget-49-title-wrapper .widget-49-meeting-info .widget-49-meeting-time {
-    color: #B1BAC5;
+    color: #383737;
     font-size: 13px;
 }
 

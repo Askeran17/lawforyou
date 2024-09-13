@@ -10,7 +10,7 @@
     <div class="row">
       <div class="col-lg-8 animate__animated animate__bounce text-white welcome-bg">
         <h1 class="welcome-txt">Welcome</h1>
-        <h2 class="lawforyou-txt">Get your help here</h2>
+        <h2 class="lawforyou-txt">Get your lawhelp here</h2>
 
         <div class="go-posts">
           <a href="{% url 'appointment' %}" class="btn-posts">Book an appointment</a>
@@ -25,8 +25,9 @@
 <div class="container-fluid">
   <br>
   <p class="front-page-text">
-    Our lawyers are ready to provide legal services in all regions of Sweden, as well as online services in
-    all countries of the world, using modern instant messengers (Skype, WhatsApp, Viber, Zoom and Teams) to provide oral
+    Our lawyers are ready to provide <strong>legal services</strong> in all regions of Sweden, as well as online
+    services in
+    all countries of the world, using modern instant messengers (Zoom, Teams, Skype and WhatsApp) to provide oral
     and written consultations and negotiations, organize the collection of documentation and coordinate the actions of
     clients, as well as by sending on business trips on behalf of the client.
 
@@ -34,7 +35,9 @@
     intellectual property law, etc.
 
     We carefully treat the issue of customer trust, strengthening it in practice, and therefore we only advocate for the
-    transparency of mutual business and partnership relations. We value our reputation and regular customers who have
+    transparency of mutual business and partnership relations. Understanding that the legal process can be expensive, we
+    offer the opportunity for a <strong>free legal consultation</strong> for the first meeting. We value our reputation
+    and regular customers who have
     trusted us for many years.
   </p>
   <!-- Featured -->
@@ -55,8 +58,8 @@
         </div>
         <div class="card-body">
           <h5 class="card-title">{{ product.name }}</h5>
-          <p class="card-text"> {{ product.summary }}</p>
-          
+          <p class="card-text"> <em> {{ product.summary }}</em></p>
+
           <hr>
           <div class="highlight red-bg ribbon float-left">
             #1 Best Seller
