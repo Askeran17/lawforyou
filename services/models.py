@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MinLengthValidator
-from cloudinary.models import CloudinaryField
 
 
 RATINGS = ((None, '0'), (1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5'))
@@ -13,7 +12,7 @@ class Product(models.Model):
     item = models.IntegerField(null=True)
     name = models.CharField(max_length=254)
     url = models.SlugField(max_length=300, null=True, unique=True)
-    image = CloudinaryField('image', default='dfy0one9z', blank=True)
+    image = models.ImageField(null=True, blank=True)
     description = models.TextField(
         validators=[
             MinLengthValidator(1)
