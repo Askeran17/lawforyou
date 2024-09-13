@@ -20,9 +20,8 @@
   </div>
 </header>
 
-
 <!-- index.html content starts here -->
-<div class="container-fluid">
+<section class="container-fluid">
   <br>
   <p class="front-page-text">
     Our lawyers are ready to provide <strong>legal services</strong> in all regions of Sweden, as well as online
@@ -30,13 +29,13 @@
     all countries of the world, using modern instant messengers (Zoom, Teams, Skype and WhatsApp) to provide oral
     and written consultations and negotiations, organize the collection of documentation and coordinate the actions of
     clients, as well as by sending on business trips on behalf of the client.
-
+ 
     The activities are carried out in various branches of law, the key areas of which are civil, labor, tax law,
     intellectual property law, etc.
 
     We carefully treat the issue of customer trust, strengthening it in practice, and therefore we only advocate for the
     transparency of mutual business and partnership relations. Understanding that the legal process can be expensive, we
-    offer the opportunity for a <strong>free legal consultation</strong> for the first meeting. We value our reputation
+    offer the opportunity for a free legal consultation for the first meeting. We value our reputation
     and regular customers who have
     trusted us for many years.
   </p>
@@ -59,9 +58,8 @@
         <div class="card-body">
           <h5 class="card-title">{{ product.name }}</h5>
           <p class="card-text"> <em> {{ product.summary }}</em></p>
-
           <hr>
-          <div class="highlight red-bg ribbon float-left">
+          <div class="highlight float-left">
             #1 Best Seller
           </div>
           <a href="{% url 'product_detail' product.url %}" class="btn btn-primary float-right"> <i
@@ -71,11 +69,9 @@
     </div>
     <!-- End Card Item -->
     {% endfor %}
-
-
   </div>
   <br>
-</div>
+</section>
 
 <!-- index.html content ends here -->
 {% endblock %}

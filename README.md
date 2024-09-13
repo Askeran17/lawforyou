@@ -286,23 +286,21 @@ __Product detail page__
 __Shopping Bag page__
 
 - On the shopping bag page, the user can delete the ordered product or, for example, increase its quantity.
-![Shopping Bag Page](/static/images/readme-img/.png)
-
-- The user can also return to shopping or continue placing the order.
-![Shopping Bag Page](/static/images/readme-img/.png)
+The user can also return to shopping or continue placing the order.
+![Shopping Bag Page](/static/images/readme-img/shopping-bag-page.png)
 
 __Checkout page__
 
 - On the checkout page, the user fills in the specified fields and makes a purchase by clicking the order button.
-![Checkout Page](/static/images/readme-img/.png)
+![Checkout Page](/static/images/readme-img/checkout-page.png)
 
 - After the purchase, the user is taken to the order confirmation page, where the purchased service is described, and the user also receives a confirmation email to his email that the service has been purchased with a notification in the mail that the user will be contacted shortly.
-![Checkout Page](/static/images/readme-img/.png)
+![Checkout Success Page](/static/images/readme-img/checkout-success-page.png)
 
 __Profile page__
 
 - On the profile page, the user can see all of their orders, as well as their personal data.
-![Profile Page](/static/images/readme-img/.png)
+![Profile Page](/static/images/readme-img/profile-page.png)
 
 __Forecast page__
 
@@ -313,29 +311,31 @@ __Forecast page__
 ![Forecast Page](/static/images/readme-img/forecast-request-page.png)
 
 - If, for example, the user receives a positive answer, then he can be calm and most likely does not need to contact lawyers.
-![Forecast Page](/static/images/readme-img/.png)
+![Forecast Question](/static/images/readme-img/forecast-question.png)
+![Forecast Good Result](/static/images/readme-img/forecast-good-result.png)
 
 - If the user receives an average or especially negative answer, then he is recommended to contact lawyers by filling out a request
-![Forecast Page](/static/images/readme-img/.png)
+![Forecast Bad Result](/static/images/readme-img/forecast-bad-result.png)
 
 - Having filled in all the contact fields, the user sends it and the legal team receives this request, after which they will contact him as soon as possible
-![Forecast Page](/static/images/readme-img/.png)
+![Request Form](/static/images/readme-img/request-form-fill.png)
+![Request Success Page](/static/images/readme-img/request-success-page.png)
 
 __Appointment page__
 
 On the Meeting page, you can order a meeting with a lawyer. To do this, the user needs to fill out the form and click the send button.
-![Appointment Page](/static/images/readme-img/.png)
+![Appointment Page](/static/images/readme-img/book-appointment.png)
 
 __Manage Appointment page__
 
 - The admin, in turn, will see each sent request directly from the frontend on the management page, without going to the admin panel, and can process the request, choosing a suitable date for the meeting.
-![Manage-Appointment Page](/static/images/readme-img/.png)
+![Manage-Appointment Page](/static/images/readme-img/manage-appointment.png)
 
 - After the admin approves the request by specifying the date, the user will receive an email that the request has been approved and will be contacted shortly.
-![Manage-Appointment Page](/static/images/readme-img/.png)
+![Acceppt Appointment](/static/images/readme-img/accept-appointment.png)
 
 - The admin can also delete the request directly without going to the admin panel.
-![Manage-Appointment Page](/static/images/readme-img/.png)
+![Delete Appointment Page](/static/images/readme-img/delete-appointment.png)
 
 __About page__
 
