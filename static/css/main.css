@@ -112,17 +112,9 @@ footer {
     border-radius: 5%;
 }
 
-.card-lawforyou:hover{
-    background-color: #d1d1d1;
-}
-
 .card-lawforyou-featured {
     background-color: #e7e7e7;
     border:1px solid black;
-}
-
-.card-lawforyou-featured:hover{
-    background-color: #d1d1d1;
 }
 
 .img-featured {

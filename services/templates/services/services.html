@@ -23,7 +23,7 @@
               {% for service in product_list %}
               <div class="col-md-4">
                 <div class="card mb-4 text-center">
-                  <div class="card-body card-lawforyou border">
+                  <div class="card-body w-100 h-100 card-lawforyou border">
                     <div class="image-container">
                       {% if service.image %}
                       <img class="card-img-top" src="{{ service.image.url }}" alt="{{ service.name }}">
@@ -37,8 +37,7 @@
                     <h2 class="card-title">{{ service.name }}</h2>
                     <hr>
                     <p class="card-text">{{ service.summary }}</p>
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                    <p class="card-text border border-secondary"><strong>Price: ${{ service.price }} </strong></p>
+                    <p class="card-text"><strong>Price: ${{ service.price }} </strong></p>
                     <a href="{{ service.url }}" class="btn btn-primary">Buy</a>
                   </div>
                 </div>

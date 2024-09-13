@@ -12,7 +12,7 @@
     <meta name="description"
         content="law for you is online service which can help people to find fast answer to their problem">
     
-    <meta name="keywords" content="law, law service, legal service, law help, notarius, legal contracts">
+    <meta name="keywords" content="law, legal service, free legal consultation, legal advice, civil lawyer">
     
     {% endblock %}
 
@@ -69,7 +69,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <div class="container-fluid">
                 <a class="navbar-brand text-dark" href="{% url 'home' %}"><img
-                        src="https://res.cloudinary.com/dfy0one9z/image/upload/v1726171483/lawforyou-logo_vkras3.webp"
+                        src="{% static 'images/lawforyou-logo.webp' %}"
                         alt="LawForYou Logo" class="logo-lawforyou"></a>
                     <!-- Head links  -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
@@ -113,11 +113,11 @@
 
                     </ul>
 
+                    
                 </div>
 
                 <!-- Account and Bag -->
                 <ul class="nav nav-account-bag mb-2 mb-lg-0">
-                         
                          <li class="list-inline-item dropdown">
                             <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">

@@ -10,10 +10,6 @@ class RequestForm(forms.ModelForm):
     name.widget = forms.TextInput(
         attrs={'pattern': "[A-zÀ-ú]+",
                'title': "Please Enter Valid Name (Only letters, no space)"})
-    phone = forms.CharField(max_length=20)
-    phone.widget = forms.TextInput(
-        attrs={'pattern': "[0-9\-\+]+",
-               'title': "Please Enter Valid Phone Number (Only numbers and +/-, no space)"})
     subject = forms.CharField(max_length=150)
     subject.widget = forms.TextInput(
         attrs={'pattern': "[A-zÀ-ú]+",
@@ -22,3 +18,13 @@ class RequestForm(forms.ModelForm):
     class Meta:
         model = RequestHelp
         fields = ['name', 'email', 'phone', 'subject', 'message']
+
+    def __init__(self, *args, **kwargs):
+        """
+        Initialize class to fields
+        """
+        super().__init__(*args, **kwargs)
+
+        for field in self.fields:
+            self.fields[field].widget.attrs['class'] = (
+                'border-dark')

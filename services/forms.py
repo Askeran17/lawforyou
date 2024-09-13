@@ -5,7 +5,6 @@ from .models import Product, Review
 
 class ProductForm(forms.ModelForm):
 
-    name = forms.CharField(max_length=254)
     url = forms.SlugField(max_length=300)
     url.widget = forms.TextInput(
         attrs={'pattern': "^[a-z0-9_]+(?:-[a-z0-9_]+)*$",
