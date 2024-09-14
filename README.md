@@ -276,12 +276,8 @@ __Main content__
 - On the main page, the user is given the opportunity at the top to immediately proceed to ordering a service - an appointment. To do this, click on the "Book an appointment" button located in the middle of the picture.
 ![Homepage](/static/images/readme-img/homepage.png)
 
-- Below the picture is a description with keywords so that the site is well ranked and promoted in search engines.
-
-![SEO Description](/static/images/readme-img/seo-description.png)
-
-- Further below the text are recommended services, of which there are four. The user can choose any of them by clicking on the "Buy" button and will immediately go to the detailed product page.
-![Homepage](/static/images/readme-img/.png)
+- Below the background image are recommended services, of which there are four. The user can choose any of them by clicking on the "Buy" button and will immediately go to the detailed product page.
+![Homepage](/static/images/readme-img/featured-services.png)
 
 __Services page__
 
@@ -293,14 +289,11 @@ __Product detail page__
 - On the product page, any user, even unregistered, can buy a service. By specifying how many services he wants to order and then clicking the buy button, his service goes to the cart.
 ![Product Detail Page](/static/images/readme-img/.png)
 
-- Registered users also have the ability to leave comments, edit them and delete them. Also, registered users can rate the service by placing their rating.
-![Product Detail Page](/static/images/readme-img/.png)
-
-- After the user has rated and left a rating, his review appears immediately.
-![Product Detail Page](/static/images/readme-img/.png)
+- Registered users also have the ability to leave comments, edit them and delete them. Also, registered users can rate the service by placing their rating.After the user has rated and left a rating, his review appears immediately.
+![Review Rating](/static/images/readme-img/review-rating.png)
 
 - The admin can edit the product, as well as delete it directly without going to the admin panel.
-![Product Detail Page](/static/images/readme-img/.png)
+![Edit Product](/static/images/readme-img/edit-product.png)
 
 __Shopping Bag page__
 

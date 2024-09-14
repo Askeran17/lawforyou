@@ -63,7 +63,7 @@ footer {
     color: #ffc107;
 }
 
-.btn-posts {
+.btn-booking {
     font-weight: 500;
     font-size: 15px;
     letter-spacing: 0.5px;
@@ -85,7 +85,7 @@ footer {
 
 }
 
-.btn-posts:hover {
+.btn-booking:hover {
     background: white;
     color: black;
     border: 1px solid;
@@ -1002,7 +1002,12 @@ textarea:focus {
     }
 
     .masthead-home {
-        height: 53vh;
+        height: 33vh;
+    }
+
+    .img-featured {
+        height: 10vh;
+        width: 10vh;
     }
 
     .add-post-form-view {
@@ -1043,17 +1048,11 @@ textarea:focus {
         padding-top: 340px;
     }
 
-    .img-featured {
-        height: 10vh;
-        width: 10vh;
-    }
-
     .masthead-home {
         margin-top: 0px;
         overflow: hidden;
         position: relative;
         display: inline-block;
-        height: 73vh;
         width: 100%;
     }
 
@@ -1098,7 +1097,7 @@ textarea:focus {
 /* Large devices (laptops and desktops, 1200px and up) */
 @media screen and (min-width: 1200px) {
 
-    .go-posts {
+    .book-appointment {
         margin-left: -15px;
     }
 
