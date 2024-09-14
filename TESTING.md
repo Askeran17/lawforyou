@@ -28,7 +28,7 @@ The site showed good scores.
 Home page
 <br>
 
-![Home](/static/images/readme-img/lighthouse-desktop.png)
+![Home](/static/images/testing-img/lighthouse-desktop.png)
 
 
 ### Mobile Results
@@ -40,7 +40,7 @@ The site showed good scores.
 Home page
 <br>
 
-![Home](/static/images/readme-img/lighthouse-mobile.png)
+![Home](/static/images/testing-img/lighthouse-mobile.png)
 
 
 ## Manual Testing
@@ -225,6 +225,7 @@ I conducted manual testing to ensure the effectiveness and usability of the LawF
 
 - HTML
   - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/)
+    ![HTML validation](/static/images/testing-img/html-validation.png)
 
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](http://jigsaw.w3.org/css-validator/)
@@ -350,7 +351,8 @@ I conducted manual testing to ensure the effectiveness and usability of the LawF
   ![urls.py](/static/images/testing-img/forecast-urls-py.png)
 
 
-
 ## Bugs
+
+At the beginning of my project I tried to test which storage platform is better to work on Cloudinary or Amazon. At first I used Cloudinary, but then I decided to try Amazon. Using Amazon for several days I received messages from them that my free limit had already reached 85%, and then I realized that perhaps this was due to the fact that I deployed the site many times. For this reason I returned back to Cloudinary, configured it correctly and the site began to work much faster and I did not receive any messages from Cloudinary like from Amazon. I think that Cloudinary platform is much better than Amazon.
 
 ### Unfixed Bugs
