@@ -80,12 +80,7 @@
     let noSpace = function (event) {
         if (document.getElementById('request').value.trim() === '') {
             event.preventDefault();
-            swal({
-                title: "Error!",
-                text: "Please Type Your Request",
-                type: "error",
-                confirmButtonText: "Ok"
-            });
+            alert("Please Type Your Request");
         }
     };
 
