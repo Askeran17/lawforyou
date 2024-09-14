@@ -19,6 +19,8 @@ class Product(models.Model):
             ]
         )
     summary = models.TextField(blank=True)
+    cooperation_partner = models.CharField(default='Svedea', max_length=100)
+    has_cooperation_partner = models.BooleanField(default=False)
     price = models.DecimalField(max_digits=6, decimal_places=2)
 
     class Meta:
