@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container w-75">
+    <div class="row d-flex justify-content-center">
+        <h1>F.A.Q</h1>
+        
+        {% for faq in faq_list %}
+            <div class="text-center">
+                <br>
+               <h2> {{ faq.title }}</h2>
+               <h3> {{ faq.question }}</h3>
+               <p> {{ faq.answer }}</p>
+            </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+{% endblock %}

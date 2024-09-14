@@ -229,6 +229,7 @@ I conducted manual testing to ensure the effectiveness and usability of the LawF
 
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](http://jigsaw.w3.org/css-validator/)
+    ![CSS validation](/static/images/testing-img/css-validation.png)
 
 - JAVASCRIPT
   - No errors for all scripts were returned when passing through the official [JSHint validator](https://jshint.com/)
@@ -247,8 +248,6 @@ I conducted manual testing to ensure the effectiveness and usability of the LawF
   - Forecast.js - No warnings for this script.
 
   ![forecast.js](/static/images/testing-img/forecast-js.png)
-
-  - 
 
 - PYTHON
   - No errors were returned when passing through the PEP8 Validator 
