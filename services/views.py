@@ -63,7 +63,7 @@ def review_edit(request, url, review_id):
             review.save()
             messages.add_message(request, messages.SUCCESS, 'Review Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating!')
+            messages.add_message(request, messages.ERROR, 'Failed to update, make sure you put also rating!')  # noqa
 
     return redirect(reverse('product_detail', args=[url]))
 

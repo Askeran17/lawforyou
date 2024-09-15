@@ -135,6 +135,11 @@ My profile page
 
 ![image](/static/images/readme-img/wireframe-profile.png)
 
+FAQ page
+<br>
+
+![image](/static/images/readme-img/wireframe-faq.png)
+
 ### Database
 The project uses the relational database PostgreSQL to store the data. I used PostgreSQL because it is considered one of the recommended databases on the Heroku platform.
 
@@ -242,6 +247,14 @@ The model consists of the following parts:
 - [x] **product**: models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE) - Field for order product
 - [x] **quantity**: models.IntegerField(null=False, blank=False, default=0) - Field for quantity
 - [x] **lineitem_total**: models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False) - Field for item total price
+
+**LawFaq model:**
+
+The model consists of the following parts:
+
+- [x] **title**: models.CharField(max_length=300) - Indicates the title of faq rubric with 300 characters length
+- [x] **question**: models.CharField(max_length=300) - Indicates the question of faq with 300 characters length
+- [x] **answer**: models.TextField(max_length=1500) - Indicates the answer of faq question with 1500 characters length
 
 
 ## Features
@@ -356,7 +369,7 @@ __About page__
 
 __Footer__
 
-- In the footer I have placed a link to Facebook, Instagram, Twitter and YouTube. The link opens in a separate tab and the visitor is taken to socialmedia he choose, while the site remains open. It is very comfortable. Then I add schedule of opening hours, contacts and oppotunity to subscribe. And at the bottom I placed copyright.
+- In the footer I have placed a link to Facebook, Instagram, Twitter and YouTube. The link opens in a separate tab and the visitor is taken to socialmedia he choose, while the site remains open. It is very comfortable. Then I add schedule of opening hours, contacts and opportunity to subscribe. In the footer there is also links to "Privacy Policy" and "FAQ". At the bottom I placed copyright.
 
 ![Footer](/static/images/readme-img/footer.png)
 
@@ -456,7 +469,7 @@ To clone do the following steps:
 
 ## Credits
 
-- I was inspired by the "Boutique Ado" project at the Code Institute. I watched YouTube tutorial about how to fix appointments opportunity for customers: (https://www.youtube.com/watch?v=3_3q_dE4_qs) 
+- I was inspired by the "Boutique Ado" project at the Code Institute. I watched YouTube tutorial about how to fix appointments opportunity for customers: (https://www.youtube.com/watch?v=3_3q_dE4_qs), and to how to add rating: (https://www.youtube.com/watch?v=3KCBN7WJXMY&t=0s)
 
 - The icons was taken from [Font Awesome](https://fontawesome.com/)
 
