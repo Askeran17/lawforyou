@@ -386,7 +386,14 @@ __Error pages__
 
 - For good promotion of products, and especially online services, the site that offers its services for this must be well SEO optimized. For this, all possible means were used to promote the legal services that the site offers, namely: a beautifully designed site design, which in turn entices the visitor to visit the site again and again, well-structured web pages, removal of unnecessary code, adaptability and the ability to use the site on all possible devices. Google AdWords was also used to find key queries for the site's subject matter.
 
+### SEO Content
+
+- For successful marketing, first of all, I used the content itself, namely, I improved it. I adapted all the pages, so the site works quickly and without much delay. On the pages, such as on the main page, I used the keywords that I chose, and arranged them in such an order that Google will not consider them as spam, but on the contrary, it will rank my site well. I selected keywords from Google AdWords, as well as directly from Google search. I tried to take both general words and the most specific ones. The content itself is structured optimized, that is, each page has a header, navigation bar, section, footer, that is, everything goes in the correct order. There are also headings 1 2 3, etc. The site has a sitemap.xml, as well as robots.txt. All this helps to promote it well.
+
+### Newsletter
+
 - The site also offers to subscribe to the newsletter using Mail Chimp, which in turn will increase the flow of returning visitors and from the incoming visitors will become regular customers, receiving new and high-quality offers.
+![MailChimp](/static/images/readme-img/mailchimp-newsletter.png)
 
 ### Facebook Business
 
