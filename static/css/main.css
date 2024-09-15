@@ -740,10 +740,15 @@ textarea:focus {
     color: #fafafa;
 }
 
-
-.error-image {
-    width: 100%;
+.error-heading {
+    margin: -10px 0 -30px;
+    font-size: calc(30vw + 40px);
+    font-family: Exo;
+    opacity: .8;
+    letter-spacing: -17px;
+    color: #0673c7;
 }
+
 
 /* Small devices (phones, 300px and up) */
 @media only screen and (min-width: 300px) {
