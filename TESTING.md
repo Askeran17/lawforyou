@@ -189,6 +189,12 @@ I conducted manual testing to ensure the effectiveness and usability of the LawF
 | - | - | - | - |
 | Visitor can view about page | Access to the about page after clicked on button "About" from navbar | Being able read text without errors | PASS |
 
+#### FAQ page
+
+| Testing  | Action | Expected Result | Grade |  
+| - | - | - | - |
+| Visitor can view FAQ page | Access to the FAQ page after clicked on link "FAQ" from footer | Being able read text without errors | PASS |
+
 #### Registration 
 
 | Testing  | Action | Expected Result | Grade |  
@@ -348,6 +354,19 @@ I conducted manual testing to ensure the effectiveness and usability of the LawF
 
 - Urls.py
   ![urls.py](/static/images/testing-img/forecast-urls-py.png)
+
+### FAQ app
+- Forms.py
+  ![forms.py](/static/images/testing-img/faq-forms-py.png)
+
+- Models.py
+  ![models.py](/static/images/testing-img/faq-models-py.png)
+
+- Views.py
+  ![views.py](/static/images/testing-img/faq-views-py.png)
+
+- Urls.py
+  ![urls.py](/static/images/testing-img/faq-urls-py.png)
 
 
 ## Bugs

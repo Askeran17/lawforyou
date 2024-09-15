@@ -2,8 +2,9 @@ from django.db import models
 
 # Create your models here.
 
+
 class LawFaq(models.Model):
-    
+
     title = models.CharField(max_length=300)
     question = models.CharField(max_length=300)
     answer = models.TextField(max_length=1500)
