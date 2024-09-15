@@ -1,4 +1,4 @@
-<h1 align="center"> LawForYou - Online Legal Service/h1>
+<h1 align="center"> LawForYou - Online Legal Service </h1>
 
 ![The LawForYou on a variety of screen sizes](/static/images/readme-img/adaptability-size.png)
 
@@ -373,7 +373,7 @@ __About page__
 __FAQ page__
 
 - This page contains brief information in form of question and answer about the safety, payments, personal data and etc.
-![FAQ Page](/static/images/readme-img/faq-page.png)
+![FAQ Page](/static/images/readme-img/faq.png)
 
 __Footer__
 
