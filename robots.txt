@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /accounts/
+Disallow: /bag/
 Sitemap: https://lawforyou-4899488e19b1.herokuapp.com/sitemap.xml
