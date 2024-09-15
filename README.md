@@ -367,6 +367,11 @@ __About page__
 - This page contains brief information about the company, as well as what the company does
 ![About Page](/static/images/readme-img/about-page.png)
 
+__FAQ page__
+
+- This page contains brief information in form of question and answer about the safety, payments, personal data and etc.
+![FAQ Page](/static/images/readme-img/faq-page.png)
+
 __Footer__
 
 - In the footer I have placed a link to Facebook, Instagram, Twitter and YouTube. The link opens in a separate tab and the visitor is taken to socialmedia he choose, while the site remains open. It is very comfortable. Then I add schedule of opening hours, contacts and opportunity to subscribe. In the footer there is also links to "Privacy Policy" and "FAQ". At the bottom I placed copyright.
@@ -393,6 +398,7 @@ __Error pages__
 ### Newsletter
 
 - The site also offers to subscribe to the newsletter using Mail Chimp, which in turn will increase the flow of returning visitors and from the incoming visitors will become regular customers, receiving new and high-quality offers.
+
 ![MailChimp](/static/images/readme-img/mailchimp-newsletter.png)
 
 ### Facebook Business

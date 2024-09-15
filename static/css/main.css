@@ -740,6 +740,12 @@ textarea:focus {
     color: #fafafa;
 }
 
+/* Error page */
+
+.error-page {
+    margin-bottom: 50px;
+  }
+
 .error-heading {
     margin: -10px 0 -30px;
     font-size: calc(30vw + 40px);
@@ -938,6 +944,10 @@ textarea:focus {
         margin-bottom: 600px;
     }
 
+    .error-page {
+        margin-bottom: 320px;
+      }
+
 
 }
 
@@ -1066,5 +1076,9 @@ textarea:focus {
     .delete-appoint-display {
         margin-bottom: 40px;
     }
+
+    .error-page {
+        margin-bottom: 50px;
+      }
 
 }

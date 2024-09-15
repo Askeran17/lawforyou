@@ -6,59 +6,59 @@
 	background-color: gold;
 	cursor: pointer;
 	margin-left: 65px;
-    color: black;
-    margin-bottom: 100px;
+	color: black;
+	margin-bottom: 100px;
 }
 
 .forecast-header {
 	font-size: 1.3rem;
-    color: black;
+	color: black;
 	margin-bottom: 5px;
 	display: flex;
-    flex-wrap: wrap;
+	flex-wrap: wrap;
 	text-align: center;
 }
 
 .hide {
-    display: none;
-  }
+	display: none;
+}
 
 
 /* Result */
-#result  {
+#result {
 	display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	margin-top: 10px;
 	font-family: "Paytone One", sans-serif;
 }
 
 #good-answer {
 	color: green;
-    font-weight: bold;
+	font-weight: bold;
 }
 
 #bad-answer {
 	color: red;
-    font-weight: bold;
+	font-weight: bold;
 }
 
 /* Top Scoreboard */
 
-#top-scoreboard  {
+#top-scoreboard {
 	display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	margin-top: 10px;
 	font-family: "Paytone One", sans-serif;
 }
 
 #forecast-case {
-    display: flex;
-    font-size: 12px;
-    margin-right: -1rem;
-    font-family: "Paytone One", sans-serif;
-    
+	display: flex;
+	font-size: 12px;
+	margin-right: -1rem;
+	font-family: "Paytone One", sans-serif;
+
 }
 
 #questions-total {
@@ -67,7 +67,7 @@
 }
 
 .questions-hidden {
-    visibility: hidden;
+	visibility: hidden;
 }
 
 /* Forecast Area */
@@ -79,10 +79,10 @@
 	box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
 	max-width: 95vw;
 	overflow: hidden;
-    
+
 }
 
-.title{
+.title {
 	font-size: 1.5rem;
 	padding: 1rem 0;
 	text-align: center;
@@ -114,7 +114,7 @@
 .forecast-options label {
 	cursor: pointer;
 	width: 100%;
-    display: block;
+	display: block;
 	padding: 1rem 0.5rem;
 }
 
@@ -158,17 +158,19 @@
 }
 
 .success-image {
-	width: 100%;
+	height: 20%;
+	width: 50%;
+	margin-bottom: 10px;
 }
 
 
 #forecast-main-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-    margin: 40px 5vw;
-	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-start;
+	margin: 40px 5vw;
+
 }
 
 
@@ -177,22 +179,22 @@
 
 	.forecast {
 		margin-bottom: 50px;
-		
+
 	}
 
 }
 
 /* Small devices (phones, 510px and up) */
 @media only screen and (min-width: 510px) and (max-width: 767px) {
-    
+
 	#start-button {
-		
-	 margin-left: -40px;
-		
+
+		margin-left: -40px;
+
 	}
 
 	.forecast-header {
-		
+
 		margin-left: -115px;
 	}
 
@@ -202,11 +204,19 @@
 @media screen and (min-width: 768px) {
 
 	.forecast {
-	
+
 		width: 300px;
-		
+
 	}
 
+}
+
+/* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+
+	.success-image {
+		margin-bottom: 100px;
+	}
 }
 
 
@@ -214,8 +224,22 @@
 @media screen and (min-width: 1024px) {
 
 	.forecast {
-	
+
 		width: 400px;
-		
+
 	}
+
+	.success-image {
+		margin-bottom: 240px;
+	}
+}
+
+/* Large devices (laptops and desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+
+	.success-image {
+		margin-bottom: 10px;
+	}
+
+
 }

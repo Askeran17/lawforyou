@@ -6,13 +6,12 @@
     <div class="container">
         <div class="row full-post-text">
             <div class="col-md-10 mt-2 mx-auto text-center">
-                <div class="darkg-bg">
-                    <h1>Error 403</h1>
-                    <p>You don't have permission to access this resource. Please, go back to <a class="btn btn-outline-black text-uppercase rounded-0" href="{% url 'home' %}">homepage</a>
+                <div class="error-page">
+                    <h1 class="error-heading">403</h1>
+                    <p>You don't have permission to access this resource.
                     </p>
-                <div class="error-image-403">
-                    <img src="https://res.cloudinary.com/dfy0one9z/image/upload/v1726037907/law-attention-image_bz4imr.png" alt="error-image-403" class="error-image">
-                </div> 
+                    <p>Please, go back to: </p>
+                    <a class="btn btn-outline-black text-uppercase rounded-0" href="{% url 'home' %}">homepage</a>
                 </div>
             </div>
         </div>
