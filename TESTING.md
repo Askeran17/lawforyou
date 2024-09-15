@@ -374,3 +374,5 @@ I conducted manual testing to ensure the effectiveness and usability of the LawF
 At the beginning of my project I tried to test which storage platform is better to work on Cloudinary or Amazon. At first I used Cloudinary, but then I decided to try Amazon. Using Amazon for several days I received messages from them that my free limit had already reached 85%, and then I realized that perhaps this was due to the fact that I deployed the site many times. For this reason I returned back to Cloudinary, configured it correctly and the site began to work much faster and I did not receive any messages from Cloudinary like from Amazon. I think that Cloudinary platform is much better than Amazon.
 
 ### Unfixed Bugs
+
+The disadvantage of Cloudinary was that when I added images, special characters from the Cloudinary were automaticaly added to the name of the images, I consider this a downside for SEO, but I did not find the right guide to how to fix this bug. 

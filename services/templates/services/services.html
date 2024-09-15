@@ -10,8 +10,6 @@
         <div class="service-summary text-center">
           <h1 class="text-uppercase"> <strong>Our service </strong></h1>
           <br>
-          <p>Choose any service you need, and our lawyers with many years of experience in the field of jurisprudence will
-          help you solve your problems!</p>
           <div class="card-header text-center uppercase border"> <strong class="text-white text-uppercase"> We recommend</strong></div>
         </div>
         <hr>
@@ -35,8 +33,8 @@
                     <h2 class="card-title">{{ service.name }}</h2>
                     <hr>
                     <p class="card-text"> <em> {{ service.summary }} </em></p>
-                    <p class="card-text"><strong> <u>Price: ${{ service.price }}</u> </strong></p>
-                    <a href="{{ service.url }}" class="btn btn-primary">Buy</a>
+                    <p class="card-text"><strong class="border border-secondary pl-1 pr-1 bg-warning"> Price: ${{ service.price }} </strong></p>
+                    <a href="{{ service.url }}" class="btn btn-primary">Buy Now</a>
                   </div>
                 </div>
               </div>

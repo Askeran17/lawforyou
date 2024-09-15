@@ -1,4 +1,4 @@
-<h1 align="center"> LawForYou - your guidehelp in law</h1>
+<h1 align="center"> LawForYou - Online Legal Service/h1>
 
 ![The LawForYou on a variety of screen sizes](/static/images/readme-img/adaptability-size.png)
 
@@ -252,6 +252,7 @@ The model consists of the following parts:
 
 The model consists of the following parts:
 
+- [x] **faq_item**: models.IntegerField(null=True) - Field for numbers for organize faq items
 - [x] **title**: models.CharField(max_length=300) - Indicates the title of faq rubric with 300 characters length
 - [x] **question**: models.CharField(max_length=300) - Indicates the question of faq with 300 characters length
 - [x] **answer**: models.TextField(max_length=1500) - Indicates the answer of faq question with 1500 characters length
@@ -295,12 +296,15 @@ __Main content__
 __Services page__
 
 - On the service page, several types of services are offered, 6 of them on each page. In total, the service page offers 8 services, namely: draw up a testament, a power of attorney, write a letter to an opponent, notarize any document, get help in filling out a application, help in dividing property, help in appealing a decision, and also the ability to draw up a contract.
-![Services Page](/static/images/readme-img/.png)
+![Services Page](/static/images/readme-img/services-page.png)
 
 __Product detail page__
 
 - On the product page, any user, even unregistered, can buy a service. By specifying how many services he wants to order and then clicking the buy button, his service goes to the cart.
-![Product Detail Page](/static/images/readme-img/.png)
+![Product Detail Page](/static/images/readme-img/product-detail.png)
+
+- If product has a cooperate partner it appears below product image.
+![Product Cooperate Partner](/static/images/readme-img/product-with-partner.png)
 
 - Registered users also have the ability to leave comments, edit them and delete them. Also, registered users can rate the service by placing their rating.After the user has rated and left a rating, his review appears immediately.
 ![Review Rating](/static/images/readme-img/review-rating.png)
@@ -336,7 +340,6 @@ __Forecast page__
 ![Forecast Page](/static/images/readme-img/forecast-request-page.png)
 
 - If, for example, the user receives a positive answer, then he can be calm and most likely does not need to contact lawyers.
-![Forecast Question](/static/images/readme-img/forecast-question.png)
 ![Forecast Good Result](/static/images/readme-img/forecast-good-result.png)
 
 - If the user receives an average or especially negative answer, then he is recommended to contact lawyers by filling out a request
@@ -393,7 +396,12 @@ __Error pages__
 
 ### SEO Content
 
-- For successful marketing, first of all, I used the content itself, namely, I improved it. I adapted all the pages, so the site works quickly and without much delay. On the pages, such as on the main page, I used the keywords that I chose, and arranged them in such an order that Google will not consider them as spam, but on the contrary, it will rank my site well. I selected keywords from Google AdWords, as well as directly from Google search. I tried to take both general words and the most specific ones. The content itself is structured optimized, that is, each page has a header, navigation bar, section, footer, that is, everything goes in the correct order. There are also headings 1 2 3, etc. The site has a sitemap.xml, as well as robots.txt. All this helps to promote it well.
+- For successful marketing, first of all, I used the content itself, namely, I improved it. I adapted all the pages, so the site works quickly and without much delay. On the pages, such as on the main page, I used the keywords that I chose, and arranged them in such an order that Google will not consider them as spam, but on the contrary, it will rank my site well. I selected keywords from Google AdWords, as well as directly from Google search. I tried to take both general words and the most specific ones. 
+
+- So for exampel you can see the banner with key words "Free Legal Consultation" there I diluted this keyword with an offer and it turned out to be a real offer including keywords
+![Keywords Exampel](/static/images/readme-img/keywords-exampel.png)
+
+- The content itself is structured optimized, that is, each page has a header, navigation bar, section, footer, that is, everything goes in the correct order. There are also headings 1 2 3, etc. The site has a sitemap.xml, as well as robots.txt. All this helps to promote it well.
 
 ### Newsletter
 
