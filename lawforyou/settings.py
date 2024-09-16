@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-askeran17-lawforyou-ajbjdhb4cuu.ws.codeinstitute-ide.net','.herokuapp.com']
+ALLOWED_HOSTS = ['8000-askeran17-lawforyou-byg7cpd89k3.ws.codeinstitute-ide.net','.herokuapp.com']
 
 
 # Application definition
@@ -145,7 +145,7 @@ else:
 CSRF_TRUSTED_ORIGINS = [
     "https://*.herokuapp.com",
     "https://*.ws.codeinstitute-ide.net",
-    "https://8000-askeran17-lawforyou-ajbjdhb4cuu.ws.codeinstitute-ide.net/"
+    "https://8000-askeran17-lawforyou-byg7cpd89k3.ws.codeinstitute-ide.net/"
 ]
 
 # Password validation
