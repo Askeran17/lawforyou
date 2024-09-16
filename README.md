@@ -35,6 +35,7 @@
 - [Stripe Payments](#stripe-payments)
 - [Deployment](#deployment)
 - [Credits](#credits)
+  - [Education](#education)
   - [Content](#content)
   - [Media](#media)
   - [Acknowledgments](#acknowledgments)
@@ -159,7 +160,10 @@ The model consists of the following parts:
 - [x] **image**: models.ImageField(null=True, blank=True) - fiel for upload images
 - [x] **description**: models.TextField() - detailed description of the product
 - [x] **summary**: models.TextField(blank=True) - short description of the product
+- [x] **cooperation_partner**: models.CharField(default='Svedea', max_length=100) - by default, products are set to cooperate partner Svedea
+- [x] **has_cooperation_partner**: models.BooleanField(default=False) - the ability to indicate or not indicate a cooperate partner in a product
 - [x] **price**: models.DecimalField(max_digits=6, decimal_places=2) - price of the product
+
 
 **Review model:**
 
@@ -291,6 +295,7 @@ __Header__
 ![Forgot Password](/static/images/readme-img/forgot-password.png)
 
 - Then user go to the next page there he can reset password. User must filled out the form with valid e-mail and click on button "Reset My Password".
+
 ![Forgot Password](/static/images/readme-img/reset-password.png)
 
 - After that user will receive an confirmation mail on e-mail address.
@@ -321,8 +326,17 @@ __Product detail page__
 - Registered users also have the ability to leave comments, edit them and delete them. Also, registered users can rate the service by placing their rating.After the user has rated and left a rating, his review appears immediately.
 ![Review Rating](/static/images/readme-img/review-rating.png)
 
+- The admin can add the product, as well as delete it directly without going to the admin panel.
+![Add Product](/static/images/readme-img/add-product.png)
+
 - The admin can edit the product, as well as delete it directly without going to the admin panel.
 ![Edit Product](/static/images/readme-img/edit-product.png)
+
+- When the admin decides to delete a product, he can do this directly from the site by clicking on the delete button located at the beginning of the product.
+![Delete Product Link](/static/images/readme-img/delete-product-link.png)
+
+- When product deleted, it appears messages about it.
+![Delete Product](/static/images/readme-img/delete-product.png)
 
 __Shopping Bag page__
 
@@ -438,6 +452,10 @@ __Error pages__
 
 ![MailChimp](/static/images/readme-img/mailchimp-newsletter.png)
 
+- When siteowner receive a subscriber it appear in MailChimp dashboard.
+
+![MailChimp](/static/images/readme-img/mailchimp-subscriber.png)
+
 ### Facebook Business
 
 - Since social networks play a big role today, having the most popular social network Facebook will significantly increase the reach of the audience, among which there will be potential clients. The best marketing move is a well-promoted page on the social platform Facebook, where we can reach an audience not only in our region, but also beyond its borders, which will lead to the popularity of our site. Considering that our legal services operate online with the help of proper marketing, especially using Facebook, we can receive requests from clients from all over the world.
@@ -542,6 +560,16 @@ To clone do the following steps:
 - I was inspired by the "Boutique Ado" project at the Code Institute. I watched YouTube tutorial about how to fix appointments opportunity for customers: (https://www.youtube.com/watch?v=3_3q_dE4_qs), and to how to add rating: (https://www.youtube.com/watch?v=3KCBN7WJXMY&t=0s)
 
 - The icons was taken from [Font Awesome](https://fontawesome.com/)
+
+### Education
+
+Additional learning:
+
+- [Stack Overflow](https://stackoverflow.com): In this forum all type of differents question and answer about code helped me in my education
+
+- [YouTube](https://www.youtube.com): YouTube videos helped broaden my horizons and better understand how programming languages ​​work by watching how other programmers work
+
+- [Slack](https://slack.com): This community platform was very helpful, there me and others students could communicate with each other and ask/answer if we hade problems with our coding
 
 ### Content 
 

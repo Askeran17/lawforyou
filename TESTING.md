@@ -180,7 +180,7 @@ I conducted manual testing to ensure the effectiveness and usability of the LawF
 | Name field can´t be empty | User must type at least 1 letters | Only letter without spaces/numbers/etc/ accept, otherwise it is impossible to submit the form| PASS |
 | E-mail field can´t be empty | User must type e-mail which include @ symbol | User must type correct validate e-mail which include @ symbol, otherwise it is impossible to submit the form | PASS |
 | Phone Number field can´t be empty | User must type characters | If this field is left empty, then when sending the form, user will receive a notification that the form is not valid and therefore cannot be sent | PASS |
-| Subject field can´t be empty | User must type at least 1 letters | Only letter without spaces/numbers/etc/ accept, otherwise it is impossible to submit the form| PASS |
+| Subject field can´t be empty | User must type characters | If this field is left empty, then when sending the form, user will receive a notification that the form is not valid and therefore cannot be sent | PASS |
 | Message field can´t be empty | User must type characters | If this field is left empty, then when sending the form, user will receive a notification that the form is not valid and therefore cannot be sent | PASS |
 
 #### About page
