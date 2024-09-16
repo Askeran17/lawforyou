@@ -24,6 +24,7 @@
     - [Database](#database)
 - [Features](#features)
     - [Existing Features](#existing-features)
+- [Business Model](#business-model)
 - [Marketing](#marketing)
     - [Facebook Business](#facebook-business)
     - [SEO Optimization](#seo-optimization)
@@ -31,6 +32,7 @@
   - [Languages Used](#languages-used)
   - [Frameworks, Libraries & Programs Used](#frameworks)
 - [Testing](#testing)
+- [Stripe Payments](#stripe-payments)
 - [Deployment](#deployment)
 - [Credits](#credits)
   - [Content](#content)
@@ -41,7 +43,7 @@
 
 This site is dedicated to legal assistance to people who need to protect their rights. On this site you will find a variety of legal services, thanks to which the visitor has a large choice of options for solving their problems. For example, the user can order a free consultation with a lawyer, where the user and the lawyer will analyze the problem together, the user is also given the opportunity to make a brief forecast of his case, what is the probability of a positive or negative decision.
 
-The scope of paid services includes, for example, writing a contract, appealing a decision in government agencies and court, a notary seal, filing a petition, etc. Under each service, the user can leave a review and evaluate the offered service. The user also has the opportunity to follow the company's news via Facebook, by subscribing to the company's Facebook page, as well as subscribing to the mailing list.
+The scope of paid services includes, for example, writing a contract, appealing a decision in government agencies and court, a notary seal, filing a petition, etc. Under each service, the user can leave a review and evaluate the offered service. The user also has the opportunity to follow the company's news via Facebook, by subscribing to the company's Facebook page, as well as subscribing to the mailing list. LawForYou - works primarily with civil law.
 
 
 ## User Experience
@@ -285,6 +287,15 @@ __Header__
 
 ![User logged out](/static/images/readme-img/message-sign-out.png)
 
+- If user forgot password, it possible to create the new one. User must click on link "Forgot Password" on sign-in page.
+![Forgot Password](/static/images/readme-img/forgot-password.png)
+
+- Then user go to the next page there he can reset password. User must filled out the form with valid e-mail and click on button "Reset My Password".
+![Forgot Password](/static/images/readme-img/reset-password.png)
+
+- After that user will receive an confirmation mail on e-mail address.
+
+![Reset Confirmation Mail](/static/images/readme-img/reset-confirmation-mail.png)
 
 __Main content__
 
@@ -402,6 +413,11 @@ __Error pages__
 
 - The similar pages I did for pages 403 and 500.
 
+## Business Model
+
+- The business model chosen for this project is Business to Customer, since the main goal of the project is to provide services to people. This model was implemented with the help of a well-adapted and SEO-optimized website, as well as social networks, particularly Facebook, which will help attract visitors to buy services.
+
+- The main target audience is individuals, since the company works primarily with civil law.
 
 ## Marketing
 
@@ -470,6 +486,24 @@ HTML, CSS, JavaScript, Python, Django
 ## Testing
 
 To view testing go here [TESTING.md](TESTING.md)
+
+## Stripe Payments
+
+- The Stripe payments system was set up as the online payment processing and credit card processing platform for the order.
+ It needs to have an create account which you can do: [here](https://stripe.com/)
+
+### Guide to how setup stripe payments
+  
+- How to set up stripe payments you can read: [here](https://stripe.com/docs/payments/accept-a-payment#web-collect-card-details)
+
+#### Order in Stripe
+
+- When user doing an order, admin will receive both in admin panel and in his stripe account confirmation about it:
+![Order Confirmation Admin](/static/images/readme-img/order-admin.png)
+
+- Stripe Dashboard
+![Order Confirmation Stripe](/static/images/readme-img/order-stripe.png)
+
 
 ## Deployment
 

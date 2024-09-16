@@ -205,15 +205,22 @@ I conducted manual testing to ensure the effectiveness and usability of the LawF
 
 | Testing  | Action | Expected Result | Grade |  
 | - | - | - | - |
-| User signup page | Click on link "My account"-"Register" from navbar | User is directed to the signup page | PASS |
-| Fill in the registration form with valid and unique user information | Click on button "Sign up" | Success full registration | PASS |
+| User sign-up page Step 1 | Click on link "My account"-"Register" from navbar | User is directed to the signup page | PASS |
+| User sign-up page Step 2 | Fill in the registration form with valid and unique user information, click on button "Sign up" | Successfull registration | PASS |
 
 #### Sign in
 
 | Testing  | Action | Expected Result | Grade |  
 | - | - | - | - |
-| User signin page | Click on link "My account"-"Login" from navbar | User is directed to the sign-in page | PASS |
-| Fill in the form with valid and unique user information | Click on button "Sign in" | Success full sign in | PASS |
+| User sign-in page Step 1| Click on link "My account"-"Login" from navbar | User is directed to the sign-in page | PASS |
+| User sign-in page Step 2 | Fill in the form with valid and unique user information, click on button "Sign in" | Successfull sign in | PASS |
+
+#### Reset password
+
+| Testing  | Action | Expected Result | Grade |  
+| - | - | - | - |
+| User reset password Step 1 | Click on link "My account"-"Login" from navbar, and click on "Forgot Password" | User is directed to the password reset page | PASS |
+| User reset password Step 2 | Fill in the form with valid e-mail, click on button "Reset My Password" | Successfull reset, mail confirmation on users-email | PASS |
 
 #### Subscribe on newsletter
 
