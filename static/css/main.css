@@ -312,7 +312,7 @@ textarea:focus {
 }
 
 .btn-send {
-    width: 33%;
+    width: 40%;
     display: inherit;
 }
 
@@ -947,7 +947,7 @@ textarea:focus {
     }
 
     .profile-fix {
-        margin-bottom: 100px;
+        margin-bottom: 100px;       
     }
 
 
@@ -1008,6 +1008,10 @@ textarea:focus {
         margin-bottom: 1px;
     }
 
+    .profile-fix {
+        margin-bottom: 240px;
+    }
+
     .footer {
         height: 800px;
     }
@@ -1036,6 +1040,10 @@ textarea:focus {
     .message-container {
         top: 85px;
 
+    }
+
+    .btn-send {
+        width: 120%;
     }
 
     .img-featured {
@@ -1069,6 +1077,10 @@ textarea:focus {
 
     .section-column {
         padding-bottom: 10px;
+    }
+
+    .profile-fix {
+        margin-bottom: 100px;
     }
 
     .footer {
