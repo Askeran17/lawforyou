@@ -37,11 +37,11 @@ footer {
     right: 0;
 }
 
-.highlight {
+.special-offer {
 	display: inline-block;
 	color: #fff;
 	line-height: 2em;
-	padding: 2px 10px 2px 15px;
+	padding: 2px 10px 2px 10px;
 	border-radius: 4px;
     background: red;
     font-size: 13px;
