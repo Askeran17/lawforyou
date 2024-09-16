@@ -5,6 +5,9 @@ from django.core.validators import MinLengthValidator
 # Create your models here.
 
 class RequestHelp(models.Model):
+    """
+    The model indicates to make a Request
+    """
     name = models.CharField(max_length=100)
     email = models.EmailField()
     phone = models.CharField(max_length=20)

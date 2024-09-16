@@ -35,6 +35,7 @@
 - [Credits](#credits)
   - [Content](#content)
   - [Media](#media)
+  - [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -326,6 +327,9 @@ __Checkout page__
 - After the purchase, the user is taken to the order confirmation page, where the purchased service is described, and the user also receives a confirmation email to his email that the service has been purchased with a notification in the mail that the user will be contacted shortly.
 ![Checkout Success Page](/static/images/readme-img/checkout-success-page.png)
 
+- Order confirmation mail which user receive after payment
+![Order Confirmation Mail](/static/images/readme-img/order-confirmation-mail.png)
+
 __Profile page__
 
 - On the profile page, the user can see all of their orders, as well as their personal data.
@@ -362,6 +366,9 @@ __Manage Appointment page__
 - After the admin approves the request by specifying the date, the user will receive an email that the request has been approved and will be contacted shortly.
 ![Acceppt Appointment](/static/images/readme-img/accept-appointment.png)
 
+- Appointment confirmation mail which user receive after admin accept appointment
+![Appointment Confirmation Mail](/static/images/readme-img/appointment-confirmation-mail.png)
+
 - The admin can also delete the request directly without going to the admin panel.
 ![Delete Appointment Page](/static/images/readme-img/delete-appointment.png)
 
@@ -374,6 +381,12 @@ __FAQ page__
 
 - This page contains brief information in form of question and answer about the safety, payments, personal data and etc.
 ![FAQ Page](/static/images/readme-img/faq.png)
+
+
+__Privacy Policy page__
+
+- This page contains information about privacy and policy. Page opens in new window if user clicked on link "Privacy Policy" which is located in footer.
+![Privacy Policy Page](/static/images/readme-img/privacy-policy.png)
 
 __Footer__
 
@@ -452,6 +465,8 @@ HTML, CSS, JavaScript, Python, Django
 
 * [Stripe](https://stripe.com/) - To ability to accept payment.
 
+* [Cloudinary](https://cloudinary.com/) - To to host static and media files.
+
 ## Testing
 
 To view testing go here [TESTING.md](TESTING.md)
@@ -501,3 +516,9 @@ To clone do the following steps:
 ### Media
 
 - The images in site I took from open source, i.e. google.
+
+### Acknowledgements
+
+- Code Institute Tutor Support helped me if I had question about code.
+- My mentor Jubril Akolade helped me throughout the project with mentoring and advice.
+- My family supported me all the way throughout my studies.

@@ -9,6 +9,9 @@ RATINGS = ((None, '0'), (1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5'))
 
 
 class Product(models.Model):
+    """
+    The model indicates the products
+    """
     item = models.IntegerField(null=True)
     name = models.CharField(max_length=254)
     url = models.SlugField(max_length=300, null=True, unique=True)
@@ -31,6 +34,9 @@ class Product(models.Model):
 
 
 class Review(models.Model):
+    """
+    The model indicates the reviews for products
+    """
     product = models.ForeignKey(Product, on_delete=models.CASCADE,
                                 related_name="reviews")
     user = models.ForeignKey(User, on_delete=models.CASCADE)

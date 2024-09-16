@@ -12,6 +12,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 
 
 class AppointmentView(TemplateView):
+    '''view for booking appointment'''
     template_name = "appointment/appointment.html"
 
     def post(self, request):
@@ -36,6 +37,7 @@ class AppointmentView(TemplateView):
 
 
 class ManageAppointmentView(ListView):
+    '''view for manage appointments'''
     queryset = Appointment.objects.all().order_by("-sent_date", "-id")
     template_name = "appointment/manage-appointment.html"
     model = Appointment

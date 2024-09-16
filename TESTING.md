@@ -195,12 +195,25 @@ I conducted manual testing to ensure the effectiveness and usability of the LawF
 | - | - | - | - |
 | Visitor can view FAQ page | Access to the FAQ page after clicked on link "FAQ" from footer | Being able read text without errors | PASS |
 
+#### Privacy Policy page
+
+| Testing  | Action | Expected Result | Grade |  
+| - | - | - | - |
+| Visitor can view Privacy Policy page from new window | Access to the Privacy Policy page after clicked on link "Privacy And Policy" from footer | Page opens in new window, user being able read text without errors | PASS |
+
 #### Registration 
 
 | Testing  | Action | Expected Result | Grade |  
 | - | - | - | - |
-| User signup page | Click on link "Register" from navbar | Visitor is directed to the signup page | PASS |
+| User signup page | Click on link "My account"-"Register" from navbar | User is directed to the signup page | PASS |
 | Fill in the registration form with valid and unique user information | Click on button "Sign up" | Success full registration | PASS |
+
+#### Sign in
+
+| Testing  | Action | Expected Result | Grade |  
+| - | - | - | - |
+| User signin page | Click on link "My account"-"Login" from navbar | User is directed to the sign-in page | PASS |
+| Fill in the form with valid and unique user information | Click on button "Sign in" | Success full sign in | PASS |
 
 #### Subscribe on newsletter
 

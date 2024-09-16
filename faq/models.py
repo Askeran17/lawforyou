@@ -4,6 +4,9 @@ from django.db import models
 
 
 class LawFaq(models.Model):
+    """
+    The model indicates the FAQ
+    """
     faq_item = models.IntegerField(null=True)
     title = models.CharField(max_length=300)
     question = models.CharField(max_length=300)

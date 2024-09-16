@@ -2,6 +2,9 @@ from django.db import models
 
 
 class Appointment(models.Model):
+    """
+    The model indicates to booking and manage appointments
+    """
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     email = models.CharField(max_length=50)

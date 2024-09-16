@@ -10,10 +10,6 @@ class RequestForm(forms.ModelForm):
     name.widget = forms.TextInput(
         attrs={'pattern': "[A-zÀ-ú]+",
                'title': "Please Enter Valid Name (Only letters, no space)"})
-    subject = forms.CharField(max_length=150)
-    subject.widget = forms.TextInput(
-        attrs={'pattern': "[A-zÀ-ú]+",
-               'title': "Please Enter Valid Subject (Only letters, no space)"})
 
     class Meta:
         model = RequestHelp

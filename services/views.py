@@ -15,7 +15,7 @@ class ServiceTemplateView(generic.ListView):
 
 
 def product_detail(request, url):
-    """ Display detailed post """
+    """ Display detailed product """
     queryset = Product.objects.all()
     product = get_object_or_404(queryset, url=url)
     reviews = product.reviews.all().order_by("-created_at")
