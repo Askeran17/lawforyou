@@ -173,6 +173,15 @@
 
 }
 
+/* Small devices (phones, max 320px) */
+@media only screen and (max-width: 320px) {
+
+	#start-button {
+		margin-left: 45px;
+	}
+    
+}
+
 
 /* Small devices (phones, 335px and up) */
 @media only screen and (min-width: 335px) {

@@ -762,6 +762,17 @@ textarea:focus {
     .logo-lawforyou {
         width: 180px;
     }
+
+    .nav-account-bag {
+        margin-left: 37px;
+        
+    }
+
+    .welcome-bg {
+        top: -5px;
+    
+    }
+    
 }
 
 /* Small devices (phones, 335px and up) */
