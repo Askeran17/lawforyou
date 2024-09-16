@@ -10,19 +10,8 @@ class LawFaq(models.Model):
     answer = models.TextField(max_length=1500)
 
     class Meta:
-       verbose_name_plural = 'FAQS'
-       ordering = ['faq_item']
+        verbose_name_plural = 'FAQS'
+        ordering = ['faq_item']
 
     def __str__(self):
         return self.title
-
-
-
-    
-
-        
-    
-
-
-
-

@@ -1,18 +1,15 @@
 from django.http.response import HttpResponseRedirect
-from django.shortcuts import render
-from django.http import HttpResponse
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import DeleteView
-from django.urls import reverse, reverse_lazy
-from django.core.mail import EmailMessage, message
+from django.urls import reverse_lazy
+from django.core.mail import EmailMessage
 from django.conf import settings
 from django.contrib import messages
 from .models import Appointment
 from django.views.generic import ListView
-import datetime
-from django.template import Context
-from django.template.loader import render_to_string, get_template
+from django.template.loader import get_template
 from django.contrib.messages.views import SuccessMessageMixin
+
 
 class AppointmentView(TemplateView):
     template_name = "appointment/appointment.html"
@@ -22,7 +19,7 @@ class AppointmentView(TemplateView):
         lname = request.POST.get("lname")
         email = request.POST.get("email")
         phone = request.POST.get("phone")
-        message = request.POST.get("request")
+        message = request.POST.get("message")
 
         appointment = Appointment.objects.create(
             first_name=fname,
