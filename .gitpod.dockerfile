@@ -20,17 +20,31 @@ ENV PATH=$PATH:/home/gitpod/.nvm/versions/node/v${NODE_VERSION}/bin
 ### Python ###
 USER root
 RUN apt-get update && apt-get install -y \
-    python3.12 python3.12-venv python3.12-dev python3-pip python3-distutils
+    make build-essential libssl-dev zlib1g-dev libbz2-dev \
+    libreadline-dev libsqlite3-dev wget curl llvm \
+    libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev \
+    libffi-dev liblzma-dev git ca-certificates
+
 USER gitpod
 
-RUN python3.12 -m pip install --no-cache-dir --upgrade pip && \
-    python3.12 -m pip install --no-cache-dir --upgrade \
-        setuptools wheel virtualenv pipenv pylint rope flake8 \
-        mypy autopep8 pep8 pylama pydocstyle bandit notebook twine
+ENV PYENV_ROOT=/home/gitpod/.pyenv
+ENV PATH=$PYENV_ROOT/bin:$PYENV_ROOT/shims:$PATH
+ENV PYTHON_VERSION=3.12.2
 
-ENV PYTHONUSERBASE=/workspace/.pip-modules \
-    PIP_USER=yes
-ENV PATH=$PYTHONUSERBASE/bin:$PATH
+RUN curl https://pyenv.run | bash && \
+    echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc.d/60-python && \
+    echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc.d/60-python && \
+    echo 'eval "$(pyenv init --path)"' >> ~/.bashrc.d/60-python && \
+    echo 'eval "$(pyenv init -)"' >> ~/.bashrc.d/60-python && \
+    echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc.d/60-python && \
+    pyenv install $PYTHON_VERSION && \
+    pyenv global $PYTHON_VERSION && \
+    python3 -m pip install --no-cache-dir --upgrade pip setuptools wheel && \
+    python3 -m pip install --no-cache-dir \
+        virtualenv pipenv pylint rope flake8 \
+        mypy autopep8 pep8 pylama pydocstyle \
+        bandit notebook twine
+
 
 ### Heroku CLI ###
 RUN curl https://cli-assets.heroku.com/install.sh | sh
