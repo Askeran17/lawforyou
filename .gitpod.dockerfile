@@ -33,7 +33,7 @@ RUN curl -fsSL https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-ins
         setuptools wheel virtualenv pipenv pylint rope flake8 \
         mypy autopep8 pep8 pylama pydocstyle bandit notebook \
         twine \
-    && sudo rm -rf /tmp/*USER gitpod
+    && sudo rm -rf /tmp/*
 ENV PYTHONUSERBASE=/workspace/.pip-modules \
     PIP_USER=yes
 ENV PATH=$PYTHONUSERBASE/bin:$PATH
