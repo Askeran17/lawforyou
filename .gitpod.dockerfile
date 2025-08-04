@@ -16,7 +16,13 @@ RUN curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh |
 ENV PATH=$PATH:/home/gitpod/.nvm/versions/node/v${NODE_VERSION}/bin
 
 ### Python ###
+USER root
+RUN apt-get update && apt-get install -y \
+    build-essential curl git libssl-dev zlib1g-dev libbz2-dev \
+    libreadline-dev libsqlite3-dev wget llvm libncurses5-dev libncursesw5-dev \
+    xz-utils tk-dev libffi-dev liblzma-dev
 USER gitpod
+
 RUN sudo install-packages python3-pip
 ENV PYTHON_VERSION 3.12.2
 
