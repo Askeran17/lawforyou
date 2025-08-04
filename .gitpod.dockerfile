@@ -19,12 +19,10 @@ ENV PATH=$PATH:/home/gitpod/.nvm/versions/node/v${NODE_VERSION}/bin
 
 ### Python ###
 USER root
-RUN apt-get update && apt-get install -y software-properties-common && \
-    add-apt-repository ppa:deadsnakes/ppa && \
-    apt-get update && \
-    apt-get install -y python3.12 python3.12-venv python3.12-distutils python3-pip
-
+RUN apt-get update && apt-get install -y \
+    python3.12 python3.12-venv python3.12-dev python3-pip python3-distutils
 USER gitpod
+
 RUN python3.12 -m pip install --no-cache-dir --upgrade pip && \
     python3.12 -m pip install --no-cache-dir --upgrade \
         setuptools wheel virtualenv pipenv pylint rope flake8 \
