@@ -22,7 +22,7 @@ USER root
 RUN apt-get update && apt-get install -y software-properties-common && \
     add-apt-repository ppa:deadsnakes/ppa && \
     apt-get update && \
-    apt-get install -y python3.12 python3.12-venv python3-pip
+    apt-get install -y python3.12 python3.12-venv python3.12-distutils python3-pip
 
 USER gitpod
 RUN python3.12 -m pip install --no-cache-dir --upgrade pip && \
