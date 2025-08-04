@@ -17,29 +17,15 @@ ENV PATH=$PATH:/home/gitpod/.nvm/versions/node/v${NODE_VERSION}/bin
 
 ### Python ###
 USER root
-RUN apt-get update && apt-get install -y \
-    build-essential curl git libssl-dev zlib1g-dev libbz2-dev \
-    libreadline-dev libsqlite3-dev wget llvm libncurses5-dev libncursesw5-dev \
-    xz-utils tk-dev libffi-dev liblzma-dev
+RUN apt-get update && apt-get install -y python3.12 python3.12-venv python3-pip
+
 USER gitpod
-
-RUN sudo install-packages python3-pip
-ENV PYTHON_VERSION 3.12.2
-
-ENV PATH=$HOME/.pyenv/bin:$HOME/.pyenv/shims:$PATH
-RUN curl -fsSL https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash \
-    && { echo; \
-        echo 'eval "$(pyenv init -)"'; \
-        echo 'eval "$(pyenv virtualenv-init -)"'; } >> /home/gitpod/.bashrc.d/60-python \
-    && pyenv update \
-    && pyenv install $PYTHON_VERSION \
-    && pyenv global $PYTHON_VERSION \
-    && python3 -m pip install --no-cache-dir --upgrade pip \
-    && python3 -m pip install --no-cache-dir --upgrade \
+RUN python3.12 -m pip install --no-cache-dir --upgrade pip && \
+    python3.12 -m pip install --no-cache-dir --upgrade \
         setuptools wheel virtualenv pipenv pylint rope flake8 \
         mypy autopep8 pep8 pylama pydocstyle bandit notebook \
-        twine \
-    && sudo rm -rf /tmp/*
+        twine
+
 ENV PYTHONUSERBASE=/workspace/.pip-modules \
     PIP_USER=yes
 ENV PATH=$PYTHONUSERBASE/bin:$PATH
