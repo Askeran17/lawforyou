@@ -11,6 +11,7 @@ from .forms import ProductForm, ReviewForm
 class ServiceTemplateView(generic.ListView):
     template_name = 'services/services.html'
     queryset = Product.objects.all()
+
     paginate_by = 6
 
 
