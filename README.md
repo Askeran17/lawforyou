@@ -4,7 +4,7 @@
 
 ### Live Site
 
-- Go to live site - [LawForYou](https://lawforyou-4899488e19b1.herokuapp.com/)
+- Go to live site - [LawForYou](https://lawforyou.onrender.com)
 
 ### Repository
 
@@ -145,7 +145,7 @@ FAQ page
 ![image](/static/images/readme-img/wireframe-faq.png)
 
 ### Database
-The project uses the relational database PostgreSQL to store the data. I used PostgreSQL because it is considered one of the recommended databases on the Heroku platform.
+The project uses the relational database PostgreSQL to store the data. I used PostgreSQL because it is considered one of the recommended databases on the Heroku platform. Attention: I have worked with Heroku but after problem with Heroku I have decided to use Render for deploy.
 
 
 ### Models in "Services" app
