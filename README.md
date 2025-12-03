@@ -467,7 +467,7 @@ I did all the work in GitPod platform.
 
 ### Languages Used
 
-HTML, CSS, JavaScript, Python, Django
+HTML, CSS, JavaScript, Python, Django.
 
 ### Frameworks, Libraries & Programs Used
 
