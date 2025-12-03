@@ -9,7 +9,7 @@ dj-database-url==0.5.0
 dj3-cloudinary-storage==0.0.6
 Django==4.2.13
 django-allauth==0.57.2
-django-countries>=7.6.1
+django-countries==7.2.1
 django-crispy-forms==1.14.0
 gunicorn==22.0.0
 idna==3.11
@@ -21,7 +21,7 @@ pycparser==2.23
 PyJWT==2.8.0
 python3-openid==3.2.0
 pytz==2024.1
-requests==2.32.5
+requests==2.31.0
 requests-oauthlib==2.0.0
 six==1.17.0
 sqlparse==0.5.0

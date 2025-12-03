@@ -76,6 +76,7 @@ class ManageAppointmentView(ListView):
                 messages.SUCCESS, 
                 f"You accepted the appointment of {appointment.first_name} and sent confirmation email"
             )
+                
         except Exception as e:
             logger.error(f"Failed to send email: {str(e)}")
             messages.add_message(
