@@ -9,6 +9,9 @@ from .models import Appointment
 from django.views.generic import ListView
 from django.template.loader import get_template
 from django.contrib.messages.views import SuccessMessageMixin
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class AppointmentView(TemplateView):
@@ -53,22 +56,34 @@ class ManageAppointmentView(ListView):
         appointment.accepted = True
         appointment.save()
 
-        data = {
-            "fname": appointment.first_name,
-            "date": appointment.appointment_date,
-        }
-
-        message = get_template('appointment/email.html').render(data)
-        email = EmailMessage(
-            "About your appointment",
-            message,
-            settings.EMAIL_HOST_USER,
-            [appointment.email],
-        )
-        email.content_subtype = "html"
-        email.send()
-
-        messages.add_message(request, messages.SUCCESS, f"You accepted the appointment of {appointment.first_name}")  # noqa
+        try:
+            data = {
+                "fname": appointment.first_name,
+                "date": appointment.appointment_date,
+            }
+            message = get_template('appointment/email.html').render(data)
+            email = EmailMessage(
+                "Your Appointment Confirmed - Law For You",
+                message,
+                settings.EMAIL_HOST_USER,
+                [appointment.email],
+            )
+            email.content_subtype = "html"
+            email.send(fail_silently=False)
+            
+            messages.add_message(
+                request, 
+                messages.SUCCESS, 
+                f"You accepted the appointment of {appointment.first_name} and sent confirmation email"
+            )
+        except Exception as e:
+            logger.error(f"Failed to send email: {str(e)}")
+            messages.add_message(
+                request, 
+                messages.WARNING, 
+                f"You accepted the appointment of {appointment.first_name}, but email notification failed. Error: {type(e).__name__}"
+            )
+        
         return HttpResponseRedirect(request.path)
 
     def get_context_data(self, *args, **kwargs):
