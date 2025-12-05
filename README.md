@@ -462,7 +462,7 @@ __Error pages__
 
 ## Technologies Used
 
-I did all the work in GitPod platform.
+I did all the work in GitPod platform. Later I built the project using Docker.
 
 ### Languages Used
 
