@@ -2,6 +2,10 @@
 
 ![The LawForYou on a variety of screen sizes](/static/images/readme-img/adaptability-size.png)
 
+### Live Site
+
+- [View the live site here](https://lawforyou.onrender.com/)
+
 ### Repository
 
 - Go to the repository for this project - [Repository-LawForYou](https://github.com/Askeran17/lawforyou.git)
@@ -141,7 +145,7 @@ FAQ page
 ![image](/static/images/readme-img/wireframe-faq.png)
 
 ### Database
-The project uses the relational database PostgreSQL to store the data. I used PostgreSQL because it is considered one of the recommended databases on the Heroku platform.
+The project uses the relational database PostgreSQL to store the data. I used PostgreSQL because it is considered one of the recommended databases on the Heroku platform. Attention: Because of problem with Heroku, I have changed platform to Render.
 
 ### Models in "Services" app
 
