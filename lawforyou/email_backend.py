@@ -53,13 +53,16 @@ class BrevoAPIBackend(BaseEmailBackend):
             return False
         
         try:
+            # Determine content type
+            is_html = getattr(email_message, 'content_subtype', 'plain') == 'html'
+            
             # Prepare the email
             send_smtp_email = sib_api_v3_sdk.SendSmtpEmail(
                 to=[{"email": recipient} for recipient in email_message.to],
-                sender={"email": email_message.from_email},
+                sender={"email": email_message.from_email or os.environ.get('EMAIL_HOST_USER', 'byzantium1988@gmail.com')},
                 subject=email_message.subject,
-                html_content=email_message.body if email_message.content_subtype == 'html' else None,
-                text_content=email_message.body if email_message.content_subtype == 'plain' else None,
+                html_content=email_message.body if is_html else None,
+                text_content=email_message.body if not is_html else None,
             )
             
             # Add CC if present
@@ -75,6 +78,12 @@ class BrevoAPIBackend(BaseEmailBackend):
             return True
             
         except ApiException as e:
+            print(f"Brevo API Error: {e}")  # Log error
+            if not self.fail_silently:
+                raise
+            return False
+        except Exception as e:
+            print(f"Email sending error: {e}")  # Log error
             if not self.fail_silently:
                 raise
             return False
