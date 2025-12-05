@@ -29,8 +29,19 @@ RUN pip install --upgrade pip && \
 # Copy all project files
 COPY . /app/
 
+# Create startup script
+RUN echo '#!/bin/sh\n\
+set -e\n\
+echo "Running migrations..."\n\
+python manage.py migrate --noinput\n\
+echo "Collecting static files..."\n\
+python manage.py collectstatic --noinput\n\
+echo "Starting Gunicorn..."\n\
+exec gunicorn lawforyou.wsgi:application --bind 0.0.0.0:8000 --workers 4' > /app/start.sh && \
+chmod +x /app/start.sh
+
 # Open port
 EXPOSE 8000
 
-# Run gunicorn
-CMD ["gunicorn", "lawforyou.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "4"]
+# Run startup script
+CMD ["/app/start.sh"]
