@@ -37,7 +37,7 @@ python manage.py migrate --noinput\n\
 echo "Collecting static files..."\n\
 python manage.py collectstatic --noinput\n\
 echo "Starting Gunicorn..."\n\
-exec gunicorn lawforyou.wsgi:application --bind 0.0.0.0:8000 --workers 4' > /app/start.sh && \
+exec gunicorn lawforyou.wsgi:application --bind 0.0.0.0:8000 --workers 2 --threads 2 --timeout 120 --max-requests 1000 --max-requests-jitter 50 --log-level info' > /app/start.sh && \
 chmod +x /app/start.sh
 
 # Open port
